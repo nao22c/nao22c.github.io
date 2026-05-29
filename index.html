@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Logカレンダー サポート</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", sans-serif;
+      background: #F5F5FF;
+      color: #1a1a2e;
+      min-height: 100vh;
+    }
+    header {
+      background: linear-gradient(135deg, #6366F1, #8B5CF6);
+      color: white;
+      padding: 48px 24px;
+      text-align: center;
+    }
+    header h1 { font-size: 2rem; font-weight: 700; margin-bottom: 8px; }
+    header p { font-size: 1rem; opacity: 0.85; }
+    main {
+      max-width: 640px;
+      margin: 40px auto;
+      padding: 0 24px;
+    }
+    .card {
+      background: white;
+      border-radius: 16px;
+      padding: 28px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 12px rgba(99,102,241,0.08);
+    }
+    .card h2 {
+      font-size: 1.1rem;
+      color: #6366F1;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .card p, .card li {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: #444;
+    }
+    .card ul { padding-left: 20px; }
+    a { color: #6366F1; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .contact-btn {
+      display: inline-block;
+      background: linear-gradient(135deg, #6366F1, #8B5CF6);
+      color: white;
+      padding: 12px 28px;
+      border-radius: 50px;
+      font-weight: 600;
+      margin-top: 12px;
+    }
+    footer {
+      text-align: center;
+      padding: 32px 24px;
+      color: #999;
+      font-size: 0.8rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>📅 Logカレンダー</h1>
+  <p>カレンダーと日々の記録を、ひとつのアプリで。</p>
+</header>
+
+<main>
+
+  <div class="card">
+    <h2>📬 お問い合わせ</h2>
+    <p>ご不明な点・不具合のご報告はメールにてお気軽にどうぞ。</p>
+    <a class="contact-btn" href="mailto:mediclip20c@gmail.com">mediclip20c@gmail.com</a>
+  </div>
+
+  <div class="card">
+    <h2>📋 主な機能</h2>
+    <ul>
+      <li>iCloud・Google カレンダーと同期</li>
+      <li>日別タスク管理</li>
+      <li>体重・日記などの LOG 記録</li>
+      <li>ウィジェット対応</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>🔒 プライバシーと利用規約</h2>
+    <p>
+      <a href="https://climbing-thrush-d9c.notion.site/361539bc4e38808f9a6eda9faafaf972" target="_blank">
+        プライバシーポリシー
+      </a>
+      　／
+      <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank">
+        利用規約（EULA）
+      </a>
+    </p>
+  </div>
+
+</main>
+
+<footer>
+  <p>© 2026 Naoto Sugiyama</p>
+</footer>
+
+</body>
+</html>
