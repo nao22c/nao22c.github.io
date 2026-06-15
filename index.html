@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>nao22c — App Portfolio</title>
+  <style>
+    :root {
+      --accent: #0071e3;
+      --bg: #f5f5f7;
+      --card: #ffffff;
+      --text: #1d1d1f;
+      --sub: #6e6e73;
+      --border: #e0e0e5;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #111;
+        --card: #1c1c1e;
+        --text: #f5f5f7;
+        --sub: #98989d;
+        --border: #333;
+      }
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    header {
+      background: var(--card);
+      border-bottom: 1px solid var(--border);
+      padding: 48px 24px 36px;
+      text-align: center;
+    }
+    header h1 { font-size: 2rem; font-weight: 700; }
+    header p { color: var(--sub); font-size: 1rem; margin-top: 8px; }
+    .container { max-width: 720px; margin: 48px auto; padding: 0 24px 80px; }
+    h2 { font-size: 1.1rem; font-weight: 700; margin-bottom: 20px; color: var(--sub); letter-spacing: 0.04em; text-transform: uppercase; }
+    .app-grid { display: grid; gap: 16px; }
+    .app-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      text-decoration: none;
+      color: inherit;
+      transition: box-shadow 0.2s;
+    }
+    .app-card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+    .app-icon {
+      width: 64px; height: 64px;
+      border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 32px;
+      flex-shrink: 0;
+    }
+    .app-info { flex: 1; }
+    .app-name { font-size: 1.05rem; font-weight: 700; margin-bottom: 4px; }
+    .app-desc { color: var(--sub); font-size: 0.88rem; }
+    .app-links { display: flex; gap: 8px; margin-top: 10px; flex-wrap: wrap; }
+    .app-links a {
+      font-size: 0.8rem;
+      color: var(--accent);
+      text-decoration: none;
+      padding: 4px 10px;
+      border: 1px solid var(--accent);
+      border-radius: 20px;
+    }
+    .app-links a:hover { background: var(--accent); color: #fff; }
+    footer {
+      text-align: center;
+      color: var(--sub);
+      font-size: 0.8rem;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>nao22c</h1>
+    <p>iOS App Developer — シンプルで使いやすいアプリを開発しています</p>
+  </header>
+
+  <div class="container">
+    <h2>Apps</h2>
+    <div class="app-grid">
+
+      <div class="app-card">
+        <div class="app-icon" style="background: linear-gradient(135deg, #5ac8fa, #007aff);">📅</div>
+        <div class="app-info">
+          <div class="app-name">Log Calendar</div>
+          <div class="app-desc">カレンダー・タスク・ログを一元管理するiOSアプリ</div>
+          <div class="app-links">
+            <a href="log_calendar/">サポート</a>
+            <a href="log_calendar/privacy-policy.html">プライバシーポリシー</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="app-card">
+        <div class="app-icon" style="background: linear-gradient(135deg, #f5a623, #f0561e);">🧮</div>
+        <div class="app-info">
+          <div class="app-name">memo calculator custom</div>
+          <div class="app-desc">計算結果をそのままメモに残せる電卓アプリ</div>
+          <div class="app-links">
+            <a href="https://nao22c.github.io/memocal/">サポート</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="app-card">
+        <div class="app-icon" style="background: linear-gradient(135deg, #ff6b6b, #ee5a24);">💊</div>
+        <div class="app-info">
+          <div class="app-name">服薬チェッカー</div>
+          <div class="app-desc">服薬スケジュールの管理と通知をサポートするiOSアプリ</div>
+          <div class="app-links">
+            <a href="okusuri/support.html">サポート</a>
+            <a href="okusuri/privacy.html">プライバシーポリシー</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="app-card">
+        <div class="app-icon" style="background: linear-gradient(135deg, #34c759, #30b350);">📈</div>
+        <div class="app-info">
+          <div class="app-name">株主優待ログ</div>
+          <div class="app-desc">保有株の株主優待情報を一元管理するiOSアプリ</div>
+          <div class="app-links">
+            <a href="kabu-log/support.html">サポート</a>
+            <a href="kabu-log/privacy-policy.html">プライバシーポリシー</a>
+            <a href="kabu-log/terms.html">利用規約</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 nao22c &nbsp;|&nbsp; <a href="mailto:nao1648@gmail.com" style="color: var(--sub);">nao1648@gmail.com</a></p>
+  </footer>
+</body>
+</html>
