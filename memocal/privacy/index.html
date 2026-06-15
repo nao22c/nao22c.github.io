@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>プライバシーポリシー — memo calculator custom</title>
+  <style>
+    :root {
+      --accent: #f5a623;
+      --bg: #f9f9f9;
+      --card: #ffffff;
+      --text: #1a1a1a;
+      --sub: #666;
+      --border: #e5e5e5;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #111;
+        --card: #1e1e1e;
+        --text: #f0f0f0;
+        --sub: #999;
+        --border: #333;
+      }
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.8;
+      padding: 0 16px 48px;
+    }
+    .container { max-width: 680px; margin: 0 auto; }
+    header {
+      text-align: center;
+      padding: 40px 0 32px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 32px;
+    }
+    header h1 { font-size: 1.4rem; font-weight: 700; margin-bottom: 6px; }
+    header p { color: var(--sub); font-size: 0.85rem; }
+    section { margin-bottom: 32px; }
+    h2 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      border-left: 4px solid var(--accent);
+      padding-left: 10px;
+      margin-bottom: 12px;
+    }
+    p { margin-bottom: 10px; font-size: 0.92rem; color: var(--text); }
+    ul {
+      padding-left: 20px;
+      margin-bottom: 10px;
+      font-size: 0.92rem;
+    }
+    li { margin-bottom: 4px; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px 20px;
+      font-size: 0.9rem;
+    }
+    .card + .card { margin-top: 10px; }
+    .sdk-name { font-weight: 600; margin-bottom: 4px; }
+    .sdk-desc { color: var(--sub); font-size: 0.85rem; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    footer {
+      text-align: center;
+      color: var(--sub);
+      font-size: 0.8rem;
+      margin-top: 48px;
+    }
+    footer a { color: var(--sub); }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>プライバシーポリシー</h1>
+      <p>memo calculator custom &nbsp;|&nbsp; 最終更新: 2025年6月</p>
+    </header>
+
+    <section>
+      <h2>1. 基本方針</h2>
+      <p>「memo calculator custom」（以下「本アプリ」）は、ユーザーのプライバシーを尊重し、個人情報の適切な保護に努めます。</p>
+      <p>本アプリが収集・保存するデータはすべてお使いの端末内にのみ保存されます。開発者がユーザーの計算データやメモの内容を収集・閲覧・送信することはありません。</p>
+    </section>
+
+    <section>
+      <h2>2. 収集する情報</h2>
+      <p>本アプリ自体が収集する個人情報はありません。アプリ内で入力した計算式・結果・メモテキストはすべてデバイス内（SwiftData）にのみ保存されます。</p>
+      <p>ただし、以下のサードパーティSDKが動作上必要な情報を収集する場合があります。</p>
+    </section>
+
+    <section>
+      <h2>3. 利用するサードパーティSDK</h2>
+
+      <div class="card">
+        <div class="sdk-name">Google AdMob（広告配信）</div>
+        <div class="sdk-desc">
+          無料版ユーザー向けに広告を表示するために使用します。AdMobはデバイス情報・広告IDなどを収集することがあります。プレミアム（広告非表示）購入後は広告SDKは無効になります。<br>
+          <a href="https://policies.google.com/privacy" target="_blank">Google プライバシーポリシー</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="sdk-name">RevenueCat（アプリ内課金管理）</div>
+        <div class="sdk-desc">
+          プレミアム買い切り購入の管理に使用します。RevenueCatはApple IDに紐づいた購入情報を処理します。個人を特定する情報は開発者には共有されません。<br>
+          <a href="https://www.revenuecat.com/privacy" target="_blank">RevenueCat プライバシーポリシー</a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>4. データの保存と管理</h2>
+      <ul>
+        <li>計算データ・メモ・設定はすべてデバイス内のローカルストレージに保存されます。</li>
+        <li>iCloudバックアップが有効な場合、データはiCloudバックアップに含まれる場合があります。</li>
+        <li>アプリを削除するとすべてのデータが削除されます。</li>
+        <li>開発者はユーザーのデータにアクセスする手段を持ちません。</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>5. 広告とトラッキング</h2>
+      <p>本アプリはApp Tracking Transparency（ATT）フレームワークによるトラッキング許可を求めません。</p>
+      <p>表示される広告はGoogle AdMobによるものです。AdMobの広告パーソナライズ設定については<a href="https://adssettings.google.com/" target="_blank">Googleの広告設定</a>から変更できます。</p>
+    </section>
+
+    <section>
+      <h2>6. 子どものプライバシー</h2>
+      <p>本アプリは13歳未満の子どもを対象としていません。13歳未満の方の個人情報を意図的に収集することはありません。</p>
+    </section>
+
+    <section>
+      <h2>7. プライバシーポリシーの変更</h2>
+      <p>本ポリシーは必要に応じて更新されることがあります。重要な変更があった場合はアプリのアップデートにてお知らせします。最新のポリシーは常にこのページでご確認いただけます。</p>
+    </section>
+
+    <section>
+      <h2>8. お問い合わせ</h2>
+      <p>プライバシーに関するご質問・ご要望は下記までお問い合わせください。</p>
+      <div class="card">
+        <div class="sdk-name">開発者：nao22c</div>
+        <div class="sdk-desc">メール：<a href="mailto:nao1648@gmail.com">nao1648@gmail.com</a></div>
+      </div>
+    </section>
+
+    <footer>
+      <p><a href="../">サポートページに戻る</a> &nbsp;|&nbsp; &copy; 2025 nao22c</p>
+    </footer>
+  </div>
+</body>
+</html>

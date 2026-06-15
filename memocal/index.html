@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>memo calculator custom — サポート</title>
+  <style>
+    :root {
+      --accent: #f5a623;
+      --bg: #f9f9f9;
+      --card: #ffffff;
+      --text: #1a1a1a;
+      --sub: #666;
+      --border: #e5e5e5;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #111;
+        --card: #1e1e1e;
+        --text: #f0f0f0;
+        --sub: #999;
+        --border: #333;
+      }
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      padding: 0 16px 48px;
+    }
+    header {
+      text-align: center;
+      padding: 48px 0 32px;
+    }
+    .icon {
+      width: 96px; height: 96px;
+      border-radius: 22px;
+      background: linear-gradient(135deg, #f5a623, #f0561e);
+      display: inline-flex; align-items: center; justify-content: center;
+      font-size: 48px;
+      margin-bottom: 16px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    }
+    h1 { font-size: 1.6rem; font-weight: 700; margin-bottom: 4px; }
+    .tagline { color: var(--sub); font-size: 0.95rem; }
+    .container { max-width: 680px; margin: 0 auto; }
+    section { margin-bottom: 32px; }
+    h2 {
+      font-size: 1.1rem; font-weight: 700;
+      border-left: 4px solid var(--accent);
+      padding-left: 10px;
+      margin-bottom: 14px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .faq-item { padding: 16px 20px; border-bottom: 1px solid var(--border); }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q { font-weight: 600; margin-bottom: 6px; }
+    .faq-a { color: var(--sub); font-size: 0.9rem; }
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 12px;
+    }
+    .feature-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+    }
+    .feature-icon { font-size: 1.6rem; margin-bottom: 6px; }
+    .feature-title { font-weight: 600; font-size: 0.9rem; margin-bottom: 4px; }
+    .feature-desc { color: var(--sub); font-size: 0.82rem; }
+    .contact-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+    }
+    .contact-card p { color: var(--sub); font-size: 0.9rem; margin-bottom: 12px; }
+    .contact-card a {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      padding: 8px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+    footer {
+      text-align: center;
+      color: var(--sub);
+      font-size: 0.8rem;
+      margin-top: 48px;
+    }
+    footer a { color: var(--sub); }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="icon">🧮</div>
+      <h1>memo calculator custom</h1>
+      <p class="tagline">計算結果をそのままメモに残せる電卓アプリ</p>
+    </header>
+
+    <section>
+      <h2>機能紹介</h2>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="feature-icon">📝</div>
+          <div class="feature-title">ドラッグ＆ドロップメモ</div>
+          <div class="feature-desc">計算結果を直接メモゾーンにドロップして保存</div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🎛️</div>
+          <div class="feature-title">カスタムグリッド</div>
+          <div class="feature-desc">ボタン配置・サイズ・グリッド列数を自由に編集</div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🎨</div>
+          <div class="feature-title">テーマ設定</div>
+          <div class="feature-desc">カラーテーマ・ライト/ダークモードに対応</div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🔒</div>
+          <div class="feature-title">完全ローカル保存</div>
+          <div class="feature-desc">データはすべて端末内に保存。クラウド不使用</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>よくある質問</h2>
+      <div class="card">
+        <div class="faq-item">
+          <div class="faq-q">Q. 計算結果をメモに保存するには？</div>
+          <div class="faq-a">A. 「＝」ボタンを長押しするとドラッグが始まります。そのままメモゾーン（上部エリア）にドロップすると結果が保存されます。</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Q. メモにコメントを追加するには？</div>
+          <div class="faq-a">A. メモのチップをダブルタップするとメモ入力モードになります。テキストを入力してチェックボタンを押すか、キーボードの完了を押すと保存されます。</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Q. ボタンの配置を変えるには？</div>
+          <div class="faq-a">A. 電卓画面右上のグリッドアイコンをタップするとボタン配置エディタが開きます。ボタンのドラッグや、タップでボタン種類の変更ができます。</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Q. データはバックアップされますか？</div>
+          <div class="faq-a">A. データはiCloudバックアップの対象に含まれます（iCloudバックアップが有効な場合）。ただし、端末をリセットする前にバックアップをお取りください。</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Q. 広告を非表示にするには？</div>
+          <div class="faq-a">A. 設定画面の「プレミアムにアップグレード」から300円の買い切り購入をすると広告が非表示になります。</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Q. 購入を別の端末に引き継ぐには？</div>
+          <div class="faq-a">A. 設定画面のプレミアム購入画面から「購入を復元」をタップしてください。同じApple IDでサインインした端末で復元できます。</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>お問い合わせ</h2>
+      <div class="contact-card">
+        <p>ご不明な点・ご要望・バグ報告などはメールにてお気軽にお問い合わせください。</p>
+        <a href="mailto:nao1648@gmail.com">メールで問い合わせる</a>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 nao22c &nbsp;|&nbsp; <a href="privacy/">プライバシーポリシー</a></p>
+    </footer>
+  </div>
+</body>
+</html>
