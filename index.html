@@ -3,111 +3,133 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Logカレンダー サポート</title>
+  <title>nao22c — App Portfolio</title>
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --accent: #0071e3;
+      --bg: #f5f5f7;
+      --card: #ffffff;
+      --text: #1d1d1f;
+      --sub: #6e6e73;
+      --border: #e0e0e5;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #111;
+        --card: #1c1c1e;
+        --text: #f5f5f7;
+        --sub: #98989d;
+        --border: #333;
+      }
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", sans-serif;
-      background: #F5F5FF;
-      color: #1a1a2e;
-      min-height: 100vh;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
     }
     header {
-      background: linear-gradient(135deg, #6366F1, #8B5CF6);
-      color: white;
-      padding: 48px 24px;
+      background: var(--card);
+      border-bottom: 1px solid var(--border);
+      padding: 48px 24px 36px;
       text-align: center;
     }
-    header h1 { font-size: 2rem; font-weight: 700; margin-bottom: 8px; }
-    header p { font-size: 1rem; opacity: 0.85; }
-    main {
-      max-width: 640px;
-      margin: 40px auto;
-      padding: 0 24px;
-    }
-    .card {
-      background: white;
+    header h1 { font-size: 2rem; font-weight: 700; }
+    header p { color: var(--sub); font-size: 1rem; margin-top: 8px; }
+    .container { max-width: 720px; margin: 48px auto; padding: 0 24px 80px; }
+    h2 { font-size: 1.1rem; font-weight: 700; margin-bottom: 20px; color: var(--sub); letter-spacing: 0.04em; text-transform: uppercase; }
+    .app-grid { display: grid; gap: 16px; }
+    .app-card {
+      background: var(--card);
+      border: 1px solid var(--border);
       border-radius: 16px;
-      padding: 28px;
-      margin-bottom: 20px;
-      box-shadow: 0 2px 12px rgba(99,102,241,0.08);
-    }
-    .card h2 {
-      font-size: 1.1rem;
-      color: #6366F1;
-      margin-bottom: 16px;
+      padding: 20px 24px;
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 20px;
+      text-decoration: none;
+      color: inherit;
+      transition: box-shadow 0.2s;
     }
-    .card p, .card li {
-      font-size: 0.95rem;
-      line-height: 1.7;
-      color: #444;
+    .app-card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+    .app-icon {
+      width: 64px; height: 64px;
+      border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 32px;
+      flex-shrink: 0;
     }
-    .card ul { padding-left: 20px; }
-    a { color: #6366F1; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .contact-btn {
-      display: inline-block;
-      background: linear-gradient(135deg, #6366F1, #8B5CF6);
-      color: white;
-      padding: 12px 28px;
-      border-radius: 50px;
-      font-weight: 600;
-      margin-top: 12px;
+    .app-info { flex: 1; }
+    .app-name { font-size: 1.05rem; font-weight: 700; margin-bottom: 4px; }
+    .app-desc { color: var(--sub); font-size: 0.88rem; }
+    .app-links { display: flex; gap: 8px; margin-top: 10px; flex-wrap: wrap; }
+    .app-links a {
+      font-size: 0.8rem;
+      color: var(--accent);
+      text-decoration: none;
+      padding: 4px 10px;
+      border: 1px solid var(--accent);
+      border-radius: 20px;
     }
+    .app-links a:hover { background: var(--accent); color: #fff; }
     footer {
       text-align: center;
-      padding: 32px 24px;
-      color: #999;
+      color: var(--sub);
       font-size: 0.8rem;
+      margin-top: 60px;
     }
   </style>
 </head>
 <body>
+  <header>
+    <h1>nao22c</h1>
+    <p>iOS App Developer — シンプルで使いやすいアプリを開発しています</p>
+  </header>
 
-<header>
-  <h1>📅 Logカレンダー</h1>
-  <p>カレンダーと日々の記録を、ひとつのアプリで。</p>
-</header>
+  <div class="container">
+    <h2>Apps</h2>
+    <div class="app-grid">
 
-<main>
+      <div class="app-card">
+        <div class="app-icon" style="background: linear-gradient(135deg, #5ac8fa, #007aff);">📅</div>
+        <div class="app-info">
+          <div class="app-name">Log Calendar</div>
+          <div class="app-desc">カレンダー・タスク・ログを一元管理するiOSアプリ</div>
+          <div class="app-links">
+            <a href="log_calendar/">サポート</a>
+            <a href="log_calendar/privacy-policy.html">プライバシーポリシー</a>
+          </div>
+        </div>
+      </div>
 
-  <div class="card">
-    <h2>📬 お問い合わせ</h2>
-    <p>ご不明な点・不具合のご報告はメールにてお気軽にどうぞ。</p>
-    <a class="contact-btn" href="mailto:mediclip20c@gmail.com">mediclip20c@gmail.com</a>
+      <div class="app-card">
+        <div class="app-icon" style="background: linear-gradient(135deg, #f5a623, #f0561e);">🧮</div>
+        <div class="app-info">
+          <div class="app-name">memo calculator custom</div>
+          <div class="app-desc">計算結果をそのままメモに残せる電卓アプリ</div>
+          <div class="app-links">
+            <a href="https://nao22c.github.io/memocal/">サポート</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="app-card">
+        <div class="app-icon" style="background: linear-gradient(135deg, #34c759, #30b350);">📈</div>
+        <div class="app-info">
+          <div class="app-name">株主優待ログ</div>
+          <div class="app-desc">保有株の株主優待情報を一元管理するiOSアプリ</div>
+          <div class="app-links">
+            <a href="https://nao22c.github.io/kabu-log/">サポート</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
   </div>
 
-  <div class="card">
-    <h2>📋 主な機能</h2>
-    <ul>
-      <li>iCloud・Google カレンダーと同期</li>
-      <li>日別タスク管理</li>
-      <li>体重・日記などの LOG 記録</li>
-      <li>ウィジェット対応</li>
-    </ul>
-  </div>
-
-  <div class="card">
-    <h2>🔒 プライバシーと利用規約</h2>
-    <p>
-      <a href="https://climbing-thrush-d9c.notion.site/361539bc4e38808f9a6eda9faafaf972" target="_blank">
-        プライバシーポリシー
-      </a>
-      　／
-      <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank">
-        利用規約（EULA）
-      </a>
-    </p>
-  </div>
-
-</main>
-
-<footer>
-  <p>© 2026 Naoto Sugiyama</p>
-</footer>
-
+  <footer>
+    <p>&copy; 2026 nao22c &nbsp;|&nbsp; <a href="mailto:nao1648@gmail.com" style="color: var(--sub);">nao1648@gmail.com</a></p>
+  </footer>
 </body>
 </html>

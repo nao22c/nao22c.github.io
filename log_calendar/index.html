@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Log Calendar — サポート</title>
+  <style>
+    :root {
+      --accent: #007aff;
+      --bg: #f5f5f7;
+      --card: #ffffff;
+      --text: #1d1d1f;
+      --sub: #6e6e73;
+      --border: #e0e0e5;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #111;
+        --card: #1c1c1e;
+        --text: #f5f5f7;
+        --sub: #98989d;
+        --border: #333;
+      }
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      padding: 0 16px 60px;
+    }
+    header { text-align: center; padding: 52px 0 36px; }
+    .icon {
+      width: 100px; height: 100px;
+      border-radius: 24px;
+      background: linear-gradient(135deg, #5ac8fa, #007aff);
+      display: inline-flex; align-items: center; justify-content: center;
+      font-size: 52px;
+      margin-bottom: 20px;
+      box-shadow: 0 6px 24px rgba(0,122,255,0.3);
+    }
+    h1 { font-size: 1.8rem; font-weight: 700; margin-bottom: 6px; }
+    .tagline { color: var(--sub); font-size: 0.95rem; }
+    .container { max-width: 680px; margin: 0 auto; }
+    section { margin-bottom: 36px; }
+    h2 {
+      font-size: 1.05rem; font-weight: 700;
+      border-left: 4px solid var(--accent);
+      padding-left: 10px;
+      margin-bottom: 16px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+    }
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+      gap: 12px;
+    }
+    .feature-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 18px;
+    }
+    .feature-icon { font-size: 1.8rem; margin-bottom: 8px; }
+    .feature-title { font-weight: 700; font-size: 0.92rem; margin-bottom: 4px; }
+    .feature-desc { color: var(--sub); font-size: 0.83rem; }
+    .faq-item { padding: 18px 20px; border-bottom: 1px solid var(--border); }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q { font-weight: 700; margin-bottom: 6px; }
+    .faq-a { color: var(--sub); font-size: 0.9rem; }
+    .contact-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 24px;
+    }
+    .contact-card p { color: var(--sub); font-size: 0.9rem; margin-bottom: 14px; }
+    .btn {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      padding: 10px 24px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.92rem;
+    }
+    footer {
+      text-align: center;
+      color: var(--sub);
+      font-size: 0.8rem;
+      margin-top: 60px;
+    }
+    footer a { color: var(--sub); }
+    .nav { margin-bottom: 12px; }
+    .nav a { color: var(--accent); text-decoration: none; font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="nav"><a href="../">← すべてのアプリ</a></div>
+
+    <header>
+      <div class="icon">📅</div>
+      <h1>Log Calendar</h1>
+      <p class="tagline">カレンダー・タスク・ログを一元管理するiOSアプリ</p>
+    </header>
+
+    <section>
+      <h2>主な機能</h2>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="feature-icon">📅</div>
+          <div class="feature-title">カレンダー管理</div>
+          <div class="feature-desc">月ビューで予定を一覧表示。下部に予定リストを表示</div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">✅</div>
+          <div class="feature-title">タスク管理</div>
+          <div class="feature-desc">その日の目標・タスクを書き出して、1日を豊かに</div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📖</div>
+          <div class="feature-title">ログ管理</div>
+          <div class="feature-desc">日記・体重・体調など、さまざまな記録を蓄積</div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🔒</div>
+          <div class="feature-title">完全ローカル保存</div>
+          <div class="feature-desc">データはすべて端末内に保存。クラウド不使用</div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🔔</div>
+          <div class="feature-title">リマインダー</div>
+          <div class="feature-desc">大切な予定を通知でお知らせ</div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📱</div>
+          <div class="feature-title">ウィジェット対応</div>
+          <div class="feature-desc">小・中・大サイズのホーム画面ウィジェット</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>よくある質問</h2>
+      <div class="card">
+        <div class="faq-item">
+          <div class="faq-q">Q. データはどこに保存されますか？</div>
+          <div class="faq-a">A. すべてのデータはお使いのiPhone端末内にのみ保存されます。外部サーバーへの送信は行いません。</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Q. ウィジェットを追加するには？</div>
+          <div class="faq-a">A. ホーム画面を長押しして編集モードに入り、「+」ボタンからLog Calendarを選択してください。小・中・大の3サイズから選べます。</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Q. 予定とタスクの違いは？</div>
+          <div class="faq-a">A. 予定は日時が決まっているスケジュールです。タスクはその日にやりたいこと・目標を自由に書き出すものです。</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Q. 広告を非表示にするには？</div>
+          <div class="faq-a">A. 設定画面からプレミアムプランにアップグレードすると広告が非表示になります。</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Q. 購入を別の端末に引き継ぐには？</div>
+          <div class="faq-a">A. 設定画面のプレミアム購入画面から「購入を復元」をタップしてください。同じApple IDの端末で復元できます。</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Q. データをバックアップできますか？</div>
+          <div class="faq-a">A. iCloudバックアップが有効な場合、アプリのデータもバックアップ対象に含まれます。端末のリセット前にバックアップをご確認ください。</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>お問い合わせ</h2>
+      <div class="contact-card">
+        <p>ご不明な点・ご要望・バグ報告などは、以下のメールアドレスまでお気軽にお問い合わせください。</p>
+        <a href="mailto:nao1648@gmail.com" class="btn">メールで問い合わせる</a>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2026 nao22c &nbsp;|&nbsp; <a href="privacy-policy.html">プライバシーポリシー</a> &nbsp;|&nbsp; <a href="../">すべてのアプリ</a></p>
+    </footer>
+  </div>
+</body>
+</html>
