@@ -2,11 +2,15 @@
 
 Personal GitHub Pages site for nao22c iOS apps.
 
-## Pages
+## このページの運用方法
 
-- `/` — App portfolio (personal page)
-- `/log_calendar/` — Log Calendar support page
-- `/log_calendar/privacy-policy.html` — Log Calendar privacy policy
+アプリ開発における個人ページです。
+アプリをリリースする段階でプロジェクトフォルダを作成し、サポートURL、プライバシーポリシーを管理します。
+
+## app-ads.txt
+google.com, pub-3619121092308241, DIRECT, f08c47fec0942fa0
+このページをマーケティングURLとして機能させます。
+app-ads.txtがgoogleに認識されるようにリポジトリの直下におきます。
 
 ## Setup
 
