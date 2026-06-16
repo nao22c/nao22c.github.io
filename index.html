@@ -1,334 +1,314 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>naoto — iOS App Developer</title>
-  <style>
-    :root {
-      --accent: #0a84ff;
-      --accent2: #bf5af2;
-      --bg: #0a0a0f;
-      --surface: rgba(255,255,255,0.05);
-      --surface-hover: rgba(255,255,255,0.09);
-      --border: rgba(255,255,255,0.1);
-      --text: #f5f5f7;
-      --sub: rgba(255,255,255,0.5);
-    }
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>naoto — iOS App Developer</title>
+        <style>
+            :root {
+                --accent: #007aff;
+                --bg: #f5f5f7;
+                --card-bg: #ffffff;
+                --text: #1d1d1f;
+                --sub: #6e6e73;
+                --border: rgba(0, 0, 0, 0.08);
+                --shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
 
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-      min-height: 100vh;
-    }
+            body {
+                font-family:
+                    -apple-system, BlinkMacSystemFont, "Hiragino Sans",
+                    "Hiragino Kaku Gothic ProN", sans-serif;
+                background: var(--bg);
+                color: var(--text);
+                line-height: 1.6;
+                min-height: 100vh;
+            }
 
-    /* ── Hero ── */
-    .hero {
-      position: relative;
-      overflow: hidden;
-      padding: 120px 24px 100px;
-      text-align: center;
-    }
+            /* ── Hero ── */
+            .hero {
+                position: relative;
+                overflow: hidden;
+                padding: 100px 24px 80px;
+                text-align: center;
+                background: #fff;
+            }
 
-    .hero-bg {
-      position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(ellipse 80% 60% at 50% -10%, rgba(10,132,255,0.25) 0%, transparent 70%),
-        radial-gradient(ellipse 50% 40% at 80% 80%, rgba(191,90,242,0.15) 0%, transparent 60%),
-        radial-gradient(ellipse 40% 30% at 10% 70%, rgba(10,132,255,0.1) 0%, transparent 60%);
-      z-index: 0;
-    }
+            .hero-bg {
+                position: absolute;
+                inset: 0;
+                background:
+                    radial-gradient(
+                        ellipse 80% 60% at 50% -10%,
+                        rgba(0, 122, 255, 0.05) 0%,
+                        transparent 70%
+                    ),
+                    radial-gradient(
+                        ellipse 50% 40% at 80% 80%,
+                        rgba(0, 122, 255, 0.03) 0%,
+                        transparent 60%
+                    );
+                z-index: 0;
+            }
 
-    .hero-grid {
-      position: absolute;
-      inset: 0;
-      background-image:
-        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
-      background-size: 60px 60px;
-      z-index: 0;
-    }
+            .hero-content {
+                position: relative;
+                z-index: 1;
+            }
 
-    .hero-content {
-      position: relative;
-      z-index: 1;
-    }
+            .hero-badge {
+                display: inline-flex;
+                align-items: center;
+                gap: 6px;
+                background: rgba(0, 122, 255, 0.05);
+                border: 1px solid rgba(0, 122, 255, 0.1);
+                border-radius: 100px;
+                padding: 6px 14px;
+                font-size: 0.78rem;
+                color: var(--accent);
+                letter-spacing: 0.06em;
+                text-transform: uppercase;
+                margin-bottom: 24px;
+            }
 
-    .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: rgba(10,132,255,0.15);
-      border: 1px solid rgba(10,132,255,0.3);
-      border-radius: 100px;
-      padding: 6px 14px;
-      font-size: 0.78rem;
-      color: var(--accent);
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      margin-bottom: 28px;
-    }
+            .hero-badge::before {
+                content: "";
+                width: 6px;
+                height: 6px;
+                background: var(--accent);
+                border-radius: 50%;
+                box-shadow: 0 0 6px var(--accent);
+            }
 
-    .hero-badge::before {
-      content: '';
-      width: 6px; height: 6px;
-      background: var(--accent);
-      border-radius: 50%;
-      box-shadow: 0 0 6px var(--accent);
-      animation: pulse 2s ease-in-out infinite;
-    }
+            .hero h1 {
+                font-size: clamp(2.5rem, 8vw, 4.5rem);
+                font-weight: 800;
+                letter-spacing: -0.03em;
+                line-height: 1.1;
+                color: var(--text);
+                margin-bottom: 20px;
+            }
 
-    @keyframes pulse {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.4; }
-    }
+            .hero p {
+                font-size: 1.1rem;
+                color: var(--sub);
+                max-width: 460px;
+                margin: 0 auto;
+            }
 
-    .hero h1 {
-      font-size: clamp(3rem, 8vw, 5.5rem);
-      font-weight: 800;
-      letter-spacing: -0.03em;
-      line-height: 1.1;
-      background: linear-gradient(135deg, #ffffff 0%, rgba(255,255,255,0.65) 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      margin-bottom: 20px;
-    }
+            /* ── Section ── */
+            .section {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 48px 24px 100px;
+            }
 
-    .hero p {
-      font-size: 1.1rem;
-      color: var(--sub);
-      max-width: 460px;
-      margin: 0 auto;
-    }
+            .section-label {
+                font-size: 0.72rem;
+                font-weight: 700;
+                letter-spacing: 0.12em;
+                text-transform: uppercase;
+                color: var(--sub);
+                margin-bottom: 24px;
+                display: flex;
+                align-items: center;
+                gap: 12px;
+            }
 
-    /* ── Section ── */
-    .section {
-      max-width: 760px;
-      margin: 0 auto;
-      padding: 0 24px 100px;
-    }
+            .section-label::after {
+                content: "";
+                flex: 1;
+                height: 1px;
+                background: var(--border);
+            }
 
-    .section-label {
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--sub);
-      margin-bottom: 24px;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
+            /* ── App Grid ── */
+            .app-grid {
+                display: grid;
+                gap: 16px;
+            }
 
-    .section-label::after {
-      content: '';
-      flex: 1;
-      height: 1px;
-      background: var(--border);
-    }
+            .app-card {
+                background: var(--card-bg);
+                border: 1px solid var(--border);
+                border-radius: 22px;
+                padding: 24px;
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                text-decoration: none;
+                color: inherit;
+                transition:
+                    transform 0.2s,
+                    box-shadow 0.2s;
+                box-shadow: var(--shadow);
+            }
 
-    /* ── App Grid ── */
-    .app-grid {
-      display: grid;
-      gap: 12px;
-    }
+            .app-card:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+            }
 
-    .app-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 22px 24px;
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      text-decoration: none;
-      color: inherit;
-      transition: background 0.2s, border-color 0.2s, transform 0.2s;
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-    }
+            .app-icon {
+                width: 72px;
+                height: 72px;
+                border-radius: 16px;
+                object-fit: cover;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+                flex-shrink: 0;
+            }
 
-    .app-card:hover {
-      background: var(--surface-hover);
-      border-color: rgba(255,255,255,0.18);
-      transform: translateY(-2px);
-    }
+            .app-info {
+                flex: 1;
+                min-width: 0;
+            }
 
-    .app-icon {
-      width: 68px; height: 68px;
-      border-radius: 16px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 30px;
-      flex-shrink: 0;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.4);
-    }
+            .app-name {
+                font-size: 1.1rem;
+                font-weight: 700;
+                margin-bottom: 4px;
+                color: var(--text);
+            }
 
-    .app-info { flex: 1; min-width: 0; }
+            .app-desc {
+                color: var(--sub);
+                font-size: 0.88rem;
+            }
 
-    .app-name {
-      font-size: 1rem;
-      font-weight: 700;
-      margin-bottom: 3px;
-      color: var(--text);
-    }
+            .app-arrow {
+                color: #c7c7cc;
+                font-size: 1.2rem;
+                flex-shrink: 0;
+                transition:
+                    transform 0.2s,
+                    color 0.2s;
+            }
 
-    .app-desc {
-      color: var(--sub);
-      font-size: 0.84rem;
-      margin-bottom: 12px;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
+            .app-card:hover .app-arrow {
+                transform: translateX(3px);
+                color: var(--accent);
+            }
 
-    .app-links {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-    }
+            /* ── Footer ── */
+            footer {
+                border-top: 1px solid var(--border);
+                padding: 48px 24px;
+                text-align: center;
+                color: var(--sub);
+                font-size: 0.8rem;
+            }
 
-    .app-links a {
-      font-size: 0.75rem;
-      color: rgba(255,255,255,0.6);
-      text-decoration: none;
-      padding: 4px 12px;
-      background: rgba(255,255,255,0.07);
-      border: 1px solid rgba(255,255,255,0.1);
-      border-radius: 100px;
-      transition: background 0.15s, color 0.15s;
-    }
+            footer a {
+                color: var(--sub);
+                text-decoration: none;
+                transition: color 0.15s;
+            }
 
-    .app-links a:hover {
-      background: rgba(255,255,255,0.14);
-      color: var(--text);
-    }
+            footer a:hover {
+                color: var(--accent);
+            }
 
-    .app-arrow {
-      color: var(--sub);
-      font-size: 1.1rem;
-      flex-shrink: 0;
-      transition: transform 0.2s, color 0.2s;
-    }
+            .footer-links {
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+                flex-wrap: wrap;
+            }
 
-    .app-card:hover .app-arrow {
-      transform: translateX(3px);
-      color: var(--text);
-    }
-
-    /* ── Footer ── */
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 32px 24px;
-      text-align: center;
-      color: var(--sub);
-      font-size: 0.78rem;
-    }
-
-    footer a {
-      color: var(--sub);
-      text-decoration: none;
-      transition: color 0.15s;
-    }
-
-    footer a:hover { color: var(--text); }
-
-    .footer-links {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-    .divider { opacity: 0.3; }
-  </style>
-</head>
-<body>
-
-  <div class="hero">
-    <div class="hero-bg"></div>
-    <div class="hero-grid"></div>
-    <div class="hero-content">
-      <div class="hero-badge">iOS App Developer</div>
-      <h1>naoto</h1>
-      <p>シンプルで使いやすい<br>iOSアプリを開発しています</p>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="section-label">Apps</div>
-    <div class="app-grid">
-
-      <div class="app-card">
-        <div class="app-icon" style="background: linear-gradient(145deg, #5ac8fa, #007aff);">📅</div>
-        <div class="app-info">
-          <div class="app-name">Log Calendar</div>
-          <div class="app-desc">カレンダー・タスク・ログを一元管理するiOSアプリ</div>
-          <div class="app-links">
-            <a href="log_calendar/">サポート</a>
-            <a href="log_calendar/privacy-policy.html">プライバシーポリシー</a>
-          </div>
+            .divider {
+                opacity: 0.3;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="hero">
+            <div class="hero-bg"></div>
+            <div class="hero-content">
+                <div class="hero-badge">iOS App Developer</div>
+                <h1>naoto</h1>
+                <p>シンプルで心地よい<br />iOSアプリを開発しています</p>
+            </div>
         </div>
-        <div class="app-arrow">›</div>
-      </div>
 
-      <div class="app-card">
-        <div class="app-icon" style="background: linear-gradient(145deg, #f5a623, #f0561e);">🧮</div>
-        <div class="app-info">
-          <div class="app-name">Note Dentaku</div>
-          <div class="app-desc">計算結果をそのままメモに残せる電卓アプリ</div>
-          <div class="app-links">
-            <a href="memocal/">サポート</a>
-            <a href="memocal/privacy/">プライバシーポリシー</a>
-          </div>
+        <div class="section">
+            <div class="section-label">Apps</div>
+            <div class="app-grid">
+                <a href="log_calendar/" class="app-card">
+                    <img
+                        src="log_calendar/Log_Calendar icon.png"
+                        class="app-icon"
+                        alt="Log Calendar"
+                    />
+                    <div class="app-info">
+                        <div class="app-name">Log Calendar</div>
+                        <div class="app-desc">
+                            カレンダー・タスク・ログを一元管理
+                        </div>
+                    </div>
+                    <div class="app-arrow">›</div>
+                </a>
+
+                <a href="memocal/" class="app-card">
+                    <img
+                        src="memocal/memocal icon.png"
+                        class="app-icon"
+                        alt="Note Dentaku"
+                    />
+                    <div class="app-info">
+                        <div class="app-name">Note Dentaku</div>
+                        <div class="app-desc">
+                            計算結果をそのままメモに残せる電卓
+                        </div>
+                    </div>
+                    <div class="app-arrow">›</div>
+                </a>
+
+                <a href="okusuri/" class="app-card">
+                    <img
+                        src="okusuri/おくすりカレンダー icon.png"
+                        class="app-icon"
+                        alt="おくすりカレンダー"
+                    />
+                    <div class="app-info">
+                        <div class="app-name">おくすりカレンダー</div>
+                        <div class="app-desc">
+                            服薬スケジュールの管理と通知をサポート
+                        </div>
+                    </div>
+                    <div class="app-arrow">›</div>
+                </a>
+
+                <a href="kabu-log/" class="app-card">
+                    <img
+                        src="kabu-log/株主優待ログ.png"
+                        class="app-icon"
+                        alt="株主優待ログ"
+                    />
+                    <div class="app-info">
+                        <div class="app-name">株主優待ログ</div>
+                        <div class="app-desc">
+                            保有株の株主優待情報を一元管理
+                        </div>
+                    </div>
+                    <div class="app-arrow">›</div>
+                </a>
+            </div>
         </div>
-        <div class="app-arrow">›</div>
-      </div>
 
-      <div class="app-card">
-        <div class="app-icon" style="background: linear-gradient(145deg, #ff6b6b, #ee5a24);">💊</div>
-        <div class="app-info">
-          <div class="app-name">服薬チェッカー</div>
-          <div class="app-desc">服薬スケジュールの管理と通知をサポートするiOSアプリ</div>
-          <div class="app-links">
-            <a href="okusuri/support.html">サポート</a>
-            <a href="okusuri/privacy.html">プライバシーポリシー</a>
-          </div>
-        </div>
-        <div class="app-arrow">›</div>
-      </div>
-
-      <div class="app-card">
-        <div class="app-icon" style="background: linear-gradient(145deg, #34c759, #248a3d);">📈</div>
-        <div class="app-info">
-          <div class="app-name">株主優待ログ</div>
-          <div class="app-desc">保有株の株主優待情報を一元管理するiOSアプリ</div>
-          <div class="app-links">
-            <a href="kabu-log/support.html">サポート</a>
-            <a href="kabu-log/privacy-policy.html">プライバシーポリシー</a>
-            <a href="kabu-log/terms.html">利用規約</a>
-          </div>
-        </div>
-        <div class="app-arrow">›</div>
-      </div>
-
-    </div>
-  </div>
-
-  <footer>
-    <div class="footer-links">
-      <span>&copy; 2026 naoto</span>
-      <span class="divider">|</span>
-      <a href="mailto:nao1648@gmail.com">nao1648@gmail.com</a>
-      <span class="divider">|</span>
-      <a href="/app-ads.txt">app-ads.txt</a>
-    </div>
-  </footer>
-
-</body>
+        <footer>
+            <div class="footer-links">
+                <span>&copy; 2026 naoto</span>
+                <span class="divider">|</span>
+                <a href="mailto:nao1648@gmail.com">nao1648@gmail.com</a>
+                <span class="divider">|</span>
+                <a href="/app-ads.txt">app-ads.txt</a>
+            </div>
+        </footer>
+    </body>
 </html>

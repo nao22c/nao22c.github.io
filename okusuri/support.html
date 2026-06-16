@@ -1,90 +1,175 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>サポート | 服薬チェッカー</title>
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Hiragino Sans', sans-serif; background: #f5f5f7; color: #1d1d1f; }
-    header { background: #fff; border-bottom: 1px solid #e0e0e5; padding: 20px 24px; }
-    header h1 { font-size: 20px; font-weight: 700; }
-    header p  { font-size: 13px; color: #6e6e73; margin-top: 4px; }
-    .container { max-width: 680px; margin: 32px auto; padding: 0 24px 60px; }
-    .back { display: inline-block; color: #0071e3; text-decoration: none; font-size: 14px; margin-bottom: 16px; }
-    .card { background: #fff; border-radius: 14px; padding: 24px; margin-bottom: 16px; box-shadow: 0 1px 4px rgba(0,0,0,.06); }
-    .card h2 { font-size: 17px; font-weight: 600; margin-bottom: 14px; }
-    details { border-top: 1px solid #e8e8ed; padding: 14px 0; }
-    details:last-child { border-bottom: 1px solid #e8e8ed; }
-    summary { font-size: 15px; font-weight: 500; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; }
-    summary::after { content: "＋"; font-size: 18px; color: #6e6e73; }
-    details[open] summary::after { content: "－"; }
-    .faq-answer { font-size: 14px; line-height: 1.8; color: #3a3a3c; margin-top: 10px; padding-left: 4px; }
-    .contact-btn { display: inline-block; background: #0071e3; color: #fff; text-decoration: none;
-                   padding: 12px 24px; border-radius: 10px; font-size: 15px; font-weight: 500; margin-top: 8px; }
-    p { font-size: 15px; line-height: 1.7; color: #3a3a3c; }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>サポート</h1>
-    <p>服薬チェッカー</p>
-  </header>
-  <div class="container">
-    <a href="../index.html" class="back">← トップへ戻る</a>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>サポート | おくすりカレンダー</title>
+        <style>
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                font-family:
+                    -apple-system, BlinkMacSystemFont, "Helvetica Neue",
+                    "Hiragino Sans", "Hiragino Kaku Gothic ProN", Arial,
+                    sans-serif;
+                background: #f5f5f7;
+                color: #1d1d1f;
+            }
+            header {
+                background: #fff;
+                border-bottom: 1px solid #e0e0e5;
+                padding: 20px 24px;
+            }
+            header h1 {
+                font-size: 20px;
+                font-weight: 700;
+            }
+            header p {
+                font-size: 13px;
+                color: #6e6e73;
+                margin-top: 4px;
+            }
+            .container {
+                max-width: 680px;
+                margin: 32px auto;
+                padding: 0 24px 60px;
+            }
+            .back {
+                display: inline-block;
+                color: #0071e3;
+                text-decoration: none;
+                font-size: 14px;
+                margin-bottom: 16px;
+            }
+            .card {
+                background: #fff;
+                border-radius: 14px;
+                padding: 24px;
+                margin-bottom: 16px;
+                box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+            }
+            .card h2 {
+                font-size: 17px;
+                font-weight: 600;
+                margin-bottom: 14px;
+            }
+            details {
+                border-top: 1px solid #e8e8ed;
+                padding: 14px 0;
+            }
+            details:last-child {
+                border-bottom: 1px solid #e8e8ed;
+            }
+            summary {
+                font-size: 15px;
+                font-weight: 500;
+                cursor: pointer;
+                list-style: none;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            summary::after {
+                content: "+";
+                font-size: 18px;
+                color: #6e6e73;
+            }
+            details[open] summary::after {
+                content: "−";
+            }
+            .faq-answer {
+                font-size: 14px;
+                line-height: 1.8;
+                color: #3a3a3c;
+                margin-top: 10px;
+                padding-left: 4px;
+            }
+            .contact-btn {
+                display: inline-block;
+                background: #0071e3;
+                color: #fff;
+                text-decoration: none;
+                padding: 12px 24px;
+                border-radius: 10px;
+                font-size: 15px;
+                font-weight: 500;
+                margin-top: 8px;
+            }
+            p {
+                font-size: 15px;
+                line-height: 1.7;
+                color: #3a3a3c;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>サポート</h1>
+            <p>おくすりカレンダー</p>
+        </header>
+        <div class="container">
+            <a href="../index.html" class="back">← トップに戻る</a>
 
-    <div class="card">
-      <h2>よくある質問</h2>
+            <div class="card">
+                <h2>よくあるご質問（FAQ）</h2>
 
-      <details>
-        <summary>薬を追加できません</summary>
-        <p class="faq-answer">
-          ホーム画面右上の「＋」ボタンから薬を追加できます。薬の名前は医薬品データベースから検索するか、手動で入力することもできます。
-        </p>
-      </details>
+                <details>
+                    <summary>薬を追加できません</summary>
+                    <p class="faq-answer">
+                        ホーム画面の右上にある「+」ボタンをタップして薬を追加してください。薬品データベースから名前で検索するか、手動で名前を入力することができます。
+                    </p>
+                </details>
 
-      <details>
-        <summary>通知が届きません</summary>
-        <p class="faq-answer">
-          iPhoneの「設定」→「通知」→「服薬チェッカー」から通知を許可してください。また、設定画面から各薬の通知時刻が正しく設定されているかご確認ください。
-        </p>
-      </details>
+                <details>
+                    <summary>通知が届きません</summary>
+                    <p class="faq-answer">
+                        iPhoneの「設定」→「通知」→「おくすりカレンダー」を開き、通知が許可されているか確認してください。また、アプリ内の設定で各薬の通知時間が正しく設定されているかも確認してください。
+                    </p>
+                </details>
 
-      <details>
-        <summary>服用記録が正しく反映されません</summary>
-        <p class="faq-answer">
-          ホーム画面またはカレンダー画面から服用済みにチェックを入れてください。記録は即座に保存されます。
-        </p>
-      </details>
+                <details>
+                    <summary>服薬ログが正しく更新されません</summary>
+                    <p class="faq-answer">
+                        ホーム画面またはカレンダー画面から、薬を服用済みとしてチェックしてください。タップするとすぐに記録が保存されます。
+                    </p>
+                </details>
 
-      <details>
-        <summary>Webhook通知を設定するには？</summary>
-        <p class="faq-answer">
-          設定画面の「介護者通知」からWebhook URLを入力してください。服用済み・未服用のタイミングで指定のURLへ通知が送信されます。
-        </p>
-      </details>
+                <details>
+                    <summary>Webhook通知の設定方法は？</summary>
+                    <p class="faq-answer">
+                        設定→「見守り通知」からWebhook
+                        URLを入力してください。薬が服用された際、または飲み忘れが発生した際に、指定したURLに通知が送信されます。
+                    </p>
+                </details>
 
-      <details>
-        <summary>データはどこに保存されますか？</summary>
-        <p class="faq-answer">
-          すべてのデータはお使いのiPhone端末内にのみ保存されます。クラウドへのアップロードは行いません。アプリを削除するとデータも削除されますのでご注意ください。
-        </p>
-      </details>
+                <details>
+                    <summary>データはどこに保存されますか？</summary>
+                    <p class="faq-answer">
+                        すべてのデータはお使いのiPhone内にのみ保存されます。クラウドへのアップロードは行われません。アプリをアンインストールすると、すべてのデータが永久に削除されますのでご注意ください。
+                    </p>
+                </details>
 
-      <details>
-        <summary>プレミアムプランとは何ですか？</summary>
-        <p class="faq-answer">
-          無料プランでは登録できる薬の数に制限があります。プレミアムプランにアップグレードすると、登録数が無制限になり広告が非表示になります。設定画面からご購入いただけます。
-        </p>
-      </details>
-    </div>
+                <details>
+                    <summary>プレミアムプランとは何ですか？</summary>
+                    <p class="faq-answer">
+                        無料プランでは登録できる薬の数に制限があります。プレミアムにアップグレードすると、この制限が解除され、すべての広告が非表示になります。設定画面から購入いただけます。
+                    </p>
+                </details>
+            </div>
 
-    <div class="card">
-      <h2>お問い合わせ</h2>
-      <p>上記で解決しない場合は、以下のメールアドレスまでお気軽にご連絡ください。内容を確認のうえ、できる限り早くご返答いたします。</p>
-      <br>
-      <a href="mailto:nao1648@gmail.com" class="contact-btn">メールでお問い合わせ</a>
-    </div>
-  </div>
-</body>
+            <div class="card">
+                <h2>お問い合わせ</h2>
+                <p>
+                    上記で解決しない場合は、お気軽にメールでお問い合わせください。順次回答させていただきます。
+                </p>
+                <br />
+                <a href="mailto:nao1648@gmail.com" class="contact-btn"
+                    >メールでお問い合わせ</a
+                >
+            </div>
+        </div>
+    </body>
 </html>

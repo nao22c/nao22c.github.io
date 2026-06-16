@@ -1,183 +1,221 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>memo calculator custom — サポート</title>
-  <style>
-    :root {
-      --accent: #f5a623;
-      --bg: #f9f9f9;
-      --card: #ffffff;
-      --text: #1a1a1a;
-      --sub: #666;
-      --border: #e5e5e5;
-    }
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #111;
-        --card: #1e1e1e;
-        --text: #f0f0f0;
-        --sub: #999;
-        --border: #333;
-      }
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.7;
-      padding: 0 16px 48px;
-    }
-    header {
-      text-align: center;
-      padding: 48px 0 32px;
-    }
-    .icon {
-      width: 96px; height: 96px;
-      border-radius: 22px;
-      background: linear-gradient(135deg, #f5a623, #f0561e);
-      display: inline-flex; align-items: center; justify-content: center;
-      font-size: 48px;
-      margin-bottom: 16px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.15);
-    }
-    h1 { font-size: 1.6rem; font-weight: 700; margin-bottom: 4px; }
-    .tagline { color: var(--sub); font-size: 0.95rem; }
-    .container { max-width: 680px; margin: 0 auto; }
-    section { margin-bottom: 32px; }
-    h2 {
-      font-size: 1.1rem; font-weight: 700;
-      border-left: 4px solid var(--accent);
-      padding-left: 10px;
-      margin-bottom: 14px;
-    }
-    .card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      overflow: hidden;
-    }
-    .faq-item { padding: 16px 20px; border-bottom: 1px solid var(--border); }
-    .faq-item:last-child { border-bottom: none; }
-    .faq-q { font-weight: 600; margin-bottom: 6px; }
-    .faq-a { color: var(--sub); font-size: 0.9rem; }
-    .feature-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      gap: 12px;
-    }
-    .feature-card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 16px;
-    }
-    .feature-icon { font-size: 1.6rem; margin-bottom: 6px; }
-    .feature-title { font-weight: 600; font-size: 0.9rem; margin-bottom: 4px; }
-    .feature-desc { color: var(--sub); font-size: 0.82rem; }
-    .contact-card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 20px;
-    }
-    .contact-card p { color: var(--sub); font-size: 0.9rem; margin-bottom: 12px; }
-    .contact-card a {
-      display: inline-block;
-      background: var(--accent);
-      color: #fff;
-      padding: 8px 20px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 0.9rem;
-    }
-    footer {
-      text-align: center;
-      color: var(--sub);
-      font-size: 0.8rem;
-      margin-top: 48px;
-    }
-    footer a { color: var(--sub); }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <header>
-      <div class="icon">🧮</div>
-      <h1>memo calculator custom</h1>
-      <p class="tagline">計算結果をそのままメモに残せる電卓アプリ</p>
-    </header>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Note Dentaku — 計算結果をそのままメモに残せる電卓</title>
+        <style>
+            :root {
+                --accent: #f5a623;
+                --bg: #f5f5f7;
+                --card: #ffffff;
+                --text: #1d1d1f;
+                --sub: #6e6e73;
+                --border: rgba(0, 0, 0, 0.08);
+            }
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                font-family:
+                    -apple-system, BlinkMacSystemFont, "Hiragino Sans",
+                    "Hiragino Kaku Gothic ProN", sans-serif;
+                background: var(--bg);
+                color: var(--text);
+                line-height: 1.7;
+                padding: 0 16px 60px;
+            }
+            header {
+                text-align: center;
+                padding: 60px 0 40px;
+            }
+            .icon {
+                width: 110px;
+                height: 110px;
+                border-radius: 24px;
+                object-fit: cover;
+                margin-bottom: 24px;
+                box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+            }
+            h1 {
+                font-size: 2rem;
+                font-weight: 800;
+                margin-bottom: 8px;
+            }
+            .tagline {
+                color: var(--sub);
+                font-size: 1rem;
+                max-width: 500px;
+                margin: 0 auto;
+            }
+            .container {
+                max-width: 680px;
+                margin: 0 auto;
+            }
+            .nav {
+                padding: 20px 0;
+            }
+            .nav a {
+                color: #007aff;
+                text-decoration: none;
+                font-size: 0.95rem;
+            }
 
-    <section>
-      <h2>機能紹介</h2>
-      <div class="feature-grid">
-        <div class="feature-card">
-          <div class="feature-icon">📝</div>
-          <div class="feature-title">ドラッグ＆ドロップメモ</div>
-          <div class="feature-desc">計算結果を直接メモゾーンにドロップして保存</div>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">🎛️</div>
-          <div class="feature-title">カスタムグリッド</div>
-          <div class="feature-desc">ボタン配置・サイズ・グリッド列数を自由に編集</div>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">🎨</div>
-          <div class="feature-title">テーマ設定</div>
-          <div class="feature-desc">カラーテーマ・ライト/ダークモードに対応</div>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">🔒</div>
-          <div class="feature-title">完全ローカル保存</div>
-          <div class="feature-desc">データはすべて端末内に保存。クラウド不使用</div>
-        </div>
-      </div>
-    </section>
+            section {
+                margin-bottom: 48px;
+            }
+            h2 {
+                font-size: 1.2rem;
+                font-weight: 700;
+                margin-bottom: 20px;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+            h2::before {
+                content: "";
+                width: 4px;
+                height: 20px;
+                background: var(--accent);
+                border-radius: 4px;
+            }
 
-    <section>
-      <h2>よくある質問</h2>
-      <div class="card">
-        <div class="faq-item">
-          <div class="faq-q">Q. 計算結果をメモに保存するには？</div>
-          <div class="faq-a">A. 「＝」ボタンを長押しするとドラッグが始まります。そのままメモゾーン（上部エリア）にドロップすると結果が保存されます。</div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-q">Q. メモにコメントを追加するには？</div>
-          <div class="faq-a">A. メモのチップをダブルタップするとメモ入力モードになります。テキストを入力してチェックボタンを押すか、キーボードの完了を押すと保存されます。</div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-q">Q. ボタンの配置を変えるには？</div>
-          <div class="faq-a">A. 電卓画面右上のグリッドアイコンをタップするとボタン配置エディタが開きます。ボタンのドラッグや、タップでボタン種類の変更ができます。</div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-q">Q. データはバックアップされますか？</div>
-          <div class="faq-a">A. データはiCloudバックアップの対象に含まれます（iCloudバックアップが有効な場合）。ただし、端末をリセットする前にバックアップをお取りください。</div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-q">Q. 広告を非表示にするには？</div>
-          <div class="faq-a">A. 設定画面の「プレミアムにアップグレード」から300円の買い切り購入をすると広告が非表示になります。</div>
-        </div>
-        <div class="faq-item">
-          <div class="faq-q">Q. 購入を別の端末に引き継ぐには？</div>
-          <div class="faq-a">A. 設定画面のプレミアム購入画面から「購入を復元」をタップしてください。同じApple IDでサインインした端末で復元できます。</div>
-        </div>
-      </div>
-    </section>
+            .feature-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+                gap: 16px;
+            }
+            .feature-card {
+                background: var(--card);
+                border: 1px solid var(--border);
+                border-radius: 18px;
+                padding: 24px;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+            }
+            .feature-title {
+                font-weight: 700;
+                font-size: 1rem;
+                margin-bottom: 8px;
+            }
+            .feature-desc {
+                color: var(--sub);
+                font-size: 0.9rem;
+            }
 
-    <section>
-      <h2>お問い合わせ</h2>
-      <div class="contact-card">
-        <p>ご不明な点・ご要望・バグ報告などはメールにてお気軽にお問い合わせください。</p>
-        <a href="mailto:nao1648@gmail.com">メールで問い合わせる</a>
-      </div>
-    </section>
+            .card {
+                background: var(--card);
+                border: 1px solid var(--border);
+                border-radius: 18px;
+                padding: 24px;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+            }
+            .links {
+                display: flex;
+                gap: 12px;
+                margin-top: 20px;
+            }
+            .btn {
+                display: inline-block;
+                background: #007aff;
+                color: #fff;
+                padding: 12px 24px;
+                border-radius: 12px;
+                text-decoration: none;
+                font-weight: 600;
+                font-size: 0.95rem;
+                transition: opacity 0.2s;
+            }
+            .btn.secondary {
+                background: #e8e8ed;
+                color: #1d1d1f;
+            }
+            .btn:hover {
+                opacity: 0.8;
+            }
 
-    <footer>
-      <p>&copy; 2025 nao22c &nbsp;|&nbsp; <a href="privacy/">プライバシーポリシー</a></p>
-    </footer>
-  </div>
-</body>
+            footer {
+                text-align: center;
+                color: var(--sub);
+                font-size: 0.85rem;
+                margin-top: 60px;
+                padding-top: 24px;
+                border-top: 1px solid var(--border);
+            }
+            footer a {
+                color: var(--sub);
+                text-decoration: none;
+            }
+            footer a:hover {
+                color: #007aff;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="nav"><a href="../">← 全てのアプリ</a></div>
+
+            <header>
+                <img src="memocal icon.png" class="icon" alt="Note Dentaku" />
+                <h1>Note Dentaku</h1>
+                <p class="tagline">
+                    計算結果をそのままメモに残せる、新しいスタイルの電卓アプリ
+                </p>
+            </header>
+
+            <section>
+                <h2>主な機能</h2>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="feature-title">計算履歴をメモに</div>
+                        <div class="feature-desc">
+                            計算した結果をワンタップでメモエリアに転記。計算の過程を後から振り返ることができます。
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-title">テキスト編集</div>
+                        <div class="feature-desc">
+                            メモエリアには自由にテキストを入力可能。何のための計算だったか、メモを添えて保存できます。
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-title">カテゴリ分け</div>
+                        <div class="feature-desc">
+                            作成したメモはカテゴリごとに整理して保存。必要な時にすぐに見つけ出せます。
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-title">シンプルデザイン</div>
+                        <div class="feature-desc">
+                            余計な機能を削ぎ落とした、直感的で使いやすいインターフェース。
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>サポート</h2>
+                <div class="card">
+                    <p>
+                        アプリの使い方や不具合に関するお問い合わせはこちらから。
+                    </p>
+                    <div class="links">
+                        <a href="mailto:nao1648@gmail.com" class="btn"
+                            >メールでお問い合わせ</a
+                        >
+                        <a href="privacy/" class="btn secondary"
+                            >プライバシーポリシー</a
+                        >
+                    </div>
+                </div>
+            </section>
+
+            <footer>
+                <p>
+                    &copy; 2026 naoto &nbsp;|&nbsp; <a href="../">naoto-apps</a>
+                </p>
+            </footer>
+        </div>
+    </body>
 </html>
