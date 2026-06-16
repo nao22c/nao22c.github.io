@@ -1,150 +1,223 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>おくすりカレンダー — 服薬管理・通知iOSアプリ</title>
-  <style>
-    :root {
-      --accent: #ff6b6b;
-      --bg: #f5f5f7;
-      --card: #ffffff;
-      --text: #1d1d1f;
-      --sub: #6e6e73;
-      --border: rgba(0,0,0,0.08);
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN", sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.7;
-      padding: 0 16px 60px;
-    }
-    header { text-align: center; padding: 60px 0 40px; }
-    .icon {
-      width: 110px; height: 110px;
-      border-radius: 24px;
-      object-fit: cover;
-      margin-bottom: 24px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
-    }
-    h1 { font-size: 2rem; font-weight: 800; margin-bottom: 8px; }
-    .tagline { color: var(--sub); font-size: 1rem; max-width: 500px; margin: 0 auto; }
-    .container { max-width: 680px; margin: 0 auto; }
-    .nav { padding: 20px 0; }
-    .nav a { color: #007aff; text-decoration: none; font-size: 0.95rem; }
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>おくすりカレンダー — 服薬管理・通知iOSアプリ</title>
+        <style>
+            :root {
+                --accent: #ff6b6b;
+                --bg: #f5f5f7;
+                --card: #ffffff;
+                --text: #1d1d1f;
+                --sub: #6e6e73;
+                --border: rgba(0, 0, 0, 0.08);
+            }
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                font-family:
+                    -apple-system, BlinkMacSystemFont, "Hiragino Sans",
+                    "Hiragino Kaku Gothic ProN", sans-serif;
+                background: var(--bg);
+                color: var(--text);
+                line-height: 1.7;
+                padding: 0 16px 60px;
+            }
+            header {
+                text-align: center;
+                padding: 60px 0 40px;
+            }
+            .icon {
+                width: 110px;
+                height: 110px;
+                border-radius: 24px;
+                object-fit: cover;
+                margin-bottom: 24px;
+                box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+            }
+            h1 {
+                font-size: 2rem;
+                font-weight: 800;
+                margin-bottom: 8px;
+            }
+            .tagline {
+                color: var(--sub);
+                font-size: 1rem;
+                max-width: 500px;
+                margin: 0 auto;
+            }
+            .container {
+                max-width: 680px;
+                margin: 0 auto;
+            }
+            .nav {
+                padding: 20px 0;
+            }
+            .nav a {
+                color: #007aff;
+                text-decoration: none;
+                font-size: 0.95rem;
+            }
 
-    section { margin-bottom: 48px; }
-    h2 {
-      font-size: 1.2rem; font-weight: 700;
-      margin-bottom: 20px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    h2::before {
-      content: '';
-      width: 4px; height: 20px;
-      background: var(--accent);
-      border-radius: 4px;
-    }
+            section {
+                margin-bottom: 48px;
+            }
+            h2 {
+                font-size: 1.2rem;
+                font-weight: 700;
+                margin-bottom: 20px;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+            h2::before {
+                content: "";
+                width: 4px;
+                height: 20px;
+                background: var(--accent);
+                border-radius: 4px;
+            }
 
-    .feature-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 16px;
-    }
-    .feature-card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      padding: 24px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.02);
-    }
-    .feature-title { font-weight: 700; font-size: 1rem; margin-bottom: 8px; }
-    .feature-desc { color: var(--sub); font-size: 0.9rem; }
+            .feature-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+                gap: 16px;
+            }
+            .feature-card {
+                background: var(--card);
+                border: 1px solid var(--border);
+                border-radius: 18px;
+                padding: 24px;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+            }
+            .feature-title {
+                font-weight: 700;
+                font-size: 1rem;
+                margin-bottom: 8px;
+            }
+            .feature-desc {
+                color: var(--sub);
+                font-size: 0.9rem;
+            }
 
-    .card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      padding: 24px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.02);
-    }
-    .links { display: flex; gap: 12px; margin-top: 20px; }
-    .btn {
-      display: inline-block;
-      background: #007aff;
-      color: #fff;
-      padding: 12px 24px;
-      border-radius: 12px;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 0.95rem;
-      transition: opacity 0.2s;
-    }
-    .btn.secondary { background: #e8e8ed; color: #1d1d1f; }
-    .btn:hover { opacity: 0.8; }
+            .card {
+                background: var(--card);
+                border: 1px solid var(--border);
+                border-radius: 18px;
+                padding: 24px;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+            }
+            .links {
+                display: flex;
+                gap: 12px;
+                margin-top: 20px;
+            }
+            .btn {
+                display: inline-block;
+                background: #007aff;
+                color: #fff;
+                padding: 12px 24px;
+                border-radius: 12px;
+                text-decoration: none;
+                font-weight: 600;
+                font-size: 0.95rem;
+                transition: opacity 0.2s;
+            }
+            .btn.secondary {
+                background: #e8e8ed;
+                color: #1d1d1f;
+            }
+            .btn:hover {
+                opacity: 0.8;
+            }
 
-    footer {
-      text-align: center;
-      color: var(--sub);
-      font-size: 0.85rem;
-      margin-top: 60px;
-      padding-top: 24px;
-      border-top: 1px solid var(--border);
-    }
-    footer a { color: var(--sub); text-decoration: none; }
-    footer a:hover { color: #007aff; }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <div class="nav"><a href="../">← 全てのアプリ</a></div>
+            footer {
+                text-align: center;
+                color: var(--sub);
+                font-size: 0.85rem;
+                margin-top: 60px;
+                padding-top: 24px;
+                border-top: 1px solid var(--border);
+            }
+            footer a {
+                color: var(--sub);
+                text-decoration: none;
+            }
+            footer a:hover {
+                color: #007aff;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="nav"><a href="../">← 全てのアプリ</a></div>
 
-    <header>
-      <img src="おくすりカレンダー icon.png" class="icon" alt="おくすりカレンダー">
-      <h1>おくすりカレンダー</h1>
-      <p class="tagline">服薬スケジュールの管理と通知をサポートするiOSアプリ</p>
-    </header>
+            <header>
+                <img
+                    src="icon_okusuri.png"
+                    class="icon"
+                    alt="おくすりカレンダー"
+                />
+                <h1>おくすりカレンダー</h1>
+                <p class="tagline">
+                    服薬スケジュールの管理と通知をサポートするiOSアプリ
+                </p>
+            </header>
 
-    <section>
-      <h2>主な機能</h2>
-      <div class="feature-grid">
-        <div class="feature-card">
-          <div class="feature-title">服薬スケジュール管理</div>
-          <div class="feature-desc">薬の名前、服用量、時間を簡単に登録。カレンダー形式で予定を確認できます。</div>
+            <section>
+                <h2>主な機能</h2>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="feature-title">服薬スケジュール管理</div>
+                        <div class="feature-desc">
+                            薬の名前、服用量、時間を簡単に登録。カレンダー形式で予定を確認できます。
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-title">飲み忘れ防止通知</div>
+                        <div class="feature-desc">
+                            設定した時間にプッシュ通知。飲み忘れを防ぎます。
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-title">服薬記録ログ</div>
+                        <div class="feature-desc">
+                            「飲んだ」記録をカレンダーに保存。後から服薬履歴を確認できます。
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-title">見守り通知 (Webhook)</div>
+                        <div class="feature-desc">
+                            服薬状況を家族のLINEやSlackなどに通知。離れた家族も見守れます。
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>サポート</h2>
+                <div class="card">
+                    <p>
+                        アプリの使い方や不具合に関するお問い合わせはこちらから。
+                    </p>
+                    <div class="links">
+                        <a href="support.html" class="btn">サポートページ</a>
+                        <a href="privacy.html" class="btn secondary"
+                            >プライバシーポリシー</a
+                        >
+                    </div>
+                </div>
+            </section>
+
+            <footer>
+                <p>
+                    &copy; 2026 naoto &nbsp;|&nbsp; <a href="../">naoto-apps</a>
+                </p>
+            </footer>
         </div>
-        <div class="feature-card">
-          <div class="feature-title">飲み忘れ防止通知</div>
-          <div class="feature-desc">設定した時間にプッシュ通知。飲み忘れを防ぎます。</div>
-        </div>
-        <div class="feature-card">
-          <div class="feature-title">服薬記録ログ</div>
-          <div class="feature-desc">「飲んだ」記録をカレンダーに保存。後から服薬履歴を確認できます。</div>
-        </div>
-        <div class="feature-card">
-          <div class="feature-title">見守り通知 (Webhook)</div>
-          <div class="feature-desc">服薬状況を家族のLINEやSlackなどに通知。離れた家族も見守れます。</div>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <h2>サポート</h2>
-      <div class="card">
-        <p>アプリの使い方や不具合に関するお問い合わせはこちらから。</p>
-        <div class="links">
-          <a href="support.html" class="btn">サポートページ</a>
-          <a href="privacy.html" class="btn secondary">プライバシーポリシー</a>
-        </div>
-      </div>
-    </section>
-
-    <footer>
-      <p>&copy; 2026 naoto &nbsp;|&nbsp; <a href="../">naoto-apps</a></p>
-    </footer>
-  </div>
-</body>
+    </body>
 </html>
