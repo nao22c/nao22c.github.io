@@ -1,0 +1,786 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Finance Tracker — Real-Time Global Markets</title>
+        <meta name="description" content="Track stocks, crypto, forex, and commodities in real time. Portfolio management, watchlists, home screen widgets, and world market overview — all in one app." />
+        <style>
+            :root {
+                --accent: #4f8ef7;
+                --accent2: #7c3aed;
+                --gold: #ffd700;
+                --bg: #05060e;
+                --bg2: #0a1124;
+                --card: rgba(255, 255, 255, 0.07);
+                --card-border: rgba(255, 255, 255, 0.1);
+                --text: #ffffff;
+                --sub: rgba(255, 255, 255, 0.65);
+                --positive: #00c87a;
+                --negative: #ff4560;
+            }
+
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+                background: var(--bg);
+                color: var(--text);
+                line-height: 1.6;
+                overflow-x: hidden;
+            }
+
+            /* ── Hero ── */
+            .hero {
+                position: relative;
+                min-height: 100vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                padding: 80px 24px 60px;
+                overflow: hidden;
+            }
+
+            .hero-bg {
+                position: absolute;
+                inset: 0;
+                background:
+                    radial-gradient(ellipse 80% 60% at 50% 0%, rgba(79, 142, 247, 0.18) 0%, transparent 60%),
+                    radial-gradient(ellipse 50% 50% at 80% 80%, rgba(124, 58, 237, 0.12) 0%, transparent 55%),
+                    linear-gradient(180deg, #05060e 0%, #0a1124 60%, #0b0a1e 100%);
+                z-index: 0;
+            }
+
+            .hero-grid {
+                position: absolute;
+                inset: 0;
+                background-image:
+                    linear-gradient(rgba(79, 142, 247, 0.04) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(79, 142, 247, 0.04) 1px, transparent 1px);
+                background-size: 40px 40px;
+                z-index: 0;
+            }
+
+            .hero-content {
+                position: relative;
+                z-index: 1;
+                max-width: 640px;
+            }
+
+            .nav-back {
+                position: absolute;
+                top: 24px;
+                left: 24px;
+                z-index: 2;
+            }
+
+            .nav-back a {
+                color: var(--sub);
+                text-decoration: none;
+                font-size: 0.9rem;
+                transition: color 0.2s;
+            }
+
+            .nav-back a:hover {
+                color: var(--accent);
+            }
+
+            .app-icon {
+                width: 120px;
+                height: 120px;
+                border-radius: 28px;
+                object-fit: cover;
+                box-shadow:
+                    0 0 0 1px rgba(79, 142, 247, 0.3),
+                    0 8px 40px rgba(79, 142, 247, 0.25),
+                    0 24px 60px rgba(0, 0, 0, 0.5);
+                margin-bottom: 28px;
+            }
+
+            .badge {
+                display: inline-flex;
+                align-items: center;
+                gap: 6px;
+                background: rgba(79, 142, 247, 0.1);
+                border: 1px solid rgba(79, 142, 247, 0.2);
+                border-radius: 100px;
+                padding: 5px 14px;
+                font-size: 0.72rem;
+                color: var(--accent);
+                letter-spacing: 0.08em;
+                text-transform: uppercase;
+                margin-bottom: 20px;
+            }
+
+            .badge::before {
+                content: "";
+                width: 5px;
+                height: 5px;
+                background: var(--accent);
+                border-radius: 50%;
+                box-shadow: 0 0 6px var(--accent);
+            }
+
+            .hero h1 {
+                font-size: clamp(2.4rem, 8vw, 4rem);
+                font-weight: 800;
+                letter-spacing: -0.03em;
+                line-height: 1.1;
+                margin-bottom: 16px;
+                background: linear-gradient(135deg, #fff 30%, rgba(79, 142, 247, 0.85) 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+            }
+
+            .hero .tagline {
+                font-size: 1.1rem;
+                color: var(--sub);
+                margin-bottom: 36px;
+                line-height: 1.7;
+            }
+
+            .cta-group {
+                display: flex;
+                gap: 12px;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            .btn-primary {
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+                background: linear-gradient(135deg, var(--accent), var(--accent2));
+                color: #fff;
+                padding: 14px 28px;
+                border-radius: 14px;
+                text-decoration: none;
+                font-weight: 700;
+                font-size: 1rem;
+                box-shadow: 0 4px 20px rgba(79, 142, 247, 0.35);
+                transition: transform 0.2s, box-shadow 0.2s;
+            }
+
+            .btn-primary:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 8px 32px rgba(79, 142, 247, 0.45);
+            }
+
+            .btn-secondary {
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+                background: var(--card);
+                border: 1px solid var(--card-border);
+                color: var(--text);
+                padding: 14px 28px;
+                border-radius: 14px;
+                text-decoration: none;
+                font-weight: 600;
+                font-size: 1rem;
+                transition: background 0.2s, transform 0.2s;
+            }
+
+            .btn-secondary:hover {
+                background: rgba(255, 255, 255, 0.12);
+                transform: translateY(-2px);
+            }
+
+            /* ── Ticker bar ── */
+            .ticker-bar {
+                background: rgba(79, 142, 247, 0.06);
+                border-top: 1px solid rgba(79, 142, 247, 0.1);
+                border-bottom: 1px solid rgba(79, 142, 247, 0.1);
+                padding: 12px 0;
+                overflow: hidden;
+                white-space: nowrap;
+            }
+
+            .ticker-track {
+                display: inline-block;
+                animation: ticker 30s linear infinite;
+            }
+
+            .ticker-track span {
+                display: inline-block;
+                padding: 0 32px;
+                font-size: 0.82rem;
+                font-family: monospace;
+                color: var(--sub);
+            }
+
+            .ticker-track span.up { color: var(--positive); }
+            .ticker-track span.down { color: var(--negative); }
+
+            @keyframes ticker {
+                0% { transform: translateX(0); }
+                100% { transform: translateX(-50%); }
+            }
+
+            /* ── Sections ── */
+            .section {
+                max-width: 760px;
+                margin: 0 auto;
+                padding: 80px 24px;
+            }
+
+            .section-label {
+                font-size: 0.7rem;
+                font-weight: 700;
+                letter-spacing: 0.14em;
+                text-transform: uppercase;
+                color: var(--accent);
+                margin-bottom: 12px;
+            }
+
+            .section-title {
+                font-size: clamp(1.6rem, 5vw, 2.4rem);
+                font-weight: 800;
+                letter-spacing: -0.02em;
+                margin-bottom: 16px;
+            }
+
+            .section-desc {
+                color: var(--sub);
+                font-size: 1rem;
+                max-width: 520px;
+                margin-bottom: 48px;
+            }
+
+            /* ── Feature grid ── */
+            .feature-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+                gap: 16px;
+            }
+
+            .feature-card {
+                background: var(--card);
+                border: 1px solid var(--card-border);
+                border-radius: 20px;
+                padding: 28px;
+                transition: border-color 0.2s, transform 0.2s;
+            }
+
+            .feature-card:hover {
+                border-color: rgba(79, 142, 247, 0.3);
+                transform: translateY(-2px);
+            }
+
+            .feature-icon {
+                width: 44px;
+                height: 44px;
+                border-radius: 12px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 1.3rem;
+                margin-bottom: 16px;
+            }
+
+            .feature-title {
+                font-size: 1rem;
+                font-weight: 700;
+                margin-bottom: 8px;
+            }
+
+            .feature-desc {
+                color: var(--sub);
+                font-size: 0.88rem;
+                line-height: 1.6;
+            }
+
+            /* ── Categories ── */
+            .category-row {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-top: 32px;
+            }
+
+            .category-chip {
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+                background: var(--card);
+                border: 1px solid var(--card-border);
+                border-radius: 100px;
+                padding: 8px 16px;
+                font-size: 0.85rem;
+                font-weight: 600;
+            }
+
+            .chip-dot {
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+            }
+
+            /* ── Premium card ── */
+            .premium-card {
+                background: linear-gradient(135deg, rgba(255, 215, 0, 0.06) 0%, rgba(255, 140, 0, 0.04) 100%);
+                border: 1px solid rgba(255, 215, 0, 0.2);
+                border-radius: 24px;
+                padding: 40px;
+                text-align: center;
+            }
+
+            .premium-crown {
+                font-size: 3rem;
+                margin-bottom: 16px;
+                display: block;
+            }
+
+            .premium-title {
+                font-size: 1.5rem;
+                font-weight: 800;
+                margin-bottom: 8px;
+                background: linear-gradient(135deg, var(--gold), #ff8c00);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+            }
+
+            .premium-desc {
+                color: var(--sub);
+                margin-bottom: 32px;
+                font-size: 0.95rem;
+            }
+
+            .plan-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+                gap: 12px;
+                margin-bottom: 28px;
+            }
+
+            .plan-card {
+                background: rgba(255, 255, 255, 0.05);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                border-radius: 16px;
+                padding: 20px 16px;
+                text-align: center;
+            }
+
+            .plan-card.featured {
+                border-color: rgba(255, 215, 0, 0.4);
+                background: rgba(255, 215, 0, 0.06);
+            }
+
+            .plan-badge {
+                display: inline-block;
+                background: var(--gold);
+                color: #000;
+                font-size: 0.65rem;
+                font-weight: 800;
+                letter-spacing: 0.06em;
+                text-transform: uppercase;
+                padding: 3px 10px;
+                border-radius: 100px;
+                margin-bottom: 10px;
+            }
+
+            .plan-name {
+                font-size: 0.85rem;
+                font-weight: 700;
+                margin-bottom: 6px;
+                color: var(--sub);
+            }
+
+            .plan-price {
+                font-size: 1.3rem;
+                font-weight: 800;
+                color: var(--gold);
+                font-variant-numeric: tabular-nums;
+            }
+
+            .plan-note {
+                font-size: 0.75rem;
+                color: var(--sub);
+                margin-top: 4px;
+            }
+
+            .premium-features {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                justify-content: center;
+            }
+
+            .premium-feature {
+                display: inline-flex;
+                align-items: center;
+                gap: 6px;
+                background: rgba(255, 255, 255, 0.05);
+                border: 1px solid rgba(255, 255, 255, 0.08);
+                border-radius: 100px;
+                padding: 6px 14px;
+                font-size: 0.82rem;
+                color: var(--sub);
+            }
+
+            .premium-feature::before {
+                content: "✓";
+                color: var(--positive);
+                font-weight: 700;
+            }
+
+            /* ── Widget section ── */
+            .widget-showcase {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+                gap: 16px;
+                margin-top: 40px;
+            }
+
+            .widget-card {
+                background: var(--card);
+                border: 1px solid var(--card-border);
+                border-radius: 20px;
+                padding: 28px;
+            }
+
+            .widget-preview {
+                background: linear-gradient(135deg, #0a1124, #0b0a1e);
+                border: 1px solid rgba(79, 142, 247, 0.2);
+                border-radius: 14px;
+                padding: 18px;
+                margin-bottom: 16px;
+                font-family: monospace;
+            }
+
+            .widget-ticker {
+                font-size: 0.75rem;
+                color: var(--sub);
+                margin-bottom: 4px;
+            }
+
+            .widget-price {
+                font-size: 1.3rem;
+                font-weight: 800;
+                letter-spacing: -0.02em;
+            }
+
+            .widget-change {
+                font-size: 0.78rem;
+                font-weight: 600;
+                margin-top: 2px;
+            }
+
+            .widget-name {
+                font-size: 0.95rem;
+                font-weight: 700;
+                margin-bottom: 6px;
+            }
+
+            .widget-desc {
+                color: var(--sub);
+                font-size: 0.85rem;
+            }
+
+            /* ── Support ── */
+            .support-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+                gap: 12px;
+            }
+
+            .support-card {
+                background: var(--card);
+                border: 1px solid var(--card-border);
+                border-radius: 18px;
+                padding: 24px;
+                text-decoration: none;
+                color: inherit;
+                transition: border-color 0.2s, transform 0.2s;
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .support-card:hover {
+                border-color: rgba(79, 142, 247, 0.35);
+                transform: translateY(-2px);
+            }
+
+            .support-card .icon { font-size: 1.5rem; }
+            .support-card .title { font-weight: 700; font-size: 0.95rem; }
+            .support-card .desc { color: var(--sub); font-size: 0.82rem; }
+
+            /* ── Divider ── */
+            .divider {
+                height: 1px;
+                background: linear-gradient(90deg, transparent, rgba(79, 142, 247, 0.15), transparent);
+                margin: 0 24px;
+            }
+
+            /* ── Footer ── */
+            footer {
+                padding: 40px 24px;
+                text-align: center;
+                color: var(--sub);
+                font-size: 0.82rem;
+                border-top: 1px solid rgba(255, 255, 255, 0.06);
+            }
+
+            footer a {
+                color: var(--sub);
+                text-decoration: none;
+                transition: color 0.15s;
+            }
+
+            footer a:hover { color: var(--accent); }
+
+            .footer-links {
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+                flex-wrap: wrap;
+                margin-bottom: 12px;
+            }
+
+            @media (max-width: 480px) {
+                .plan-grid { grid-template-columns: 1fr; }
+                .feature-grid { grid-template-columns: 1fr; }
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Back nav -->
+        <div class="nav-back"><a href="../">← All Apps</a></div>
+
+        <!-- Hero -->
+        <section class="hero">
+            <div class="hero-bg"></div>
+            <div class="hero-grid"></div>
+            <div class="hero-content">
+                <img src="icon_finance_tracker.png" class="app-icon" alt="Finance Tracker" />
+                <div class="badge">Available on iPhone</div>
+                <h1>Finance Tracker</h1>
+                <p class="tagline">
+                    Real-time global markets in your pocket.<br />
+                    Stocks · Crypto · Forex · Commodities · Indices
+                </p>
+                <div class="cta-group">
+                    <a href="#" class="btn-primary">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 22 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.1 22C7.78 22.05 6.8 20.68 5.96 19.47C4.25 17 2.94 12.45 4.7 9.39C5.57 7.87 7.13 6.91 8.82 6.88C10.1 6.86 11.32 7.75 12.11 7.75C12.89 7.75 14.37 6.68 15.92 6.84C16.57 6.87 18.39 7.1 19.56 8.82C19.47 8.88 17.39 10.1 17.41 12.63C17.44 15.65 20.06 16.66 20.09 16.67C20.06 16.74 19.67 18.11 18.71 19.5M13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"/></svg>
+                        App Store
+                    </a>
+                    <a href="https://nao22c.github.io/finance-tracker-support/" class="btn-secondary">Support</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ticker bar -->
+        <div class="ticker-bar">
+            <div class="ticker-track">
+                <span class="up">AAPL &nbsp;+1.23%</span>
+                <span class="down">NVDA &nbsp;−0.45%</span>
+                <span class="up">BTC &nbsp;+2.87%</span>
+                <span class="down">EUR/USD &nbsp;−0.12%</span>
+                <span class="up">GOLD &nbsp;+0.56%</span>
+                <span class="up">MSFT &nbsp;+0.91%</span>
+                <span class="down">ETH &nbsp;−1.03%</span>
+                <span class="up">USD/JPY &nbsp;+0.38%</span>
+                <span class="up">SPX &nbsp;+0.74%</span>
+                <span class="down">OIL &nbsp;−0.29%</span>
+                <!-- duplicate for seamless loop -->
+                <span class="up">AAPL &nbsp;+1.23%</span>
+                <span class="down">NVDA &nbsp;−0.45%</span>
+                <span class="up">BTC &nbsp;+2.87%</span>
+                <span class="down">EUR/USD &nbsp;−0.12%</span>
+                <span class="up">GOLD &nbsp;+0.56%</span>
+                <span class="up">MSFT &nbsp;+0.91%</span>
+                <span class="down">ETH &nbsp;−1.03%</span>
+                <span class="up">USD/JPY &nbsp;+0.38%</span>
+                <span class="up">SPX &nbsp;+0.74%</span>
+                <span class="down">OIL &nbsp;−0.29%</span>
+            </div>
+        </div>
+
+        <!-- Features -->
+        <section class="section">
+            <div class="section-label">Features</div>
+            <h2 class="section-title">Everything you need<br />to track the markets</h2>
+            <p class="section-desc">A clean, fast, and powerful app to monitor global financial markets — no account required.</p>
+
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: rgba(79,142,247,0.12);">📈</div>
+                    <div class="feature-title">Real-Time Quotes</div>
+                    <div class="feature-desc">Live prices refreshed every 10–120 seconds. Powered by Yahoo Finance — no API key or login needed.</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: rgba(168,85,247,0.12);">💼</div>
+                    <div class="feature-title">Portfolio Tracker</div>
+                    <div class="feature-desc">Add your holdings with purchase price and quantity. Track total value, gain/loss, and daily change at a glance.</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: rgba(0,200,122,0.12);">⭐</div>
+                    <div class="feature-title">Watchlists</div>
+                    <div class="feature-desc">Organize your favorite symbols into multiple watchlists. Quick-add any ticker from a built-in universe of symbols.</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: rgba(34,228,255,0.12);">🌍</div>
+                    <div class="feature-title">World Market Map</div>
+                    <div class="feature-desc">An interactive world map showing market centers and their session status — see which exchanges are open right now.</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: rgba(255,215,0,0.12);">📊</div>
+                    <div class="feature-title">Price Charts</div>
+                    <div class="feature-desc">View historical price charts for any asset — 1D, 1W, 1M, 1Y, and 5Y ranges with clean line visualization.</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon" style="background: rgba(249,115,22,0.12);">🔔</div>
+                    <div class="feature-title">All Data Local</div>
+                    <div class="feature-desc">Your portfolio and watchlist data stays 100% on your device. No account, no cloud sync, no data collection.</div>
+                </div>
+            </div>
+
+            <!-- Asset categories -->
+            <div class="category-row">
+                <div class="category-chip"><span class="chip-dot" style="background:#4F8EF7;"></span>Stocks</div>
+                <div class="category-chip"><span class="chip-dot" style="background:#F7931A;"></span>Crypto</div>
+                <div class="category-chip"><span class="chip-dot" style="background:#00C9A7;"></span>Forex</div>
+                <div class="category-chip"><span class="chip-dot" style="background:#FFD700;"></span>Commodities</div>
+                <div class="category-chip"><span class="chip-dot" style="background:#A855F7;"></span>Bonds</div>
+                <div class="category-chip"><span class="chip-dot" style="background:#06B6D4;"></span>Indices</div>
+                <div class="category-chip"><span class="chip-dot" style="background:#F97316;"></span>Futures</div>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- Widget section -->
+        <section class="section">
+            <div class="section-label">Widgets</div>
+            <h2 class="section-title">Markets on your<br />home screen</h2>
+            <p class="section-desc">Add Finance Tracker widgets to get live prices without even opening the app.</p>
+
+            <div class="widget-showcase">
+                <div class="widget-card">
+                    <div class="widget-preview">
+                        <div class="widget-ticker">AAPL · Apple Inc.</div>
+                        <div class="widget-price">$193.42</div>
+                        <div class="widget-change" style="color: #00c87a;">▲ +1.23%</div>
+                    </div>
+                    <div class="widget-name">Price Tile</div>
+                    <div class="widget-desc">Displays the current price and daily change for any symbol you choose.</div>
+                </div>
+                <div class="widget-card">
+                    <div class="widget-preview" style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+                        <div>
+                            <div class="widget-ticker" style="font-size:0.65rem;">BTC</div>
+                            <div class="widget-price" style="font-size:1rem;">$67,842</div>
+                            <div class="widget-change" style="color:#00c87a;font-size:0.7rem;">+2.8%</div>
+                        </div>
+                        <div>
+                            <div class="widget-ticker" style="font-size:0.65rem;">ETH</div>
+                            <div class="widget-price" style="font-size:1rem;">$3,512</div>
+                            <div class="widget-change" style="color:#ff4560;font-size:0.7rem;">−1.0%</div>
+                        </div>
+                        <div>
+                            <div class="widget-ticker" style="font-size:0.65rem;">GOLD</div>
+                            <div class="widget-price" style="font-size:1rem;">$2,341</div>
+                            <div class="widget-change" style="color:#00c87a;font-size:0.7rem;">+0.5%</div>
+                        </div>
+                        <div>
+                            <div class="widget-ticker" style="font-size:0.65rem;">SPX</div>
+                            <div class="widget-price" style="font-size:1rem;">5,412</div>
+                            <div class="widget-change" style="color:#00c87a;font-size:0.7rem;">+0.7%</div>
+                        </div>
+                    </div>
+                    <div class="widget-name">Multi-Tile Grid</div>
+                    <div class="widget-desc">Show up to 4 symbols at once in a compact grid widget.</div>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- Premium -->
+        <section class="section">
+            <div class="section-label">Premium</div>
+            <h2 class="section-title">Take it further<br />with Premium</h2>
+            <p class="section-desc">The free version includes ads. Go Premium to remove them and unlock all features.</p>
+
+            <div class="premium-card">
+                <span class="premium-crown">👑</span>
+                <div class="premium-title">Finance Tracker Premium</div>
+                <p class="premium-desc">No ads · Unlimited watchlists · Fast refresh · Detailed charts · Unlimited portfolio</p>
+
+                <div class="plan-grid">
+                    <div class="plan-card">
+                        <div class="plan-name">Monthly</div>
+                        <div class="plan-price">—</div>
+                        <div class="plan-note">Cancel anytime</div>
+                    </div>
+                    <div class="plan-card featured">
+                        <div class="plan-badge">Best Value</div>
+                        <div class="plan-name">Annual</div>
+                        <div class="plan-price">—</div>
+                        <div class="plan-note">Save vs. monthly</div>
+                    </div>
+                    <div class="plan-card">
+                        <div class="plan-name">Lifetime</div>
+                        <div class="plan-price">¥500</div>
+                        <div class="plan-note">One-time purchase</div>
+                    </div>
+                </div>
+
+                <div class="premium-features">
+                    <span class="premium-feature">No Ads</span>
+                    <span class="premium-feature">Unlimited Watchlists</span>
+                    <span class="premium-feature">Detailed Charts</span>
+                    <span class="premium-feature">Fast Refresh (10s)</span>
+                    <span class="premium-feature">Unlimited Portfolio</span>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- Support -->
+        <section class="section">
+            <div class="section-label">Support & Legal</div>
+            <h2 class="section-title">We've got you covered</h2>
+
+            <div class="support-grid">
+                <a href="https://nao22c.github.io/finance-tracker-support/" class="support-card">
+                    <span class="icon">💬</span>
+                    <span class="title">Support</span>
+                    <span class="desc">Questions, feedback, or bug reports</span>
+                </a>
+                <a href="https://nao22c.github.io/finance-tracker-support/privacy.html" class="support-card">
+                    <span class="icon">🔒</span>
+                    <span class="title">Privacy Policy</span>
+                    <span class="desc">How we handle your data</span>
+                </a>
+                <a href="https://nao22c.github.io/finance-tracker-support/terms.html" class="support-card">
+                    <span class="icon">📄</span>
+                    <span class="title">Terms of Service</span>
+                    <span class="desc">Usage terms and conditions</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-links">
+                <span>&copy; 2026 naoto</span>
+                <a href="../">All Apps</a>
+                <a href="https://nao22c.github.io/finance-tracker-support/">Support</a>
+                <a href="https://nao22c.github.io/finance-tracker-support/privacy.html">Privacy</a>
+                <a href="../app-ads.txt">app-ads.txt</a>
+            </div>
+            <p style="margin-top:8px; opacity:0.5;">Data provided by Yahoo Finance. For informational purposes only — not investment advice.</p>
+        </footer>
+    </body>
+</html>
