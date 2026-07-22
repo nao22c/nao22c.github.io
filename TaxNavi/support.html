@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>税金ナビゲーター — サポート</title>
+        <style>
+            :root {
+                --accent: #17a19e;
+                --bg: #f5f5f7;
+                --card: #ffffff;
+                --text: #1d1d1f;
+                --sub: #6e6e73;
+                --border: rgba(0, 0, 0, 0.08);
+            }
+            * { box-sizing: border-box; margin: 0; padding: 0; }
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans",
+                    "Hiragino Kaku Gothic ProN", sans-serif;
+                background: var(--bg);
+                color: var(--text);
+                line-height: 1.7;
+                padding: 0 16px 60px;
+            }
+            .container { max-width: 680px; margin: 0 auto; }
+            .nav { padding: 20px 0; }
+            .nav a { color: #007aff; text-decoration: none; font-size: 0.95rem; }
+            header { text-align: center; padding: 40px 0 32px; }
+            h1 { font-size: 1.8rem; font-weight: 800; margin-bottom: 8px; }
+            .tagline { color: var(--sub); font-size: 0.98rem; }
+            section { margin-bottom: 40px; }
+            h2 {
+                font-size: 1.2rem; font-weight: 700; margin-bottom: 18px;
+                display: flex; align-items: center; gap: 10px;
+            }
+            h2::before {
+                content: ""; width: 4px; height: 20px;
+                background: var(--accent); border-radius: 4px;
+            }
+            .card {
+                background: var(--card); border: 1px solid var(--border);
+                border-radius: 18px; padding: 24px;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+            }
+            .faq-q { font-weight: 700; margin: 18px 0 2px; }
+            .faq-q:first-child { margin-top: 0; }
+            .faq-a { color: var(--sub); font-size: 0.92rem; }
+            .btn {
+                display: inline-block; background: #007aff; color: #fff;
+                padding: 12px 24px; border-radius: 12px; text-decoration: none;
+                font-weight: 600; font-size: 0.95rem; margin-top: 12px;
+            }
+            .btn:hover { opacity: 0.8; }
+            a { color: var(--accent); }
+            footer {
+                text-align: center; color: var(--sub); font-size: 0.85rem;
+                margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--border);
+            }
+            footer a { color: var(--sub); text-decoration: none; }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="nav"><a href="./">← 税金ナビゲーター</a></div>
+
+            <header>
+                <h1>サポート</h1>
+                <p class="tagline">税金ナビゲーター（Tax Navi）</p>
+            </header>
+
+            <section>
+                <h2>よくある質問</h2>
+                <div class="card">
+                    <p class="faq-q">Q. 入力したデータはどこに保存されますか？</p>
+                    <p class="faq-a">A. すべてお使いの端末内に保存されます。開発者が内容を取得することはありません。詳しくは<a href="privacy-policy.html">プライバシーポリシー</a>をご覧ください。</p>
+
+                    <p class="faq-q">Q. 機種変更や再インストールでデータを引き継げますか？</p>
+                    <p class="faq-a">A. 設定画面の「iCloud バックアップ」から、源泉徴収票・給与メモ・固定資産などのデータを iCloud にバックアップ／復元できます。</p>
+
+                    <p class="faq-q">Q. プレミアム（購入）を復元したい</p>
+                    <p class="faq-a">A. 設定画面の「購入を復元」から、同じ Apple ID でのご購入を復元できます。</p>
+
+                    <p class="faq-q">Q. 広告を消したい</p>
+                    <p class="faq-a">A. プレミアムをご購入いただくと、広告なしでご利用いただけます。</p>
+
+                    <p class="faq-q">Q. 計算結果が他サイトと違う</p>
+                    <p class="faq-a">A. 本アプリは令和7年度基準の概算・参考値を目的としており、一部の特例や調整控除を簡略化しています。最終的な税額は税務署・税理士にご確認ください。</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>お問い合わせ</h2>
+                <div class="card">
+                    <p>ご質問・ご要望・不具合のご報告は、下記までお気軽にご連絡ください。</p>
+                    <!-- 公開する連絡先メールに変更してください -->
+                    <a class="btn" href="mailto:nao1648@gmail.com?subject=税金ナビゲーター%20お問い合わせ">メールで問い合わせる</a>
+                </div>
+            </section>
+
+            <footer>
+                <p>&copy; 2026 naoto &nbsp;|&nbsp; <a href="../">naoto-apps</a></p>
+            </footer>
+        </div>
+    </body>
+</html>
