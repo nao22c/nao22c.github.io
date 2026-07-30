@@ -81,26 +81,52 @@
                 background: var(--accent);
                 border-radius: 4px;
             }
+            .category-group {
+                margin-bottom: 32px;
+            }
+            .category-group:last-child {
+                margin-bottom: 0;
+            }
+            .category-title {
+                font-size: 0.85rem;
+                font-weight: 700;
+                color: var(--accent);
+                margin-bottom: 12px;
+                letter-spacing: 0.02em;
+            }
             .feature-grid {
                 display: grid;
-                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-                gap: 16px;
+                grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+                gap: 14px;
             }
             .feature-card {
                 background: var(--card);
                 border: 1px solid var(--border);
                 border-radius: 18px;
-                padding: 24px;
+                padding: 20px 22px;
                 box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
             }
             .feature-title {
                 font-weight: 700;
                 font-size: 1rem;
                 margin-bottom: 8px;
+                display: flex;
+                align-items: center;
+                gap: 8px;
             }
             .feature-desc {
                 color: var(--sub);
                 font-size: 0.9rem;
+            }
+            .premium-badge {
+                display: inline-block;
+                background: #fdf1de;
+                color: #b3690a;
+                font-size: 0.68rem;
+                font-weight: 700;
+                padding: 2px 8px;
+                border-radius: 100px;
+                letter-spacing: 0.02em;
             }
             .card {
                 background: var(--card);
@@ -160,54 +186,126 @@
             <div class="nav"><a href="../">← 全てのアプリ</a></div>
 
             <header>
-                <!-- リリース前に icon_taxnavi.png（アプリアイコン）をこのフォルダに配置してください -->
                 <img src="icon_taxnavi.png" class="icon" alt="税金ナビゲーター" />
                 <h1>税金ナビゲーター</h1>
                 <p class="tagline">
-                    日本の税金を「計算」して、そのしくみまで理解できる iOS アプリ
+                    日本の税金を「計算」して、そのしくみまで理解できる iOS アプリ。給与・控除・相続・副業まで、暮らしとお金にまつわる税金をこれ一つで。
                 </p>
             </header>
 
             <section>
                 <h2>主な機能</h2>
-                <div class="feature-grid">
-                    <div class="feature-card">
-                        <div class="feature-title">所得税・住民税の計算</div>
-                        <div class="feature-desc">
-                            年収や各種控除から税額と手取りを内訳・解説つきで表示。逆算にも対応します。
+
+                <div class="category-group">
+                    <div class="category-title">給与・年末調整</div>
+                    <div class="feature-grid">
+                        <div class="feature-card">
+                            <div class="feature-title">所得税・住民税</div>
+                            <div class="feature-desc">年収や各種控除から税額と手取りを内訳・解説つきで計算。逆算にも対応。</div>
                         </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-title">源泉徴収票の管理</div>
-                        <div class="feature-desc">
-                            手入力または OCR で登録し、年ごとの給与・税金の推移をグラフで確認できます。
+                        <div class="feature-card">
+                            <div class="feature-title">源泉徴収票の登録</div>
+                            <div class="feature-desc">スキャン（OCR）または手入力で登録し、他の計算にそのまま再利用できます。</div>
                         </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-title">ふるさと納税</div>
-                        <div class="feature-desc">
-                            控除上限額をわかりやすくシミュレーション。仕組みもやさしく解説します。
+                        <div class="feature-card">
+                            <div class="feature-title">給与メモ（月次）</div>
+                            <div class="feature-desc">毎月の給与・賞与を記録して、年間合計とグラフで確認できます。</div>
                         </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-title">節税シミュレーション</div>
-                        <div class="feature-desc">
-                            iDeCo・小規模企業共済などの掛金による節税額を試算できます。
+                        <div class="feature-card">
+                            <div class="feature-title">給与の推移 <span class="premium-badge">PREMIUM</span></div>
+                            <div class="feature-desc">給与・税金・負担率が年ごとにどう変わるかをグラフ化します。</div>
                         </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-title">扶養の壁</div>
-                        <div class="feature-desc">
-                            106万・130万などの壁を、世帯目線でシミュレーションできます。
+                        <div class="feature-card">
+                            <div class="feature-title">扶養の壁シミュレーター</div>
+                            <div class="feature-desc">103・106・130・150・201万の壁と「働き損」ゾーンを可視化します。</div>
                         </div>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-title">減価償却・固定資産</div>
-                        <div class="feature-desc">
-                            事業用資産の減価償却を試算し、固定資産台帳として管理できます。
+                        <div class="feature-card">
+                            <div class="feature-title">夫婦の給与配分 <span class="premium-badge">PREMIUM</span></div>
+                            <div class="feature-desc">世帯として最も税負担が少ない給与配分を探索します。</div>
                         </div>
                     </div>
                 </div>
+
+                <div class="category-group">
+                    <div class="category-title">控除・節税</div>
+                    <div class="feature-grid">
+                        <div class="feature-card">
+                            <div class="feature-title">ふるさと納税</div>
+                            <div class="feature-desc">控除上限額と、自己負担2,000円の仕組みをわかりやすく解説します。</div>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-title">掛金で節税</div>
+                            <div class="feature-desc">iDeCo・小規模企業共済・はぐくみ基金で税金と社会保険料がいくら減るか試算。</div>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-title">医療費控除</div>
+                            <div class="feature-desc">医療費控除とセルフメディケーション税制、どちらが有利かを比較できます。</div>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-title">住宅ローン控除</div>
+                            <div class="feature-desc">住宅ローン控除で税金がいくら減るかを試算します。</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="category-group">
+                    <div class="category-title">資産・相続・贈与</div>
+                    <div class="feature-grid">
+                        <div class="feature-card">
+                            <div class="feature-title">相続税 <span class="premium-badge">PREMIUM</span></div>
+                            <div class="feature-desc">法定相続人・生命保険から相続税の負担額を試算します。</div>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-title">贈与税</div>
+                            <div class="feature-desc">暦年課税を、仕組みの解説つきで簡単に計算できます。</div>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-title">固定資産税</div>
+                            <div class="feature-desc">評価額から固定資産税・都市計画税を概算します。</div>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-title">減価償却 <span class="premium-badge">PREMIUM</span></div>
+                            <div class="feature-desc">事業用資産の減価償却を試算し、固定資産として登録・管理できます。</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="category-group">
+                    <div class="category-title">給付金・ライフイベント</div>
+                    <div class="feature-grid">
+                        <div class="feature-card">
+                            <div class="feature-title">育休・産休給付金</div>
+                            <div class="feature-desc">出産手当金・育児休業給付金の受取額を試算します。</div>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-title">退職金の税金</div>
+                            <div class="feature-desc">退職金にかかる税金を試算します。</div>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-title">失業給付（基本手当）</div>
+                            <div class="feature-desc">基本手当の日額と給付日数を試算します。</div>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-title">年金の手取り</div>
+                            <div class="feature-desc">公的年金にかかる税金と手取り額を計算します。</div>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-title">年金の繰上げ・繰下げ</div>
+                            <div class="feature-desc">60〜75歳、受給開始のタイミングでどう変わるかを比較できます。</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="category-group">
+                    <div class="category-title">副業・事業</div>
+                    <div class="feature-grid">
+                        <div class="feature-card">
+                            <div class="feature-title">副業の申告判定</div>
+                            <div class="feature-desc">副業の所得から、確定申告が必要かどうかを判定します。</div>
+                        </div>
+                    </div>
+                </div>
+
                 <p class="note">
                     ※ 計算結果は令和7年度基準の概算・参考値です。正確な税額は税理士・税務署にご確認ください。
                 </p>
