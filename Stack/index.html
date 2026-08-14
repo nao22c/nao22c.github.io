@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Stack — コピーしたものが、ぜんぶ手元に残る</title>
+        <style>
+            :root {
+                --accent: #3b7dd8;
+                --bg: #f5f5f7;
+                --card: #ffffff;
+                --text: #1d1d1f;
+                --sub: #6e6e73;
+                --border: rgba(0, 0, 0, 0.08);
+            }
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                font-family:
+                    -apple-system, BlinkMacSystemFont, "Hiragino Sans",
+                    "Hiragino Kaku Gothic ProN", sans-serif;
+                background: var(--bg);
+                color: var(--text);
+                line-height: 1.7;
+                padding: 0 16px 60px;
+            }
+            .container {
+                max-width: 680px;
+                margin: 0 auto;
+            }
+            header {
+                text-align: center;
+                padding: 60px 0 40px;
+            }
+            .icon {
+                width: 110px;
+                height: 110px;
+                border-radius: 24px;
+                object-fit: cover;
+                margin-bottom: 24px;
+                box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+                background: #e6eefb;
+            }
+            h1 {
+                font-size: 2rem;
+                font-weight: 800;
+                margin-bottom: 8px;
+            }
+            .tagline {
+                color: var(--sub);
+                font-size: 1rem;
+                max-width: 520px;
+                margin: 0 auto;
+            }
+            section {
+                margin-bottom: 32px;
+            }
+            h2 {
+                font-size: 1.15rem;
+                font-weight: 700;
+                margin-bottom: 14px;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+            h2::before {
+                content: "";
+                width: 4px;
+                height: 18px;
+                background: var(--accent);
+                border-radius: 4px;
+            }
+            .card {
+                background: var(--card);
+                border: 1px solid var(--border);
+                border-radius: 14px;
+                padding: 20px 22px;
+            }
+            .features {
+                display: grid;
+                gap: 12px;
+            }
+            .feature {
+                background: var(--card);
+                border: 1px solid var(--border);
+                border-radius: 14px;
+                padding: 16px 18px;
+            }
+            .feature h3 {
+                font-size: 1rem;
+                font-weight: 700;
+                margin-bottom: 4px;
+            }
+            .feature p {
+                color: var(--sub);
+                font-size: 0.92rem;
+            }
+            table.pricing {
+                width: 100%;
+                border-collapse: collapse;
+                font-size: 0.95rem;
+            }
+            table.pricing th,
+            table.pricing td {
+                text-align: left;
+                padding: 10px 4px;
+                border-bottom: 1px solid var(--border);
+            }
+            table.pricing th {
+                color: var(--sub);
+                font-weight: 600;
+            }
+            table.pricing tr:last-child td {
+                border-bottom: none;
+            }
+            a {
+                color: #007aff;
+            }
+            ul {
+                padding-left: 1.2em;
+            }
+            li {
+                margin-bottom: 6px;
+            }
+            .links {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 16px;
+                justify-content: center;
+                padding-top: 8px;
+            }
+            footer {
+                text-align: center;
+                color: var(--sub);
+                font-size: 0.85rem;
+                padding-top: 32px;
+                border-top: 1px solid var(--border);
+                margin-top: 40px;
+            }
+            .lang {
+                color: var(--sub);
+                font-size: 0.85rem;
+                text-align: center;
+                padding: 24px 0 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <img src="icon_stack.png" alt="Stack" class="icon" />
+                <h1>Stack</h1>
+                <p class="tagline">
+                    コピーしたものが、ぜんぶ手元に残る。<br />
+                    macOS のためのクリップボード履歴マネージャー。
+                </p>
+            </header>
+
+            <section>
+                <h2>できること</h2>
+                <div class="features">
+                    <div class="feature">
+                        <h3>コピーを自動で記録</h3>
+                        <p>
+                            テキスト・リンク・画像・ファイルを、コピーするだけで履歴に残します。どのアプリからコピーしたかも一緒に記録されます。
+                        </p>
+                    </div>
+                    <div class="feature">
+                        <h3>どこからでも呼び出す</h3>
+                        <p>
+                            ショートカットキーで画面下（または上）からパネルが開きます。ショートカットは自由に変更できます。
+                        </p>
+                    </div>
+                    <div class="feature">
+                        <h3>フォルダとタグで整理</h3>
+                        <p>
+                            よく使う定型文をフォルダに分け、色付きのタグを付けて分類できます。ドラッグ＆ドロップで移動できます。
+                        </p>
+                    </div>
+                    <div class="feature">
+                        <h3>ロックとゴミ箱</h3>
+                        <p>
+                            大事な項目はロックして削除を防げます。削除した項目はゴミ箱に入るので、うっかり消しても元に戻せます。
+                        </p>
+                    </div>
+                    <div class="feature">
+                        <h3>iCloud で同期</h3>
+                        <p>
+                            履歴はあなたの iCloud を通じて同期されます。データは開発者を経由しません。
+                        </p>
+                    </div>
+                    <div class="feature">
+                        <h3>パスワードは記録しません</h3>
+                        <p>
+                            パスワードマネージャーが「記録しない」と指定した内容は、履歴に残しません。
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>価格</h2>
+                <div class="card">
+                    <p style="margin-bottom: 12px">
+                        <strong>30日間、無料でお試しいただけます。</strong>
+                        お試し期間中はすべての機能が使えます。購入は不要です。
+                    </p>
+                    <table class="pricing">
+                        <tr>
+                            <th>1ヶ月</th>
+                            <td>サブスクリプション</td>
+                        </tr>
+                        <tr>
+                            <th>1年</th>
+                            <td>サブスクリプション</td>
+                        </tr>
+                        <tr>
+                            <th>買い切り</th>
+                            <td>一度の購入でずっと使えます</td>
+                        </tr>
+                    </table>
+                    <p
+                        style="
+                            color: var(--sub);
+                            font-size: 0.85rem;
+                            margin-top: 12px;
+                        "
+                    >
+                        価格はお住まいの国・地域によって異なります。最新の価格は App Store
+                        でご確認ください。お試し期間が終了した後も、保存済みの履歴は引き続き閲覧・書き出しできます。
+                    </p>
+                </div>
+            </section>
+
+            <section>
+                <h2>動作環境</h2>
+                <div class="card">
+                    <ul>
+                        <li>macOS 14.0 以降</li>
+                        <li>同期には iCloud アカウントと iCloud Drive が必要です</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2>お問い合わせ</h2>
+                <div class="card">
+                    <p>
+                        ご質問・不具合のご報告は
+                        <a href="mailto:nao1648@gmail.com">nao1648@gmail.com</a>
+                        までお送りください。数日以内に返信いたします。
+                    </p>
+                </div>
+            </section>
+
+            <div class="links">
+                <a href="support.html">サポート</a>
+                <a href="privacy-policy.html">プライバシーポリシー</a>
+                <a href="terms.html">利用規約</a>
+                <a href="../">他のアプリ</a>
+            </div>
+
+            <p class="lang">
+                English documents are available on the
+                <a href="privacy-policy.html">Privacy Policy</a> and
+                <a href="terms.html">Terms of Use</a> pages.
+            </p>
+
+            <footer>© 2026 nao22c. All rights reserved.</footer>
+        </div>
+    </body>
+</html>
