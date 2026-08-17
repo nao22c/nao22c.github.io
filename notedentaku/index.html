@@ -15,7 +15,7 @@
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Helvetica Neue", sans-serif;
       background: var(--bg);
       color: var(--text);
       line-height: 1.7;
@@ -32,8 +32,19 @@
     h1 { font-size: 2rem; font-weight: 800; margin-bottom: 8px; }
     .tagline { color: var(--sub); font-size: 1rem; max-width: 500px; margin: 0 auto; }
     .container { max-width: 680px; margin: 0 auto; }
-    .nav { padding: 20px 0; }
+    .nav { padding: 20px 0; display: flex; align-items: center; justify-content: space-between; }
     .nav a { color: #007aff; text-decoration: none; font-size: 0.95rem; }
+    .lang-toggle {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      padding: 6px 14px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text);
+      cursor: pointer;
+    }
+    .lang-toggle:hover { opacity: 0.75; }
     section { margin-bottom: 48px; }
     h2 {
       font-size: 1.2rem; font-weight: 700;
@@ -65,7 +76,7 @@
       padding: 24px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.02);
     }
-    .links { display: flex; gap: 12px; margin-top: 20px; }
+    .links { display: flex; gap: 12px; margin-top: 20px; flex-wrap: wrap; }
     .btn {
       display: inline-block;
       background: #007aff; color: #fff;
@@ -75,6 +86,23 @@
     }
     .btn.secondary { background: #e8e8ed; color: #1d1d1f; }
     .btn:hover { opacity: 0.8; }
+    .appstore-cta { text-align: center; padding: 8px 0 4px; }
+    .appstore-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #000;
+      color: #fff;
+      padding: 10px 18px;
+      border-radius: 12px;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+    .appstore-badge:hover { opacity: 0.8; }
+    .appstore-badge svg { width: 22px; height: 22px; flex-shrink: 0; }
+    .appstore-badge .badge-text { display: flex; flex-direction: column; line-height: 1.1; text-align: left; }
+    .appstore-badge .badge-text small { font-size: 0.62rem; }
+    .appstore-badge .badge-text strong { font-size: 1.05rem; font-weight: 600; letter-spacing: -0.01em; }
     footer {
       text-align: center; color: var(--sub);
       font-size: 0.85rem; margin-top: 60px;
@@ -82,46 +110,71 @@
     }
     footer a { color: var(--sub); text-decoration: none; }
     footer a:hover { color: #007aff; }
+    html:not([lang="ja"]) [data-lang="ja"] { display: none; }
+    html[lang="ja"] [data-lang="en"] { display: none; }
   </style>
 </head>
 <body>
   <div class="container">
-    <div class="nav"><a href="../">← All Apps</a></div>
+    <div class="nav">
+      <a href="../">← All Apps</a>
+      <button type="button" class="lang-toggle" id="lang-toggle" onclick="setLang(document.documentElement.lang === 'en' ? 'ja' : 'en')">日本語</button>
+    </div>
 
     <header>
       <img src="../memocal/icon_memocal.png" class="icon" alt="Note Dentaku" onerror="this.style.display='none'">
       <h1>Note Dentaku</h1>
-      <p class="tagline">A new kind of calculator that saves results directly as notes</p>
+      <p class="tagline" data-lang="en">A new kind of calculator that saves results directly as notes</p>
+      <p class="tagline" data-lang="ja">計算結果をそのままメモに残せる、新しいタイプの電卓アプリ</p>
+      <div class="appstore-cta">
+        <a href="https://apps.apple.com/jp/app/note-denkaku/id6778825758" target="_blank" rel="noopener" class="appstore-badge" aria-label="Download on the App Store">
+          <svg viewBox="0 0 384 512" fill="currentColor"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141 4 184.8 4 273.6c0 26.3 4.8 53.5 14.4 81.5 12.8 37.3 59 128.5 107.2 127 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-83.5 102.6-120.9-65.2-30.7-61.7-90-61.7-92.5zM255.7 65.4c26.9-32 24.5-61.2 23.7-71.7-23.8 1.4-51.4 16.4-67.1 34.9-17.3 19.8-27.5 44.4-25.3 71.9 26.3 2 50.3-11.4 68.7-35.1z"/></svg>
+          <span class="badge-text" data-lang="en"><small>Download on the</small><strong>App Store</strong></span>
+          <span class="badge-text" data-lang="ja"><strong>App Store からダウンロード</strong></span>
+        </a>
+      </div>
     </header>
 
     <section>
-      <h2>Features</h2>
+      <h2 data-lang="en">Features</h2>
+      <h2 data-lang="ja">主な機能</h2>
       <div class="feature-grid">
         <div class="feature-card">
-          <div class="feature-title">Save Results to Notes</div>
-          <div class="feature-desc">Transfer calculation results to the note area with one tap. Review your work anytime.</div>
+          <div class="feature-title" data-lang="en">Save Results to Notes</div>
+          <div class="feature-title" data-lang="ja">計算結果をメモに保存</div>
+          <div class="feature-desc" data-lang="en">Transfer calculation results to the note area with one tap. Review your work anytime.</div>
+          <div class="feature-desc" data-lang="ja">ワンタップで計算結果をメモ欄に転記。あとからいつでも見返せます。</div>
         </div>
         <div class="feature-card">
-          <div class="feature-title">Text Editing</div>
-          <div class="feature-desc">Freely add text in the note area — annotate what each calculation was for.</div>
+          <div class="feature-title" data-lang="en">Text Editing</div>
+          <div class="feature-title" data-lang="ja">テキスト編集</div>
+          <div class="feature-desc" data-lang="en">Freely add text in the note area — annotate what each calculation was for.</div>
+          <div class="feature-desc" data-lang="ja">メモ欄に自由にテキストを追加。それぞれの計算が何のためのものか書き添えられます。</div>
         </div>
         <div class="feature-card">
-          <div class="feature-title">Categories</div>
-          <div class="feature-desc">Organize saved notes by category so you can find them quickly when needed.</div>
+          <div class="feature-title" data-lang="en">Categories</div>
+          <div class="feature-title" data-lang="ja">カテゴリ分け</div>
+          <div class="feature-desc" data-lang="en">Organize saved notes by category so you can find them quickly when needed.</div>
+          <div class="feature-desc" data-lang="ja">保存したメモをカテゴリごとに整理。必要なときにすぐ見つけられます。</div>
         </div>
         <div class="feature-card">
-          <div class="feature-title">Simple Design</div>
-          <div class="feature-desc">An intuitive, clutter-free interface focused on what matters.</div>
+          <div class="feature-title" data-lang="en">Simple Design</div>
+          <div class="feature-title" data-lang="ja">シンプルなデザイン</div>
+          <div class="feature-desc" data-lang="en">An intuitive, clutter-free interface focused on what matters.</div>
+          <div class="feature-desc" data-lang="ja">直感的で無駄のないインターフェースで、必要な操作に集中できます。</div>
         </div>
       </div>
     </section>
 
     <section>
-      <h2>Support</h2>
+      <h2 data-lang="en">Support</h2>
+      <h2 data-lang="ja">サポート</h2>
       <div class="card">
-        <p>For questions about the app or to report an issue, please see the Privacy Policy or contact us via the App Store review.</p>
+        <p data-lang="en">For questions about the app or to report an issue, please see the Privacy Policy or contact us via the App Store review.</p>
+        <p data-lang="ja">アプリに関するご質問や不具合の報告は、プライバシーポリシーをご確認いただくか、App Storeのレビュー欄からご連絡ください。</p>
         <div class="links">
-          <a href="privacy/" class="btn secondary">Privacy Policy</a>
+          <a href="privacy/" class="btn secondary" data-lang="en">Privacy Policy</a>
+          <a href="privacy/" class="btn secondary" data-lang="ja">プライバシーポリシー</a>
         </div>
       </div>
     </section>
@@ -130,5 +183,18 @@
       <p>&copy; 2026 naoto &nbsp;|&nbsp; <a href="../">All Apps</a></p>
     </footer>
   </div>
+
+  <script>
+    function setLang(lang) {
+      document.documentElement.lang = lang;
+      document.getElementById('lang-toggle').textContent = lang === 'en' ? '日本語' : 'English';
+      try { localStorage.setItem('notedentaku-lang', lang); } catch (e) {}
+    }
+    (function () {
+      var saved = null;
+      try { saved = localStorage.getItem('notedentaku-lang'); } catch (e) {}
+      if (saved === 'ja') setLang('ja');
+    })();
+  </script>
 </body>
 </html>

@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="ja">
+<html lang="en">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Log Calendar — カレンダー・タスク・ログを一元管理</title>
+        <title>Log Calendar — Calendar, Tasks &amp; Logs in One App</title>
         <style>
             :root {
                 --accent: #007aff;
@@ -56,11 +56,27 @@
             }
             .nav {
                 padding: 20px 0;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
             }
             .nav a {
                 color: #007aff;
                 text-decoration: none;
                 font-size: 0.95rem;
+            }
+            .lang-toggle {
+                background: var(--card);
+                border: 1px solid var(--border);
+                border-radius: 100px;
+                padding: 6px 14px;
+                font-size: 0.85rem;
+                font-weight: 600;
+                color: var(--text);
+                cursor: pointer;
+            }
+            .lang-toggle:hover {
+                opacity: 0.75;
             }
 
             section {
@@ -141,6 +157,43 @@
             .btn:hover {
                 opacity: 0.8;
             }
+            .appstore-cta {
+                text-align: center;
+                padding: 8px 0 4px;
+            }
+            .appstore-badge {
+                display: inline-flex;
+                align-items: center;
+                gap: 10px;
+                background: #000;
+                color: #fff;
+                padding: 10px 18px;
+                border-radius: 12px;
+                text-decoration: none;
+                transition: opacity 0.2s;
+            }
+            .appstore-badge:hover {
+                opacity: 0.8;
+            }
+            .appstore-badge svg {
+                width: 22px;
+                height: 22px;
+                flex-shrink: 0;
+            }
+            .appstore-badge .badge-text {
+                display: flex;
+                flex-direction: column;
+                line-height: 1.1;
+                text-align: left;
+            }
+            .appstore-badge .badge-text small {
+                font-size: 0.62rem;
+            }
+            .appstore-badge .badge-text strong {
+                font-size: 1.05rem;
+                font-weight: 600;
+                letter-spacing: -0.01em;
+            }
 
             footer {
                 text-align: center;
@@ -157,11 +210,28 @@
             footer a:hover {
                 color: #007aff;
             }
+            html:not([lang="ja"]) [data-lang="ja"] {
+                display: none;
+            }
+            html[lang="ja"] [data-lang="en"] {
+                display: none;
+            }
         </style>
     </head>
     <body>
         <div class="container">
-            <div class="nav"><a href="../">← 全てのアプリ</a></div>
+            <div class="nav">
+                <a href="../" data-lang="en">← All Apps</a>
+                <a href="../" data-lang="ja">← 全てのアプリ</a>
+                <button
+                    type="button"
+                    class="lang-toggle"
+                    id="lang-toggle"
+                    onclick="setLang(document.documentElement.lang === 'en' ? 'ja' : 'en')"
+                >
+                    日本語
+                </button>
+            </div>
 
             <header>
                 <img
@@ -170,47 +240,88 @@
                     alt="Log Calendar"
                 />
                 <h1>Log Calendar</h1>
-                <p class="tagline">
+                <p class="tagline" data-lang="en">
+                    Calendar, tasks and daily logs — all in one smart app
+                </p>
+                <p class="tagline" data-lang="ja">
                     カレンダー、タスク、ログをひとつのアプリでスマートに管理
                 </p>
+                <div class="appstore-cta">
+                    <a
+                        href="https://apps.apple.com/jp/app/log%E3%82%AB%E3%83%AC%E3%83%B3%E3%83%80%E3%83%BC/id6769600312"
+                        target="_blank"
+                        rel="noopener"
+                        class="appstore-badge"
+                        aria-label="Download on the App Store"
+                    >
+                        <svg viewBox="0 0 384 512" fill="currentColor"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141 4 184.8 4 273.6c0 26.3 4.8 53.5 14.4 81.5 12.8 37.3 59 128.5 107.2 127 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-83.5 102.6-120.9-65.2-30.7-61.7-90-61.7-92.5zM255.7 65.4c26.9-32 24.5-61.2 23.7-71.7-23.8 1.4-51.4 16.4-67.1 34.9-17.3 19.8-27.5 44.4-25.3 71.9 26.3 2 50.3-11.4 68.7-35.1z"/></svg>
+                        <span class="badge-text" data-lang="en"><small>Download on the</small><strong>App Store</strong></span>
+                        <span class="badge-text" data-lang="ja"><strong>App Store からダウンロード</strong></span>
+                    </a>
+                </div>
             </header>
 
             <section>
-                <h2>主な機能</h2>
+                <h2 data-lang="en">Features</h2>
+                <h2 data-lang="ja">主な機能</h2>
                 <div class="feature-grid">
                     <div class="feature-card">
-                        <div class="feature-title">カレンダー</div>
-                        <div class="feature-desc">
+                        <div class="feature-title" data-lang="en">Calendar</div>
+                        <div class="feature-title" data-lang="ja">カレンダー</div>
+                        <div class="feature-desc" data-lang="en">
+                            A monthly calendar and your event list, side by side, so you can see your schedule at a glance.
+                        </div>
+                        <div class="feature-desc" data-lang="ja">
                             月間カレンダーと予定リストを同時に表示。スケジュールをひと目で把握できます。
                         </div>
                     </div>
                     <div class="feature-card">
-                        <div class="feature-title">タスク管理</div>
-                        <div class="feature-desc">
+                        <div class="feature-title" data-lang="en">Task Management</div>
+                        <div class="feature-title" data-lang="ja">タスク管理</div>
+                        <div class="feature-desc" data-lang="en">
+                            Write down what you want to get done each day, and make the most of it.
+                        </div>
+                        <div class="feature-desc" data-lang="ja">
                             その日の目標ややることを書き出して、一日を効率的に過ごせます。
                         </div>
                     </div>
                     <div class="feature-card">
-                        <div class="feature-title">ライフログ</div>
-                        <div class="feature-desc">
+                        <div class="feature-title" data-lang="en">Life Logs</div>
+                        <div class="feature-title" data-lang="ja">ライフログ</div>
+                        <div class="feature-desc" data-lang="en">
+                            Keep a journal, track your weight, log how you're feeling — build your own custom logs.
+                        </div>
+                        <div class="feature-desc" data-lang="ja">
                             日記、体重、体調管理など、日々の記録を自由にカスタマイズして残せます。
                         </div>
                     </div>
                     <div class="feature-card">
-                        <div class="feature-title">プライバシー重視</div>
-                        <div class="feature-desc">
+                        <div class="feature-title" data-lang="en">Privacy First</div>
+                        <div class="feature-title" data-lang="ja">プライバシー重視</div>
+                        <div class="feature-desc" data-lang="en">
+                            All data stays on your device. Nothing is ever sent to an external server.
+                        </div>
+                        <div class="feature-desc" data-lang="ja">
                             データはすべてデバイス内に保存。外部サーバーへ送信されることはありません。
                         </div>
                     </div>
                     <div class="feature-card">
-                        <div class="feature-title">通知・リマインダー</div>
-                        <div class="feature-desc">
+                        <div class="feature-title" data-lang="en">Notifications &amp; Reminders</div>
+                        <div class="feature-title" data-lang="ja">通知・リマインダー</div>
+                        <div class="feature-desc" data-lang="en">
+                            Get push notifications for the events that matter.
+                        </div>
+                        <div class="feature-desc" data-lang="ja">
                             大切な予定をプッシュ通知でお知らせします。
                         </div>
                     </div>
                     <div class="feature-card">
-                        <div class="feature-title">ホーム画面ウィジェット</div>
-                        <div class="feature-desc">
+                        <div class="feature-title" data-lang="en">Home Screen Widgets</div>
+                        <div class="feature-title" data-lang="ja">ホーム画面ウィジェット</div>
+                        <div class="feature-desc" data-lang="en">
+                            Check your events and tasks at a glance, without opening the app.
+                        </div>
+                        <div class="feature-desc" data-lang="ja">
                             アプリを開かずに予定やタスクを素早く確認できます。
                         </div>
                     </div>
@@ -218,62 +329,85 @@
             </section>
 
             <section>
-                <h2>よくあるご質問</h2>
+                <h2 data-lang="en">FAQ</h2>
+                <h2 data-lang="ja">よくあるご質問</h2>
                 <div class="card">
                     <div class="faq-item">
-                        <div class="faq-q">
-                            Q. データはどこに保存されますか？
+                        <div class="faq-q" data-lang="en">Q. Where is my data stored?</div>
+                        <div class="faq-q" data-lang="ja">Q. データはどこに保存されますか？</div>
+                        <div class="faq-a" data-lang="en">A. All data is stored only on your iPhone.</div>
+                        <div class="faq-a" data-lang="ja">A. すべてのデータはお使いのiPhone内にのみ保存されます。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-q" data-lang="en">Q. How do I add the widget?</div>
+                        <div class="faq-q" data-lang="ja">Q. ウィジェットの追加方法は？</div>
+                        <div class="faq-a" data-lang="en">
+                            A. Long-press the Home Screen, tap the "+" button, and select Log Calendar.
                         </div>
-                        <div class="faq-a">
-                            A.
-                            すべてのデータはお使いのiPhone内にのみ保存されます。
+                        <div class="faq-a" data-lang="ja">
+                            A. ホーム画面を長押しして「+」をタップし、Log Calendarを選択してください。
                         </div>
                     </div>
                     <div class="faq-item">
-                        <div class="faq-q">Q. ウィジェットの追加方法は？</div>
-                        <div class="faq-a">
-                            A. ホーム画面を長押しして「+」をタップし、Log
-                            Calendarを選択してください。
+                        <div class="faq-q" data-lang="en">Q. What's the difference between events and tasks?</div>
+                        <div class="faq-q" data-lang="ja">Q. 予定とタスクの違いは何ですか？</div>
+                        <div class="faq-a" data-lang="en">
+                            A. Events are scheduled at a specific time, while tasks are a simple to-do list for the day.
+                        </div>
+                        <div class="faq-a" data-lang="ja">
+                            A. 予定は時間に基づいたスケジュール、タスクはその日に達成したい「やることリスト」として使い分けられます。
                         </div>
                     </div>
                     <div class="faq-item">
-                        <div class="faq-q">
-                            Q. 予定とタスクの違いは何ですか？
+                        <div class="faq-q" data-lang="en">Q. Can I remove ads?</div>
+                        <div class="faq-q" data-lang="ja">Q. 広告を非表示にできますか？</div>
+                        <div class="faq-a" data-lang="en">
+                            A. Yes — upgrade to Premium from the Settings screen to hide all ads.
                         </div>
-                        <div class="faq-a">
-                            A.
-                            予定は時間に基づいたスケジュール、タスクはその日に達成したい「やることリスト」として使い分けられます。
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <div class="faq-q">Q. 広告を非表示にできますか？</div>
-                        <div class="faq-a">
-                            A.
-                            設定画面からプレミアムプランにアップグレードすることで、すべての広告を非表示にできます。
+                        <div class="faq-a" data-lang="ja">
+                            A. 設定画面からプレミアムプランにアップグレードすることで、すべての広告を非表示にできます。
                         </div>
                     </div>
                 </div>
             </section>
 
             <section>
-                <h2>お問い合わせ</h2>
+                <h2 data-lang="en">Contact</h2>
+                <h2 data-lang="ja">お問い合わせ</h2>
                 <div class="card">
-                    <p style="margin-bottom: 16px; color: var(--sub)">
+                    <p style="margin-bottom: 16px; color: var(--sub)" data-lang="en">
+                        Questions, feature requests and bug reports are all welcome here.
+                    </p>
+                    <p style="margin-bottom: 16px; color: var(--sub)" data-lang="ja">
                         ご質問、機能のリクエスト、不具合報告などはこちらからお送りください。
                     </p>
-                    <a href="mailto:nao1648@gmail.com" class="btn"
-                        >メールでお問い合わせ</a
-                    >
+                    <a href="mailto:nao1648@gmail.com" class="btn" data-lang="en">Contact by Email</a>
+                    <a href="mailto:nao1648@gmail.com" class="btn" data-lang="ja">メールでお問い合わせ</a>
                 </div>
             </section>
 
             <footer>
                 <p>
                     &copy; 2026 naoto &nbsp;|&nbsp;
-                    <a href="privacy-policy.html">プライバシーポリシー</a>
-                    &nbsp;|&nbsp; <a href="../">naoto-apps</a>
+                    <a href="privacy-policy.html" data-lang="en">Privacy Policy</a>
+                    <a href="privacy-policy.html" data-lang="ja">プライバシーポリシー</a>
+                    &nbsp;|&nbsp;
+                    <a href="../">naoto-apps</a>
                 </p>
             </footer>
         </div>
+
+        <script>
+            function setLang(lang) {
+                document.documentElement.lang = lang;
+                document.getElementById('lang-toggle').textContent = lang === 'en' ? '日本語' : 'English';
+                try { localStorage.setItem('log-calendar-lang', lang); } catch (e) {}
+            }
+            (function () {
+                var saved = null;
+                try { saved = localStorage.getItem('log-calendar-lang'); } catch (e) {}
+                if (saved === 'ja') setLang('ja');
+            })();
+        </script>
     </body>
 </html>
