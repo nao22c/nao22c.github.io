@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>TripCanvas — サポート / Support</title>
+        <style>
+            :root {
+                --accent: #0097b2;
+                --bg: #f5f5f7;
+                --card: #ffffff;
+                --text: #1d1d1f;
+                --sub: #6e6e73;
+                --border: rgba(0, 0, 0, 0.08);
+            }
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                font-family:
+                    -apple-system, BlinkMacSystemFont, "Hiragino Sans",
+                    "Hiragino Kaku Gothic ProN", sans-serif;
+                background: var(--bg);
+                color: var(--text);
+                line-height: 1.8;
+                padding: 0 16px 60px;
+            }
+            .container {
+                max-width: 680px;
+                margin: 0 auto;
+            }
+            .nav {
+                padding: 20px 0;
+            }
+            .nav a {
+                color: #007aff;
+                text-decoration: none;
+                font-size: 0.95rem;
+            }
+            header {
+                text-align: center;
+                padding: 40px 0 24px;
+            }
+            h1 {
+                font-size: 1.8rem;
+                font-weight: 800;
+                margin-bottom: 8px;
+            }
+            .updated {
+                color: var(--sub);
+                font-size: 0.85rem;
+                margin-top: 6px;
+            }
+            section {
+                margin-bottom: 28px;
+            }
+            h2 {
+                font-size: 1.1rem;
+                font-weight: 700;
+                margin-bottom: 12px;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+            h2::before {
+                content: "";
+                width: 4px;
+                height: 18px;
+                background: var(--accent);
+                border-radius: 4px;
+            }
+            .card {
+                background: var(--card);
+                border: 1px solid var(--border);
+                border-radius: 14px;
+                padding: 18px 20px;
+            }
+            ul {
+                padding-left: 1.2em;
+            }
+            li {
+                margin-bottom: 8px;
+            }
+            a {
+                color: #007aff;
+            }
+            .divider {
+                margin: 48px 0 32px;
+                border-top: 1px solid var(--border);
+            }
+            footer {
+                text-align: center;
+                color: var(--sub);
+                font-size: 0.85rem;
+                padding-top: 32px;
+                border-top: 1px solid var(--border);
+                margin-top: 40px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="nav"><a href="index.html">← TripCanvas</a></div>
+
+            <header>
+                <h1>サポート</h1>
+                <p class="updated">Support</p>
+            </header>
+
+            <section>
+                <h2>お問い合わせ</h2>
+                <div class="card">
+                    <p>
+                        うまく動かないときや、ご要望があるときは
+                        <a href="mailto:nao1648@gmail.com">nao1648@gmail.com</a>
+                        までメールをお送りください。数日以内に返信いたします。
+                    </p>
+                    <p style="margin-top: 12px">
+                        以下を書き添えていただけると、原因の特定がとても早くなります。
+                    </p>
+                    <ul style="margin-top: 8px">
+                        <li>端末の機種と OS のバージョン（例: iPhone 15 / iOS 18.2）</li>
+                        <li>アプリのバージョン（<em>設定 → アカウント</em> に表示されます）</li>
+                        <li>行った操作、期待した結果、実際に起きたこと</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2>よくある質問</h2>
+
+                <div class="card" style="margin-bottom: 12px">
+                    <h3>アカウントは必要ですか？</h3>
+                    <p>
+                        必要ありません。ログインしなくても旅程を組み、持ち物リストを作れます。
+                        Google や Apple でログインすると、複数の端末で同期でき、同行者と旅行を共有できます。
+                    </p>
+                </div>
+
+                <div class="card" style="margin-bottom: 12px">
+                    <h3>同行者を招待するには？</h3>
+                    <p>
+                        旅行の編集画面で招待コードを発行し、リンクかコードを相手に送ってください。
+                        受け取った方はリンクを開くか、アプリで「招待コードで参加する」からコードを入力すると参加できます。
+                        招待は 7 日で期限が切れ、いつでも取り消せます。
+                    </p>
+                </div>
+
+                <div class="card" style="margin-bottom: 12px">
+                    <h3>共有の範囲はどうなりますか？</h3>
+                    <p>
+                        みんなの持ち物は参加者全員に見えます。自分の持ち物は自分だけに見えます。
+                        ただしチケットやパスポートなど「重要」にした持ち物は、誰が持っているかを
+                        全員が把握できるように、参加者全員に表示されます。
+                    </p>
+                </div>
+
+                <div class="card" style="margin-bottom: 12px">
+                    <h3>旅行を削除すると、同行者の手元からも消えますか？</h3>
+                    <p>
+                        消えません。削除は「自分の一覧から消える」操作で、他の参加者の手元には残ります。
+                        幹事が抜けた場合は、残った方に幹事の権限が引き継がれます。
+                        本当に中身ごと消えるのは、最後の 1 人が抜けたときだけです。
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>データを削除したいのですが</h3>
+                    <p>
+                        旅行や持ち物はアプリ内で個別に削除できます。アカウントごと削除したい場合は、
+                        ログインに使ったメールアドレスから上記の連絡先へご連絡ください。
+                    </p>
+                </div>
+            </section>
+
+            <div class="divider"></div>
+
+            <header>
+                <h1>Support</h1>
+            </header>
+
+            <section>
+                <h2>Getting help</h2>
+                <div class="card">
+                    <p>
+                        If something is not working, or you have a request, email
+                        <a href="mailto:nao1648@gmail.com">nao1648@gmail.com</a>.
+                        We aim to reply within a few business days.
+                    </p>
+                    <p style="margin-top: 12px">
+                        Including the following makes it much faster to help you:
+                    </p>
+                    <ul style="margin-top: 8px">
+                        <li>Your device model and OS version (e.g. iPhone 15, iOS 18.2)</li>
+                        <li>The app version, shown under <em>Settings → Account</em></li>
+                        <li>What you did, what you expected, and what happened instead</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2>Frequently asked questions</h2>
+
+                <div class="card" style="margin-bottom: 12px">
+                    <h3>Do I need an account?</h3>
+                    <p>
+                        No. You can plan a trip and build a packing list without signing in.
+                        Signing in with Google or Apple lets you sync across your devices and
+                        share a trip with the people travelling with you.
+                    </p>
+                </div>
+
+                <div class="card" style="margin-bottom: 12px">
+                    <h3>How do I invite someone?</h3>
+                    <p>
+                        Create an invite code from the trip's edit screen and send the link or
+                        the code. The person you invite can open the link, or enter the code
+                        under “Join with an invite code”. Invites expire after 7 days and can be
+                        turned off at any time.
+                    </p>
+                </div>
+
+                <div class="card" style="margin-bottom: 12px">
+                    <h3>How does sharing work?</h3>
+                    <p>
+                        Shared packing items are visible to everyone on the trip. Personal items
+                        are visible only to you — except items you mark as important, such as
+                        tickets and passports, which everyone can see so the group knows who is
+                        carrying them.
+                    </p>
+                </div>
+
+                <div class="card" style="margin-bottom: 12px">
+                    <h3>If the host deletes a trip, does it disappear for me?</h3>
+                    <p>
+                        No. Deleting removes the trip from that person's own list; it stays with
+                        everyone else. If the host leaves, ownership passes to someone who
+                        remains. The trip is only really deleted when the last person leaves.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>How do I delete my data?</h3>
+                    <p>
+                        You can delete individual trips and items in the app. To delete your
+                        account and everything associated with it, email us from the address you
+                        signed in with and we will remove it.
+                    </p>
+                </div>
+            </section>
+
+            <footer>© 2026 nao22c. All rights reserved.</footer>
+        </div>
+    </body>
+</html>

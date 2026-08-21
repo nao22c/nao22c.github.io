@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>TripCanvas — 旅の計画も、持ち物も、みんなでひとつに</title>
+        <style>
+            :root {
+                --accent: #0097b2;
+                --bg: #f5f5f7;
+                --card: #ffffff;
+                --text: #1d1d1f;
+                --sub: #6e6e73;
+                --border: rgba(0, 0, 0, 0.08);
+            }
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                font-family:
+                    -apple-system, BlinkMacSystemFont, "Hiragino Sans",
+                    "Hiragino Kaku Gothic ProN", sans-serif;
+                background: var(--bg);
+                color: var(--text);
+                line-height: 1.7;
+                padding: 0 16px 60px;
+            }
+            .container {
+                max-width: 680px;
+                margin: 0 auto;
+            }
+            header {
+                text-align: center;
+                padding: 60px 0 40px;
+            }
+            .icon {
+                width: 110px;
+                height: 110px;
+                border-radius: 24px;
+                object-fit: cover;
+                margin-bottom: 24px;
+                box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+                background: #0097b2;
+            }
+            h1 {
+                font-size: 2rem;
+                font-weight: 800;
+                margin-bottom: 8px;
+            }
+            .tagline {
+                color: var(--sub);
+                font-size: 1rem;
+                max-width: 520px;
+                margin: 0 auto;
+            }
+            section {
+                margin-bottom: 32px;
+            }
+            h2 {
+                font-size: 1.15rem;
+                font-weight: 700;
+                margin-bottom: 14px;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+            h2::before {
+                content: "";
+                width: 4px;
+                height: 18px;
+                background: var(--accent);
+                border-radius: 4px;
+            }
+            .card {
+                background: var(--card);
+                border: 1px solid var(--border);
+                border-radius: 14px;
+                padding: 20px 22px;
+            }
+            .features {
+                display: grid;
+                gap: 12px;
+            }
+            .feature {
+                background: var(--card);
+                border: 1px solid var(--border);
+                border-radius: 14px;
+                padding: 16px 18px;
+            }
+            .feature h3 {
+                font-size: 1rem;
+                font-weight: 700;
+                margin-bottom: 4px;
+            }
+            .feature p {
+                color: var(--sub);
+                font-size: 0.92rem;
+            }
+            table.pricing {
+                width: 100%;
+                border-collapse: collapse;
+                font-size: 0.95rem;
+            }
+            table.pricing th,
+            table.pricing td {
+                text-align: left;
+                padding: 10px 4px;
+                border-bottom: 1px solid var(--border);
+            }
+            table.pricing th {
+                color: var(--sub);
+                font-weight: 600;
+            }
+            table.pricing tr:last-child td {
+                border-bottom: none;
+            }
+            a {
+                color: #007aff;
+            }
+            ul {
+                padding-left: 1.2em;
+            }
+            li {
+                margin-bottom: 6px;
+            }
+            .links {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 16px;
+                justify-content: center;
+                padding-top: 8px;
+            }
+            footer {
+                text-align: center;
+                color: var(--sub);
+                font-size: 0.85rem;
+                padding-top: 32px;
+                border-top: 1px solid var(--border);
+                margin-top: 40px;
+            }
+            .lang {
+                color: var(--sub);
+                font-size: 0.85rem;
+                text-align: center;
+                padding: 24px 0 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <img src="icon_tripcanvas.png" alt="TripCanvas" class="icon" />
+                <h1>TripCanvas</h1>
+                <p class="tagline">
+                    旅の計画も、持ち物も、みんなでひとつに。<br />
+                    iPhone / Android のための旅行プランナー。
+                </p>
+            </header>
+
+            <section>
+                <h2>できること</h2>
+                <div class="features">
+                    <div class="feature">
+                        <h3>日ごとの旅程をつくる</h3>
+                        <p>
+                            行き先と日程を決めるだけで、日ごとの旅程ができあがります。移動・宿泊・食事などを時刻順に並べ、宿のチェックイン／チェックアウトは自動で入ります。
+                        </p>
+                    </div>
+                    <div class="feature">
+                        <h3>時差をまたいでも狂わない</h3>
+                        <p>
+                            予定ごとに時刻エリアを持つので、海外へ飛ぶ日も「現地の何時か」で表示されます。日をまとめてずらす操作にも対応しています。
+                        </p>
+                    </div>
+                    <div class="feature">
+                        <h3>持ち物リストを分けて管理</h3>
+                        <p>
+                            「みんなの持ち物」と「自分の持ち物」を分けて管理できます。よく使う持ち物はマイリストとして保存し、次の旅行にそのまま持ち込めます。
+                        </p>
+                    </div>
+                    <div class="feature">
+                        <h3>同行者と共有する</h3>
+                        <p>
+                            招待コードかリンクを送るだけで、同行者が旅行に参加できます。旅程も持ち物も、その場で全員に反映されます。
+                        </p>
+                    </div>
+                    <div class="feature">
+                        <h3>やることリストと持ち主</h3>
+                        <p>
+                            出発前の準備を「いつまでに」「誰が」で分けて管理できます。誰が何を担当しているかが一目で分かります。
+                        </p>
+                    </div>
+                    <div class="feature">
+                        <h3>写真を予定に貼る</h3>
+                        <p>
+                            チケットや予約票の写真を予定に添付できます。旅先で紙を探す必要がなくなります。
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>価格</h2>
+                <div class="card">
+                    <p style="margin-bottom: 12px">
+                        <strong>無料で使えます。</strong>
+                        無料版では旅行を 2 つまで持て、画面下に広告が表示されます。
+                    </p>
+                    <table class="pricing">
+                        <tr>
+                            <th>買い切り</th>
+                            <td>旅行の数の制限が外れ、広告が消えます</td>
+                        </tr>
+                    </table>
+                    <p
+                        style="
+                            color: var(--sub);
+                            font-size: 0.85rem;
+                            margin-top: 12px;
+                        "
+                    >
+                        価格はお住まいの国・地域によって異なります。最新の価格はアプリ内、または App Store / Google Play でご確認ください。
+                    </p>
+                </div>
+            </section>
+
+            <section>
+                <h2>動作環境</h2>
+                <div class="card">
+                    <ul>
+                        <li>iOS 16.0 以降 / Android 8.0 以降</li>
+                        <li>
+                            端末をまたいだ同期と、同行者との共有にはログインが必要です（Google または Apple）
+                        </li>
+                        <li>ログインしなくても、その端末の中だけで使えます</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2>お問い合わせ</h2>
+                <div class="card">
+                    <p>
+                        ご質問・不具合のご報告は
+                        <a href="mailto:nao1648@gmail.com">nao1648@gmail.com</a>
+                        までお送りください。数日以内に返信いたします。
+                    </p>
+                </div>
+            </section>
+
+            <div class="links">
+                <a href="support.html">サポート</a>
+                <a href="privacy-policy.html">プライバシーポリシー</a>
+                <a href="terms.html">利用規約</a>
+                <a href="../">他のアプリ</a>
+            </div>
+
+            <p class="lang">
+                English documents are available on the
+                <a href="privacy-policy.html">Privacy Policy</a>,
+                <a href="terms.html">Terms of Use</a> and
+                <a href="support.html">Support</a> pages.
+            </p>
+
+            <footer>© 2026 nao22c. All rights reserved.</footer>
+        </div>
+    </body>
+</html>
