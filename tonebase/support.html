@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ToneBase — サポート / Support</title>
+        <style>
+            :root {
+                --accent: #4299fa;
+                --bg: #f5f5f7;
+                --card: #ffffff;
+                --text: #1d1d1f;
+                --sub: #6e6e73;
+                --border: rgba(0, 0, 0, 0.08);
+            }
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                font-family:
+                    -apple-system, BlinkMacSystemFont, "Hiragino Sans",
+                    "Hiragino Kaku Gothic ProN", sans-serif;
+                background: var(--bg);
+                color: var(--text);
+                line-height: 1.8;
+                padding: 0 16px 60px;
+            }
+            .container {
+                max-width: 680px;
+                margin: 0 auto;
+            }
+            .nav {
+                padding: 20px 0;
+            }
+            .nav a {
+                color: #007aff;
+                text-decoration: none;
+                font-size: 0.95rem;
+            }
+            header {
+                text-align: center;
+                padding: 40px 0 24px;
+            }
+            h1 {
+                font-size: 1.8rem;
+                font-weight: 800;
+                margin-bottom: 8px;
+            }
+            .tagline {
+                color: var(--sub);
+                font-size: 0.95rem;
+            }
+            section {
+                margin-bottom: 28px;
+            }
+            h2 {
+                font-size: 1.1rem;
+                font-weight: 700;
+                margin-bottom: 12px;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+            h2::before {
+                content: "";
+                width: 4px;
+                height: 18px;
+                background: var(--accent);
+                border-radius: 4px;
+            }
+            .qa {
+                background: var(--card);
+                border: 1px solid var(--border);
+                border-radius: 14px;
+                padding: 16px 18px;
+                margin-bottom: 10px;
+            }
+            .qa h3 {
+                font-size: 1rem;
+                font-weight: 700;
+                margin-bottom: 6px;
+            }
+            .qa p {
+                color: var(--sub);
+                font-size: 0.93rem;
+            }
+            .card {
+                background: var(--card);
+                border: 1px solid var(--border);
+                border-radius: 14px;
+                padding: 18px 20px;
+            }
+            a {
+                color: #007aff;
+            }
+            kbd {
+                background: #e8e8ed;
+                border-radius: 4px;
+                padding: 1px 6px;
+                font-size: 0.9em;
+            }
+            .divider {
+                margin: 48px 0 32px;
+                border-top: 1px solid var(--border);
+            }
+            footer {
+                text-align: center;
+                color: var(--sub);
+                font-size: 0.85rem;
+                padding-top: 32px;
+                border-top: 1px solid var(--border);
+                margin-top: 40px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="nav"><a href="index.html">← ToneBase</a></div>
+
+            <header>
+                <h1>サポート</h1>
+                <p class="tagline">よくある質問と、お問い合わせ先</p>
+            </header>
+
+            <section>
+                <h2>よくある質問</h2>
+
+                <div class="qa">
+                    <h3>写真を読み込むには？</h3>
+                    <p>
+                        サイドバーの「フォルダを追加」から、「ファイル」や iCloud Drive
+                        のフォルダを選んでください。フォルダの中の写真（サブフォルダを含む）がライブラリに表示され、あとから追加した写真も自動で反映されます。
+                    </p>
+                </div>
+
+                <div class="qa">
+                    <h3>「写真」の写真を編集するには？</h3>
+                    <p>
+                        サイドバーの「写真」から「写真へのアクセスを許可」を選ぶと、すべての写真・お気に入り・RAW・アルバムが表示されます。「写真」の写真を編集したら、「写真に保存」で元の写真に編集結果を保存できます。元の写真は残るので、「写真」アプリの「編集」→「元に戻す」でいつでも戻せます。別の写真として残したい場合は「書き出し」を使ってください。
+                    </p>
+                </div>
+
+                <div class="qa">
+                    <h3>雲のマークが付いた写真があります</h3>
+                    <p>
+                        その写真は iCloud 上にだけあり、まだ端末にダウンロードされていません。写真を開くと自動でダウンロードされます。長押し（Mac では右クリック）して「ダウンロード」を選ぶこともできます。
+                    </p>
+                </div>
+
+                <div class="qa">
+                    <h3>元の写真は変更されますか？</h3>
+                    <p>
+                        いいえ。ToneBase は元のファイルに一切書き込みません。編集内容はアプリの中に設定値として保存され、書き出したときに初めて新しいファイルが作られます。「すべてリセット」でいつでも元に戻せます。
+                    </p>
+                </div>
+
+                <div class="qa">
+                    <h3>対応している RAW 形式は？</h3>
+                    <p>
+                        Apple の OS（iOS・iPadOS・macOS）が対応するカメラの RAW 形式と DNG、iPhone の ProRAW に対応しています。対応カメラは OS のアップデートで追加されます。開けない RAW
+                        ファイルがあれば、カメラの機種名を添えてお知らせください。
+                    </p>
+                </div>
+
+                <div class="qa">
+                    <h3>Mac のキーボードショートカット</h3>
+                    <p>
+                        <kbd>←</kbd><kbd>→</kbd> 前後の写真、<kbd>0</kbd>〜<kbd>5</kbd>
+                        評価、<kbd>P</kbd> 採用、<kbd>X</kbd> 不採用、<kbd>U</kbd>
+                        フラグを外す、<kbd>\</kbd> 補正前と比較、<kbd>⌘</kbd><kbd>Z</kbd>
+                        取り消す、<kbd>⌘</kbd><kbd>⇧</kbd><kbd>C</kbd> /
+                        <kbd>⌘</kbd><kbd>⇧</kbd><kbd>V</kbd> 設定のコピー／ペースト、<kbd>⌘</kbd><kbd>⇧</kbd><kbd>E</kbd>
+                        書き出し。
+                    </p>
+                </div>
+
+                <div class="qa">
+                    <h3>写真ライブラリに保存できません</h3>
+                    <p>
+                        書き出した写真を写真ライブラリに保存するには、写真への追加を許可する必要があります。「設定」の「プライバシーとセキュリティ」→「写真」で
+                        ToneBase を許可してください。
+                    </p>
+                </div>
+
+                <div class="qa">
+                    <h3>無料トライアルについて</h3>
+                    <p>
+                        月額・年額プランには、条件を満たす方向けに 1ヶ月の無料トライアルがあります。トライアル終了の 24 時間前までに解約しない場合、選んだプランの料金が自動で請求されます。解約は Apple
+                        アカウントの「サブスクリプション」からいつでも行えます。
+                    </p>
+                </div>
+
+                <div class="qa">
+                    <h3>購入したのに反映されません</h3>
+                    <p>
+                        設定画面の「購入を復元」をお試しください。購入時と同じ Apple
+                        アカウントでサインインしている必要があります。
+                    </p>
+                </div>
+            </section>
+
+            <section>
+                <h2>お問い合わせ</h2>
+                <div class="card">
+                    <p>
+                        解決しない場合は
+                        <a href="mailto:nao22c@icloud.com">nao22c@icloud.com</a>
+                        までご連絡ください。ご利用の端末と OS
+                        のバージョン、カメラの機種名、症状が起きたときの操作を教えていただけると調査が早くなります。
+                    </p>
+                </div>
+            </section>
+
+            <div class="divider"></div>
+
+            <header>
+                <h1>Support</h1>
+                <p class="tagline">Frequently asked questions and how to reach us</p>
+            </header>
+
+            <section>
+                <h2>FAQ</h2>
+
+                <div class="qa">
+                    <h3>How do I bring in my photos?</h3>
+                    <p>
+                        Choose Add Folder in the sidebar and pick a folder from Files or
+                        iCloud Drive. Its photos, subfolders included, appear in the
+                        library, and photos added to it later show up on their own.
+                    </p>
+                </div>
+
+                <div class="qa">
+                    <h3>How do I edit photos from the Photos app?</h3>
+                    <p>
+                        Under Photos in the sidebar, choose Allow Access to Photos to see
+                        All Photos, Favorites, RAW and your albums. After editing, Save to
+                        Photos writes the result to the original photo. The original is
+                        kept, so Edit → Revert in the Photos app always brings it back. To
+                        keep the edit as a separate photo, use Export instead.
+                    </p>
+                </div>
+
+                <div class="qa">
+                    <h3>Some photos show a cloud icon</h3>
+                    <p>
+                        Those photos are in iCloud and not yet on this device. Opening
+                        one downloads it; you can also touch and hold (or right-click on
+                        a Mac) and choose Download.
+                    </p>
+                </div>
+
+                <div class="qa">
+                    <h3>Does ToneBase change my original photos?</h3>
+                    <p>
+                        No. ToneBase never writes to your original files. Edits are
+                        stored in the app as settings, and a new file is created only
+                        when you export. Reset All takes a photo back to how it was.
+                    </p>
+                </div>
+
+                <div class="qa">
+                    <h3>Which RAW formats are supported?</h3>
+                    <p>
+                        The camera RAW formats supported by Apple's operating systems,
+                        plus DNG and iPhone ProRAW. New cameras arrive with OS updates.
+                        If a RAW file will not open, let us know the camera model.
+                    </p>
+                </div>
+
+                <div class="qa">
+                    <h3>Keyboard shortcuts on the Mac</h3>
+                    <p>
+                        <kbd>←</kbd><kbd>→</kbd> previous / next photo,
+                        <kbd>0</kbd>–<kbd>5</kbd> rating, <kbd>P</kbd> pick,
+                        <kbd>X</kbd> reject, <kbd>U</kbd> unflag, <kbd>\</kbd> compare
+                        with the original, <kbd>⌘</kbd><kbd>Z</kbd> undo,
+                        <kbd>⌘</kbd><kbd>⇧</kbd><kbd>C</kbd> /
+                        <kbd>⌘</kbd><kbd>⇧</kbd><kbd>V</kbd> copy / paste settings,
+                        <kbd>⌘</kbd><kbd>⇧</kbd><kbd>E</kbd> export.
+                    </p>
+                </div>
+
+                <div class="qa">
+                    <h3>Exports are not saved to Photos</h3>
+                    <p>
+                        ToneBase needs permission to add photos to your library. Allow
+                        it in Settings under Privacy &amp; Security → Photos.
+                    </p>
+                </div>
+
+                <div class="qa">
+                    <h3>About the free trial</h3>
+                    <p>
+                        The monthly and yearly plans include a one-month free trial for
+                        eligible customers. Unless you cancel at least 24 hours before it
+                        ends, the plan you chose is charged automatically. You can cancel
+                        at any time from Subscriptions in your Apple Account settings.
+                    </p>
+                </div>
+
+                <div class="qa">
+                    <h3>My purchase is not recognised</h3>
+                    <p>
+                        Use Restore Purchases in Settings, signed in with the Apple
+                        Account you bought with.
+                    </p>
+                </div>
+            </section>
+
+            <section>
+                <h2>Contact</h2>
+                <div class="card">
+                    <p>
+                        Still stuck? Write to
+                        <a href="mailto:nao22c@icloud.com">nao22c@icloud.com</a>. Please
+                        include your device and OS version, the camera model, and what
+                        you were doing when the problem appeared.
+                    </p>
+                </div>
+            </section>
+
+            <footer>© 2026 nao22c. All rights reserved.</footer>
+        </div>
+    </body>
+</html>

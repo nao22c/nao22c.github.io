@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ToneBase — RAW 現像を、iPhone と Mac で</title>
+        <style>
+            :root {
+                --accent: #4299fa;
+                --bg: #f5f5f7;
+                --card: #ffffff;
+                --text: #1d1d1f;
+                --sub: #6e6e73;
+                --border: rgba(0, 0, 0, 0.08);
+            }
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                font-family:
+                    -apple-system, BlinkMacSystemFont, "Hiragino Sans",
+                    "Hiragino Kaku Gothic ProN", sans-serif;
+                background: var(--bg);
+                color: var(--text);
+                line-height: 1.7;
+                padding: 0 16px 60px;
+            }
+            .container {
+                max-width: 680px;
+                margin: 0 auto;
+            }
+            header {
+                text-align: center;
+                padding: 60px 0 40px;
+            }
+            .icon {
+                width: 110px;
+                height: 110px;
+                border-radius: 24px;
+                object-fit: cover;
+                margin-bottom: 24px;
+                box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+                background: #1f2630;
+            }
+            h1 {
+                font-size: 2rem;
+                font-weight: 800;
+                margin-bottom: 8px;
+            }
+            .tagline {
+                color: var(--sub);
+                font-size: 1rem;
+                max-width: 520px;
+                margin: 0 auto;
+            }
+            section {
+                margin-bottom: 32px;
+            }
+            h2 {
+                font-size: 1.15rem;
+                font-weight: 700;
+                margin-bottom: 14px;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+            h2::before {
+                content: "";
+                width: 4px;
+                height: 18px;
+                background: var(--accent);
+                border-radius: 4px;
+            }
+            .card {
+                background: var(--card);
+                border: 1px solid var(--border);
+                border-radius: 14px;
+                padding: 20px 22px;
+            }
+            .features {
+                display: grid;
+                gap: 12px;
+            }
+            .feature {
+                background: var(--card);
+                border: 1px solid var(--border);
+                border-radius: 14px;
+                padding: 16px 18px;
+            }
+            .feature h3 {
+                font-size: 1rem;
+                font-weight: 700;
+                margin-bottom: 4px;
+            }
+            .feature p {
+                color: var(--sub);
+                font-size: 0.92rem;
+            }
+            table.pricing {
+                width: 100%;
+                border-collapse: collapse;
+                font-size: 0.95rem;
+            }
+            table.pricing th,
+            table.pricing td {
+                text-align: left;
+                padding: 10px 4px;
+                border-bottom: 1px solid var(--border);
+                vertical-align: top;
+            }
+            table.pricing th {
+                color: var(--sub);
+                font-weight: 600;
+                white-space: nowrap;
+                padding-right: 16px;
+            }
+            table.pricing tr:last-child td,
+            table.pricing tr:last-child th {
+                border-bottom: none;
+            }
+            a {
+                color: #007aff;
+            }
+            ul {
+                padding-left: 1.2em;
+            }
+            li {
+                margin-bottom: 6px;
+            }
+            .links {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 16px;
+                justify-content: center;
+                padding-top: 8px;
+            }
+            footer {
+                text-align: center;
+                color: var(--sub);
+                font-size: 0.85rem;
+                padding-top: 32px;
+                border-top: 1px solid var(--border);
+                margin-top: 40px;
+            }
+            .lang {
+                color: var(--sub);
+                font-size: 0.85rem;
+                text-align: center;
+                padding: 24px 0 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <img src="icon_tonebase.svg" alt="ToneBase" class="icon" />
+                <h1>ToneBase</h1>
+                <p class="tagline">
+                    RAW 現像を、iPhone と Mac で。<br />
+                    元の写真には手を加えない、非破壊の写真現像アプリ。
+                </p>
+            </header>
+
+            <section>
+                <h2>できること</h2>
+                <div class="features">
+                    <div class="feature">
+                        <h3>RAW をそのまま現像</h3>
+                        <p>
+                            カメラの RAW ファイルを、Apple の RAW 現像エンジンで直接読み込みます。JPEG・HEIC・TIFF・PNG も編集できます。
+                        </p>
+                    </div>
+                    <div class="feature">
+                        <h3>元の写真はそのまま</h3>
+                        <p>
+                            編集内容は設定値としてアプリの中に保存され、元のファイルには一切書き込みません。何度でもやり直せます。
+                        </p>
+                    </div>
+                    <div class="feature">
+                        <h3>iCloud Drive のフォルダをそのまま使う</h3>
+                        <p>
+                            「ファイル」や iCloud Drive のフォルダを追加するだけ。フォルダに写真を入れると、自動でライブラリに表示されます。
+                        </p>
+                    </div>
+                    <div class="feature">
+                        <h3>本格的な現像ツール</h3>
+                        <p>
+                            露光量・ハイライト・シャドウ・ホワイトバランスから、トーンカーブ、カラーミキサー、明瞭度、かすみの除去、切り抜きまで。
+                        </p>
+                    </div>
+                    <div class="feature">
+                        <h3>プリセットと一括編集</h3>
+                        <p>
+                            仕上がりをプリセットとして保存したり、ある写真の設定を他の写真へまとめて貼り付けたりできます。
+                        </p>
+                    </div>
+                    <div class="feature">
+                        <h3>色を正しく書き出し</h3>
+                        <p>
+                            sRGB または Display P3 のカラープロファイルを埋め込んで書き出します。位置情報は、選んだときだけ含めます。
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>価格</h2>
+                <div class="card">
+                    <p style="margin-bottom: 12px">
+                        <strong>基本の現像と書き出しは、ずっと無料で使えます。</strong>
+                        トーンカーブ、カラーミキサー、ディテールと効果、プリセット、高度な書き出し、一括編集はプレミアム機能です。
+                    </p>
+                    <table class="pricing">
+                        <tr>
+                            <th>1ヶ月</th>
+                            <td>サブスクリプション（初回 1ヶ月無料）</td>
+                        </tr>
+                        <tr>
+                            <th>1年</th>
+                            <td>サブスクリプション（初回 1ヶ月無料）</td>
+                        </tr>
+                        <tr>
+                            <th>買い切り</th>
+                            <td>一度の購入でずっと使えます</td>
+                        </tr>
+                    </table>
+                    <p
+                        style="
+                            color: var(--sub);
+                            font-size: 0.85rem;
+                            margin-top: 12px;
+                        "
+                    >
+                        無料トライアルは App Store の条件を満たす方が対象です。価格はお住まいの国・地域によって異なります。最新の価格は App Store でご確認ください。
+                    </p>
+                </div>
+            </section>
+
+            <section>
+                <h2>動作環境</h2>
+                <div class="card">
+                    <ul>
+                        <li>iOS 18.0 / iPadOS 18.0 以降</li>
+                        <li>macOS 15.0 以降</li>
+                        <li>対応する RAW 形式は、Apple の OS が対応するカメラに準じます</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2>お問い合わせ</h2>
+                <div class="card">
+                    <p>
+                        ご質問・不具合のご報告は
+                        <a href="mailto:nao22c@icloud.com">nao22c@icloud.com</a>
+                        までお送りください。数日以内に返信いたします。
+                    </p>
+                </div>
+            </section>
+
+            <div class="links">
+                <a href="support.html">サポート</a>
+                <a href="privacy-policy.html">プライバシーポリシー</a>
+                <a href="terms.html">利用規約</a>
+                <a href="../">他のアプリ</a>
+            </div>
+
+            <p class="lang">
+                English versions are available on the
+                <a href="support.html">Support</a>,
+                <a href="privacy-policy.html">Privacy Policy</a> and
+                <a href="terms.html">Terms of Use</a> pages.
+            </p>
+
+            <footer>© 2026 nao22c. All rights reserved.</footer>
+        </div>
+    </body>
+</html>
