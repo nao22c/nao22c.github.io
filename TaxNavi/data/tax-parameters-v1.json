@@ -1,0 +1,1037 @@
+{
+  "currentIncomeYear" : 2026,
+  "dataVersion" : "2026-10-01",
+  "employmentInsurance" : {
+    "leave" : {
+      "childcareHighDays" : 180,
+      "childcareRateHigh" : 0.67,
+      "childcareRateLow" : 0.5,
+      "childcareWageMonthlyCap" : 496200,
+      "childcareWageMonthlyFloor" : 96090,
+      "daysPerMonth" : 30,
+      "lumpSumPerChild" : 500000,
+      "maternityPostDays" : 56,
+      "maternityPreDaysMultiple" : 98,
+      "maternityPreDaysSingle" : 42,
+      "maternityRate" : 0.6666666666666666,
+      "postBirthSupportMaxDays" : 28,
+      "postBirthSupportRate" : 0.13
+    },
+    "unemployment" : {
+      "dailyBenefitCaps" : [
+        7450,
+        8270,
+        9110,
+        7830
+      ],
+      "rateTaperEnd60to64" : 12120,
+      "rateTaperEndUnder60" : 13490,
+      "rateTaperStart" : 5480,
+      "wageDailyCaps" : [
+        14900,
+        16540,
+        18220,
+        17400
+      ],
+      "wageDailyFloor" : 3203
+    }
+  },
+  "incomeYears" : {
+    "2025" : {
+      "deductions" : {
+        "dependentElderlyLiving" : {
+          "income" : 580000,
+          "resident" : 450000
+        },
+        "dependentElderlySeparate" : {
+          "income" : 480000,
+          "resident" : 380000
+        },
+        "dependentGeneral" : {
+          "income" : 380000,
+          "resident" : 330000
+        },
+        "dependentIncomeLimit" : 580000,
+        "dependentSpecific" : {
+          "income" : 630000,
+          "resident" : 450000
+        },
+        "disabilityCoLivingSpecial" : {
+          "income" : 750000,
+          "resident" : 530000
+        },
+        "disabilityOrdinary" : {
+          "income" : 270000,
+          "resident" : 260000
+        },
+        "disabilitySpecial" : {
+          "income" : 400000,
+          "resident" : 300000
+        },
+        "donationMinimum" : 2000,
+        "donationResidentBasicRate" : 0.1,
+        "donationSpecialCapRate" : 0.2,
+        "earthquakeCapIncome" : 50000,
+        "earthquakeCapResident" : 25000,
+        "lifeCategoryCap" : {
+          "income" : 40000,
+          "resident" : 28000
+        },
+        "lifeTotalCap" : {
+          "income" : 120000,
+          "resident" : 70000
+        },
+        "medicalCap" : 2000000,
+        "medicalFloor" : 100000,
+        "medicalIncomeRate" : 0.05,
+        "singleParent" : {
+          "income" : 350000,
+          "resident" : 300000
+        },
+        "specificRelativeIncomeLimit" : 1230000,
+        "specificRelativeTable" : [
+          {
+            "amount" : {
+              "income" : 630000,
+              "resident" : 450000
+            },
+            "upperBound" : 850000
+          },
+          {
+            "amount" : {
+              "income" : 610000,
+              "resident" : 450000
+            },
+            "upperBound" : 900000
+          },
+          {
+            "amount" : {
+              "income" : 510000,
+              "resident" : 450000
+            },
+            "upperBound" : 950000
+          },
+          {
+            "amount" : {
+              "income" : 410000,
+              "resident" : 410000
+            },
+            "upperBound" : 1000000
+          },
+          {
+            "amount" : {
+              "income" : 310000,
+              "resident" : 310000
+            },
+            "upperBound" : 1050000
+          },
+          {
+            "amount" : {
+              "income" : 210000,
+              "resident" : 210000
+            },
+            "upperBound" : 1100000
+          },
+          {
+            "amount" : {
+              "income" : 110000,
+              "resident" : 110000
+            },
+            "upperBound" : 1150000
+          },
+          {
+            "amount" : {
+              "income" : 60000,
+              "resident" : 60000
+            },
+            "upperBound" : 1200000
+          },
+          {
+            "amount" : {
+              "income" : 30000,
+              "resident" : 30000
+            },
+            "upperBound" : 1230000
+          }
+        ],
+        "spouseBase" : {
+          "income" : 380000,
+          "resident" : 330000
+        },
+        "spouseElderly" : {
+          "income" : 480000,
+          "resident" : 380000
+        },
+        "spouseSpecialIncomeLimit" : 1330000,
+        "spouseSpecialTable" : [
+          {
+            "income" : [
+              380000,
+              260000,
+              130000
+            ],
+            "resident" : [
+              330000,
+              220000,
+              110000
+            ],
+            "upperBound" : 950000
+          },
+          {
+            "income" : [
+              360000,
+              240000,
+              120000
+            ],
+            "resident" : [
+              330000,
+              220000,
+              110000
+            ],
+            "upperBound" : 1000000
+          },
+          {
+            "income" : [
+              310000,
+              210000,
+              110000
+            ],
+            "resident" : [
+              310000,
+              210000,
+              110000
+            ],
+            "upperBound" : 1050000
+          },
+          {
+            "income" : [
+              260000,
+              180000,
+              90000
+            ],
+            "resident" : [
+              260000,
+              180000,
+              90000
+            ],
+            "upperBound" : 1100000
+          },
+          {
+            "income" : [
+              210000,
+              140000,
+              70000
+            ],
+            "resident" : [
+              210000,
+              140000,
+              70000
+            ],
+            "upperBound" : 1150000
+          },
+          {
+            "income" : [
+              160000,
+              110000,
+              60000
+            ],
+            "resident" : [
+              160000,
+              110000,
+              60000
+            ],
+            "upperBound" : 1200000
+          },
+          {
+            "income" : [
+              110000,
+              80000,
+              40000
+            ],
+            "resident" : [
+              110000,
+              80000,
+              40000
+            ],
+            "upperBound" : 1250000
+          },
+          {
+            "income" : [
+              60000,
+              40000,
+              20000
+            ],
+            "resident" : [
+              60000,
+              40000,
+              20000
+            ],
+            "upperBound" : 1300000
+          },
+          {
+            "income" : [
+              30000,
+              20000,
+              10000
+            ],
+            "resident" : [
+              30000,
+              20000,
+              10000
+            ],
+            "upperBound" : 1330000
+          }
+        ],
+        "widow" : {
+          "income" : 270000,
+          "resident" : 260000
+        },
+        "workingStudent" : {
+          "income" : 270000,
+          "resident" : 260000
+        },
+        "workingStudentIncomeLimit" : 850000
+      },
+      "tax" : {
+        "dependentDeductionIncomeTax" : 380000,
+        "dependentDeductionResidentTax" : 330000,
+        "displayNameKey" : "tax_year.reiwa7",
+        "employmentDeductionBrackets" : [
+          {
+            "addend" : 650000,
+            "rate" : 0,
+            "upperBound" : 1900000
+          },
+          {
+            "addend" : 80000,
+            "rate" : 0.3,
+            "upperBound" : 3600000
+          },
+          {
+            "addend" : 440000,
+            "rate" : 0.2,
+            "upperBound" : 6600000
+          },
+          {
+            "addend" : 1100000,
+            "rate" : 0.1,
+            "upperBound" : 8500000
+          }
+        ],
+        "employmentDeductionCap" : 1950000,
+        "employmentInsuranceEmployeeRate" : 0.0055,
+        "healthInsuranceAnnualCap" : 16680000,
+        "healthInsuranceEmployeeRate" : 0.05,
+        "incomeTaxBasicDeductionBrackets" : [
+          {
+            "upperBound" : 1320000,
+            "value" : 950000
+          },
+          {
+            "upperBound" : 3360000,
+            "value" : 880000
+          },
+          {
+            "upperBound" : 4890000,
+            "value" : 680000
+          },
+          {
+            "upperBound" : 6550000,
+            "value" : 630000
+          },
+          {
+            "upperBound" : 23500000,
+            "value" : 580000
+          },
+          {
+            "upperBound" : 24000000,
+            "value" : 480000
+          },
+          {
+            "upperBound" : 24500000,
+            "value" : 320000
+          },
+          {
+            "upperBound" : 25000000,
+            "value" : 160000
+          },
+          {
+            "upperBound" : null,
+            "value" : 0
+          }
+        ],
+        "incomeTaxBrackets" : [
+          {
+            "deduction" : 0,
+            "rate" : 0.05,
+            "upperBound" : 1950000
+          },
+          {
+            "deduction" : 97500,
+            "rate" : 0.1,
+            "upperBound" : 3300000
+          },
+          {
+            "deduction" : 427500,
+            "rate" : 0.2,
+            "upperBound" : 6950000
+          },
+          {
+            "deduction" : 636000,
+            "rate" : 0.23,
+            "upperBound" : 9000000
+          },
+          {
+            "deduction" : 1536000,
+            "rate" : 0.33,
+            "upperBound" : 18000000
+          },
+          {
+            "deduction" : 2796000,
+            "rate" : 0.4,
+            "upperBound" : 40000000
+          },
+          {
+            "deduction" : 4796000,
+            "rate" : 0.45,
+            "upperBound" : null
+          }
+        ],
+        "pensionAnnualCap" : 7800000,
+        "pensionEmployeeRate" : 0.0915,
+        "reconstructionSurtaxRate" : 0.021,
+        "residentAdjustmentBasicDifference" : 50000,
+        "residentIncomeLevyRate" : 0.1,
+        "residentPerCapitaLevy" : 5000,
+        "residentTaxBasicDeductionBrackets" : [
+          {
+            "upperBound" : 24000000,
+            "value" : 430000
+          },
+          {
+            "upperBound" : 24500000,
+            "value" : 290000
+          },
+          {
+            "upperBound" : 25000000,
+            "value" : 150000
+          },
+          {
+            "upperBound" : null,
+            "value" : 0
+          }
+        ],
+        "spouseDeductionIncomeTax" : 380000,
+        "spouseDeductionResidentTax" : 330000
+      }
+    },
+    "2026" : {
+      "deductions" : {
+        "dependentElderlyLiving" : {
+          "income" : 580000,
+          "resident" : 450000
+        },
+        "dependentElderlySeparate" : {
+          "income" : 480000,
+          "resident" : 380000
+        },
+        "dependentGeneral" : {
+          "income" : 380000,
+          "resident" : 330000
+        },
+        "dependentIncomeLimit" : 620000,
+        "dependentSpecific" : {
+          "income" : 630000,
+          "resident" : 450000
+        },
+        "disabilityCoLivingSpecial" : {
+          "income" : 750000,
+          "resident" : 530000
+        },
+        "disabilityOrdinary" : {
+          "income" : 270000,
+          "resident" : 260000
+        },
+        "disabilitySpecial" : {
+          "income" : 400000,
+          "resident" : 300000
+        },
+        "donationMinimum" : 2000,
+        "donationResidentBasicRate" : 0.1,
+        "donationSpecialCapRate" : 0.2,
+        "earthquakeCapIncome" : 50000,
+        "earthquakeCapResident" : 25000,
+        "lifeCategoryCap" : {
+          "income" : 40000,
+          "resident" : 28000
+        },
+        "lifeTotalCap" : {
+          "income" : 120000,
+          "resident" : 70000
+        },
+        "medicalCap" : 2000000,
+        "medicalFloor" : 100000,
+        "medicalIncomeRate" : 0.05,
+        "singleParent" : {
+          "income" : 350000,
+          "resident" : 300000
+        },
+        "specificRelativeIncomeLimit" : 1230000,
+        "specificRelativeTable" : [
+          {
+            "amount" : {
+              "income" : 630000,
+              "resident" : 450000
+            },
+            "upperBound" : 850000
+          },
+          {
+            "amount" : {
+              "income" : 610000,
+              "resident" : 450000
+            },
+            "upperBound" : 900000
+          },
+          {
+            "amount" : {
+              "income" : 510000,
+              "resident" : 450000
+            },
+            "upperBound" : 950000
+          },
+          {
+            "amount" : {
+              "income" : 410000,
+              "resident" : 410000
+            },
+            "upperBound" : 1000000
+          },
+          {
+            "amount" : {
+              "income" : 310000,
+              "resident" : 310000
+            },
+            "upperBound" : 1050000
+          },
+          {
+            "amount" : {
+              "income" : 210000,
+              "resident" : 210000
+            },
+            "upperBound" : 1100000
+          },
+          {
+            "amount" : {
+              "income" : 110000,
+              "resident" : 110000
+            },
+            "upperBound" : 1150000
+          },
+          {
+            "amount" : {
+              "income" : 60000,
+              "resident" : 60000
+            },
+            "upperBound" : 1200000
+          },
+          {
+            "amount" : {
+              "income" : 30000,
+              "resident" : 30000
+            },
+            "upperBound" : 1230000
+          }
+        ],
+        "spouseBase" : {
+          "income" : 380000,
+          "resident" : 330000
+        },
+        "spouseElderly" : {
+          "income" : 480000,
+          "resident" : 380000
+        },
+        "spouseSpecialIncomeLimit" : 1330000,
+        "spouseSpecialTable" : [
+          {
+            "income" : [
+              380000,
+              260000,
+              130000
+            ],
+            "resident" : [
+              330000,
+              220000,
+              110000
+            ],
+            "upperBound" : 950000
+          },
+          {
+            "income" : [
+              360000,
+              240000,
+              120000
+            ],
+            "resident" : [
+              330000,
+              220000,
+              110000
+            ],
+            "upperBound" : 1000000
+          },
+          {
+            "income" : [
+              310000,
+              210000,
+              110000
+            ],
+            "resident" : [
+              310000,
+              210000,
+              110000
+            ],
+            "upperBound" : 1050000
+          },
+          {
+            "income" : [
+              260000,
+              180000,
+              90000
+            ],
+            "resident" : [
+              260000,
+              180000,
+              90000
+            ],
+            "upperBound" : 1100000
+          },
+          {
+            "income" : [
+              210000,
+              140000,
+              70000
+            ],
+            "resident" : [
+              210000,
+              140000,
+              70000
+            ],
+            "upperBound" : 1150000
+          },
+          {
+            "income" : [
+              160000,
+              110000,
+              60000
+            ],
+            "resident" : [
+              160000,
+              110000,
+              60000
+            ],
+            "upperBound" : 1200000
+          },
+          {
+            "income" : [
+              110000,
+              80000,
+              40000
+            ],
+            "resident" : [
+              110000,
+              80000,
+              40000
+            ],
+            "upperBound" : 1250000
+          },
+          {
+            "income" : [
+              60000,
+              40000,
+              20000
+            ],
+            "resident" : [
+              60000,
+              40000,
+              20000
+            ],
+            "upperBound" : 1300000
+          },
+          {
+            "income" : [
+              30000,
+              20000,
+              10000
+            ],
+            "resident" : [
+              30000,
+              20000,
+              10000
+            ],
+            "upperBound" : 1330000
+          }
+        ],
+        "widow" : {
+          "income" : 270000,
+          "resident" : 260000
+        },
+        "workingStudent" : {
+          "income" : 270000,
+          "resident" : 260000
+        },
+        "workingStudentIncomeLimit" : 890000
+      },
+      "tax" : {
+        "dependentDeductionIncomeTax" : 380000,
+        "dependentDeductionResidentTax" : 330000,
+        "displayNameKey" : "tax_year.reiwa8",
+        "employmentDeductionBrackets" : [
+          {
+            "addend" : 740000,
+            "rate" : 0,
+            "upperBound" : 2190999
+          },
+          {
+            "addend" : -1451000,
+            "rate" : 1,
+            "upperBound" : 2192999
+          },
+          {
+            "addend" : -1453000,
+            "rate" : 1,
+            "upperBound" : 2195999
+          },
+          {
+            "addend" : -1456000,
+            "rate" : 1,
+            "upperBound" : 2199999
+          },
+          {
+            "addend" : 80000,
+            "rate" : 0.3,
+            "upperBound" : 3600000
+          },
+          {
+            "addend" : 440000,
+            "rate" : 0.2,
+            "upperBound" : 6600000
+          },
+          {
+            "addend" : 1100000,
+            "rate" : 0.1,
+            "upperBound" : 8500000
+          }
+        ],
+        "employmentDeductionCap" : 1950000,
+        "employmentInsuranceEmployeeRate" : 0.005,
+        "healthInsuranceAnnualCap" : 16680000,
+        "healthInsuranceEmployeeRate" : 0.05065,
+        "incomeTaxBasicDeductionBrackets" : [
+          {
+            "upperBound" : 4890000,
+            "value" : 1040000
+          },
+          {
+            "upperBound" : 6550000,
+            "value" : 670000
+          },
+          {
+            "upperBound" : 23500000,
+            "value" : 620000
+          },
+          {
+            "upperBound" : 24000000,
+            "value" : 480000
+          },
+          {
+            "upperBound" : 24500000,
+            "value" : 320000
+          },
+          {
+            "upperBound" : 25000000,
+            "value" : 160000
+          },
+          {
+            "upperBound" : null,
+            "value" : 0
+          }
+        ],
+        "incomeTaxBrackets" : [
+          {
+            "deduction" : 0,
+            "rate" : 0.05,
+            "upperBound" : 1950000
+          },
+          {
+            "deduction" : 97500,
+            "rate" : 0.1,
+            "upperBound" : 3300000
+          },
+          {
+            "deduction" : 427500,
+            "rate" : 0.2,
+            "upperBound" : 6950000
+          },
+          {
+            "deduction" : 636000,
+            "rate" : 0.23,
+            "upperBound" : 9000000
+          },
+          {
+            "deduction" : 1536000,
+            "rate" : 0.33,
+            "upperBound" : 18000000
+          },
+          {
+            "deduction" : 2796000,
+            "rate" : 0.4,
+            "upperBound" : 40000000
+          },
+          {
+            "deduction" : 4796000,
+            "rate" : 0.45,
+            "upperBound" : null
+          }
+        ],
+        "pensionAnnualCap" : 7800000,
+        "pensionEmployeeRate" : 0.0915,
+        "reconstructionSurtaxRate" : 0.021,
+        "residentAdjustmentBasicDifference" : 50000,
+        "residentIncomeLevyRate" : 0.1,
+        "residentPerCapitaLevy" : 5000,
+        "residentTaxBasicDeductionBrackets" : [
+          {
+            "upperBound" : 24000000,
+            "value" : 430000
+          },
+          {
+            "upperBound" : 24500000,
+            "value" : 290000
+          },
+          {
+            "upperBound" : 25000000,
+            "value" : 150000
+          },
+          {
+            "upperBound" : null,
+            "value" : 0
+          }
+        ],
+        "spouseDeductionIncomeTax" : 380000,
+        "spouseDeductionResidentTax" : 330000
+      }
+    }
+  },
+  "schemaVersion" : 1,
+  "socialInsurance" : {
+    "basicPensionFullAnnual" : 816000,
+    "careRate" : 0.0162,
+    "childSupportRate" : 0.0023,
+    "dependentIncomeCeiling" : 1300000,
+    "employmentInsuranceWorkerRate" : 0.005,
+    "fiscalYear" : 2026,
+    "healthBonusCapAnnual" : 5730000,
+    "healthMonthlyCap" : 1390000,
+    "nationalHealthRate" : 0.099,
+    "nationalPensionMonthly" : 17920,
+    "nhiAnnualCap" : 1060000,
+    "nhiBasicDeduction" : 430000,
+    "nhiIncomeRate" : 0.1,
+    "nhiPerCapita" : 60000,
+    "nhiPerHousehold" : 50000,
+    "pensionAccrualRate" : 0.005481,
+    "pensionBonusCapPerPayment" : 1500000,
+    "pensionMonthlyCap" : 650000,
+    "pensionRate" : 0.183,
+    "prefectureHealthRates" : [
+      {
+        "name" : "北海道",
+        "totalRate" : 0.1028
+      },
+      {
+        "name" : "青森県",
+        "totalRate" : 0.0985
+      },
+      {
+        "name" : "岩手県",
+        "totalRate" : 0.0951
+      },
+      {
+        "name" : "宮城県",
+        "totalRate" : 0.101
+      },
+      {
+        "name" : "秋田県",
+        "totalRate" : 0.1001
+      },
+      {
+        "name" : "山形県",
+        "totalRate" : 0.0975
+      },
+      {
+        "name" : "福島県",
+        "totalRate" : 0.095
+      },
+      {
+        "name" : "茨城県",
+        "totalRate" : 0.0952
+      },
+      {
+        "name" : "栃木県",
+        "totalRate" : 0.0982
+      },
+      {
+        "name" : "群馬県",
+        "totalRate" : 0.0968
+      },
+      {
+        "name" : "埼玉県",
+        "totalRate" : 0.0967
+      },
+      {
+        "name" : "千葉県",
+        "totalRate" : 0.0973
+      },
+      {
+        "name" : "東京都",
+        "totalRate" : 0.0985
+      },
+      {
+        "name" : "神奈川県",
+        "totalRate" : 0.0992
+      },
+      {
+        "name" : "新潟県",
+        "totalRate" : 0.0921
+      },
+      {
+        "name" : "富山県",
+        "totalRate" : 0.0959
+      },
+      {
+        "name" : "石川県",
+        "totalRate" : 0.097
+      },
+      {
+        "name" : "福井県",
+        "totalRate" : 0.0971
+      },
+      {
+        "name" : "山梨県",
+        "totalRate" : 0.0955
+      },
+      {
+        "name" : "長野県",
+        "totalRate" : 0.0963
+      },
+      {
+        "name" : "岐阜県",
+        "totalRate" : 0.098
+      },
+      {
+        "name" : "静岡県",
+        "totalRate" : 0.0961
+      },
+      {
+        "name" : "愛知県",
+        "totalRate" : 0.0993
+      },
+      {
+        "name" : "三重県",
+        "totalRate" : 0.0977
+      },
+      {
+        "name" : "滋賀県",
+        "totalRate" : 0.0988
+      },
+      {
+        "name" : "京都府",
+        "totalRate" : 0.0989
+      },
+      {
+        "name" : "大阪府",
+        "totalRate" : 0.1013
+      },
+      {
+        "name" : "兵庫県",
+        "totalRate" : 0.1012
+      },
+      {
+        "name" : "奈良県",
+        "totalRate" : 0.0991
+      },
+      {
+        "name" : "和歌山県",
+        "totalRate" : 0.1006
+      },
+      {
+        "name" : "鳥取県",
+        "totalRate" : 0.0986
+      },
+      {
+        "name" : "島根県",
+        "totalRate" : 0.0994
+      },
+      {
+        "name" : "岡山県",
+        "totalRate" : 0.1005
+      },
+      {
+        "name" : "広島県",
+        "totalRate" : 0.0978
+      },
+      {
+        "name" : "山口県",
+        "totalRate" : 0.1015
+      },
+      {
+        "name" : "徳島県",
+        "totalRate" : 0.1024
+      },
+      {
+        "name" : "香川県",
+        "totalRate" : 0.1002
+      },
+      {
+        "name" : "愛媛県",
+        "totalRate" : 0.0998
+      },
+      {
+        "name" : "高知県",
+        "totalRate" : 0.1005
+      },
+      {
+        "name" : "福岡県",
+        "totalRate" : 0.1011
+      },
+      {
+        "name" : "佐賀県",
+        "totalRate" : 0.1055
+      },
+      {
+        "name" : "長崎県",
+        "totalRate" : 0.1006
+      },
+      {
+        "name" : "熊本県",
+        "totalRate" : 0.1008
+      },
+      {
+        "name" : "大分県",
+        "totalRate" : 0.1008
+      },
+      {
+        "name" : "宮崎県",
+        "totalRate" : 0.0977
+      },
+      {
+        "name" : "鹿児島県",
+        "totalRate" : 0.1013
+      },
+      {
+        "name" : "沖縄県",
+        "totalRate" : 0.0944
+      }
+    ],
+    "standardMonthlyFloor" : 58000
+  }
+}
