@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Log_Film — 何気ない日常を、2秒ずつ映画に</title>
+        <style>
+            :root {
+                --accent: #e0951f;
+                --bg: #f5f5f7;
+                --card: #ffffff;
+                --text: #1d1d1f;
+                --sub: #6e6e73;
+                --border: rgba(0, 0, 0, 0.08);
+            }
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                font-family:
+                    -apple-system, BlinkMacSystemFont, "Hiragino Sans",
+                    "Hiragino Kaku Gothic ProN", sans-serif;
+                background: var(--bg);
+                color: var(--text);
+                line-height: 1.7;
+                padding: 0 16px 60px;
+            }
+            .container {
+                max-width: 680px;
+                margin: 0 auto;
+            }
+            header {
+                text-align: center;
+                padding: 60px 0 40px;
+            }
+            .icon {
+                width: 110px;
+                height: 110px;
+                border-radius: 24px;
+                object-fit: cover;
+                margin-bottom: 24px;
+                box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+                background: #1f1b17;
+            }
+            h1 {
+                font-size: 2rem;
+                font-weight: 800;
+                margin-bottom: 8px;
+            }
+            .tagline {
+                color: var(--sub);
+                font-size: 1rem;
+                max-width: 520px;
+                margin: 0 auto;
+            }
+            section {
+                margin-bottom: 32px;
+            }
+            h2 {
+                font-size: 1.15rem;
+                font-weight: 700;
+                margin-bottom: 14px;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+            h2::before {
+                content: "";
+                width: 4px;
+                height: 18px;
+                background: var(--accent);
+                border-radius: 4px;
+            }
+            .card {
+                background: var(--card);
+                border: 1px solid var(--border);
+                border-radius: 14px;
+                padding: 20px 22px;
+            }
+            .features {
+                display: grid;
+                gap: 12px;
+            }
+            .feature {
+                background: var(--card);
+                border: 1px solid var(--border);
+                border-radius: 14px;
+                padding: 16px 18px;
+            }
+            .feature h3 {
+                font-size: 1rem;
+                font-weight: 700;
+                margin-bottom: 4px;
+            }
+            .feature p {
+                color: var(--sub);
+                font-size: 0.92rem;
+            }
+            table.pricing {
+                width: 100%;
+                border-collapse: collapse;
+                font-size: 0.95rem;
+            }
+            table.pricing th,
+            table.pricing td {
+                text-align: left;
+                padding: 10px 4px;
+                border-bottom: 1px solid var(--border);
+            }
+            table.pricing th {
+                white-space: nowrap;
+                padding-right: 16px;
+                color: var(--sub);
+                font-weight: 600;
+            }
+            table.pricing tr:last-child td {
+                border-bottom: none;
+            }
+            a {
+                color: #007aff;
+            }
+            ul {
+                padding-left: 1.2em;
+            }
+            li {
+                margin-bottom: 6px;
+            }
+            .links {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 16px;
+                justify-content: center;
+                padding-top: 8px;
+            }
+            footer {
+                text-align: center;
+                color: var(--sub);
+                font-size: 0.85rem;
+                padding-top: 32px;
+                border-top: 1px solid var(--border);
+                margin-top: 40px;
+            }
+            .lang {
+                color: var(--sub);
+                font-size: 0.85rem;
+                text-align: center;
+                padding: 24px 0 0;
+            }
+        </style>
+    </head>
+        <body>
+        <div class="container">
+            <header>
+                <img src="icon_log_film.svg" alt="Log_Film" class="icon" />
+                <h1>Log_Film</h1>
+                <p class="tagline">
+                    何気ない日常を、2秒・3秒ずつ。<br />
+                    Log で撮って、映画のような色に仕上げる iPhone カメラ。
+                </p>
+            </header>
+
+            <section>
+                <h2>できること</h2>
+                <div class="features">
+                    <div class="feature">
+                        <h3>2秒・3秒で、日常を切り取る</h3>
+                        <p>
+                            シャッターを押すだけで2秒・3秒のクリップを撮影。その日のクリップは自動で1本のフィルムにつながり、毎日が短い映画になります。通常の録画や、押している間だけ撮る長押しモードもあります。
+                        </p>
+                    </div>
+                    <div class="feature">
+                        <h3>Log で撮って、あとから色を決める</h3>
+                        <p>
+                            iPhone 15 Pro 以降は Apple Log、その他の機種でもフラットな Log プロファイルで記録します。ProRes ではなく汎用的な MP4（HEVC 10bit）なので、容量を気にせず撮れます。
+                        </p>
+                    </div>
+                    <div class="feature">
+                        <h3>撮りながら LUT を当てる</h3>
+                        <p>
+                            エモい、シネマティック、セピア、白黒など、映画のようなルックをファインダーで確かめながら撮影できます。ルックはクリップと一緒に保存され、あとから何度でも変えられます。
+                        </p>
+                    </div>
+                    <div class="feature">
+                        <h3>本格的なマニュアル操作</h3>
+                        <p>
+                            シャッター角度・ISO・ホワイトバランス・ティント・マニュアルフォーカスを直接操作。ヒストグラム、ゼブラ、フォルスカラー、フォーカスピーキング、水平器で露出とピントを確かめられます。
+                        </p>
+                    </div>
+                    <div class="feature">
+                        <h3>フィルム全体にも、1カットずつにも</h3>
+                        <p>
+                            カラー編集では、ルックや露出・コントラスト・彩度・色温度・グレイン・ビネットを、フィルム全体にまとめて、またはクリップごとに調整できます。グレードのコピー＆ペーストにも対応。
+                        </p>
+                    </div>
+                    <div class="feature">
+                        <h3>書き出して、残す・送る</h3>
+                        <p>
+                            仕上がった色でフィルムを MP4 に書き出し、写真アプリへの保存や共有ができます。撮影素材は iPhone 内に保存され、iCloud Drive へのバックアップにも対応しています。
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>価格</h2>
+                <div class="card">
+                    <p style="margin-bottom: 12px">
+                        <strong>無料で使えます。</strong>
+                        無料版では基本の 5 種類のルックと 1080p / 30fps までの撮影ができ、一部の画面に広告が表示されます。
+                    </p>
+                    <table class="pricing">
+                        <tr>
+                            <th>月額プラン</th>
+                            <td>広告の非表示、すべてのルック、.cube LUT の読み込み、4K・60/120fps での撮影</td>
+                        </tr>
+                        <tr>
+                            <th>年額プラン</th>
+                            <td>月額プランと同じ内容を 1 年単位で</td>
+                        </tr>
+                        <tr>
+                            <th>買い切り</th>
+                            <td>同じ内容をずっと。更新はありません</td>
+                        </tr>
+                    </table>
+                    <p
+                        style="
+                            color: var(--sub);
+                            font-size: 0.85rem;
+                            margin-top: 12px;
+                        "
+                    >
+                        価格はお住まいの国・地域によって異なります。最新の価格はアプリ内、または App Store でご確認ください。
+                    </p>
+                </div>
+            </section>
+
+            <section>
+                <h2>動作環境</h2>
+                <div class="card">
+                    <ul>
+                        <li>iOS 17.0 以降の iPhone</li>
+                        <li>Apple Log での撮影は iPhone 15 Pro 以降。その他の機種はフラットな Log プロファイルで撮影します</li>
+                        <li>4K・高フレームレートは対応機種のみ</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2>お問い合わせ</h2>
+                <div class="card">
+                    <p>
+                        ご質問・不具合のご報告は
+                        <a href="mailto:nao22c@icloud.com">nao22c@icloud.com</a>
+                        までお送りください。数日以内に返信いたします。
+                    </p>
+                </div>
+            </section>
+
+            <div class="links">
+                <a href="support.html">サポート</a>
+                <a href="privacy-policy.html">プライバシーポリシー</a>
+                <a href="terms.html">利用規約</a>
+                <a href="../">他のアプリ</a>
+            </div>
+
+            <p class="lang">
+                English documents are available on the
+                <a href="privacy-policy.html">Privacy Policy</a>,
+                <a href="terms.html">Terms of Use</a> and
+                <a href="support.html">Support</a> pages.
+            </p>
+
+            <footer>© 2026 nao22c. All rights reserved.</footer>
+        </div>
+    </body>
+</html>

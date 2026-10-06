@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Log_Film サポート / Support</title>
+        <style>
+            :root {
+                --accent: #e0951f;
+                --bg: #f5f5f7;
+                --card: #ffffff;
+                --text: #1d1d1f;
+                --sub: #6e6e73;
+                --border: rgba(0, 0, 0, 0.08);
+            }
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                font-family:
+                    -apple-system, BlinkMacSystemFont, "Hiragino Sans",
+                    "Hiragino Kaku Gothic ProN", sans-serif;
+                background: var(--bg);
+                color: var(--text);
+                line-height: 1.8;
+                padding: 0 16px 60px;
+            }
+            .container {
+                max-width: 680px;
+                margin: 0 auto;
+            }
+            .nav {
+                padding: 20px 0;
+            }
+            .nav a {
+                color: #007aff;
+                text-decoration: none;
+                font-size: 0.95rem;
+            }
+            header {
+                text-align: center;
+                padding: 40px 0 24px;
+            }
+            h1 {
+                font-size: 1.8rem;
+                font-weight: 800;
+                margin-bottom: 8px;
+            }
+            .updated {
+                color: var(--sub);
+                font-size: 0.85rem;
+                margin-top: 6px;
+            }
+            section {
+                margin-bottom: 28px;
+            }
+            h2 {
+                font-size: 1.1rem;
+                font-weight: 700;
+                margin-bottom: 12px;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+            h2::before {
+                content: "";
+                width: 4px;
+                height: 18px;
+                background: var(--accent);
+                border-radius: 4px;
+            }
+            .card {
+                background: var(--card);
+                border: 1px solid var(--border);
+                border-radius: 14px;
+                padding: 18px 20px;
+            }
+            ul {
+                padding-left: 1.2em;
+            }
+            li {
+                margin-bottom: 8px;
+            }
+            a {
+                color: #007aff;
+            }
+            .divider {
+                margin: 48px 0 32px;
+                border-top: 1px solid var(--border);
+            }
+            footer {
+                text-align: center;
+                color: var(--sub);
+                font-size: 0.85rem;
+                padding-top: 32px;
+                border-top: 1px solid var(--border);
+                margin-top: 40px;
+            }
+        </style>
+    </head>
+        <body>
+        <div class="container">
+            <div class="nav"><a href="index.html">← Log_Film</a></div>
+
+            <header>
+                <h1>サポート</h1>
+                <p class="updated">Support</p>
+            </header>
+
+            <section>
+                <h2>お問い合わせ</h2>
+                <div class="card">
+                    <p>
+                        うまく動かないときや、ご要望があるときは
+                        <a href="mailto:nao22c@icloud.com">nao22c@icloud.com</a>
+                        までメールをお送りください。数日以内に返信いたします。
+                    </p>
+                    <p style="margin-top: 12px">
+                        以下を書き添えていただけると、原因の特定がとても早くなります。
+                    </p>
+                    <ul style="margin-top: 8px">
+                        <li>端末の機種と OS のバージョン（例: iPhone 15 Pro / iOS 18.2）</li>
+                        <li>アプリのバージョン（<em>設定 → このアプリについて</em> に表示されます）</li>
+                        <li>行った操作、期待した結果、実際に起きたこと</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2>よくある質問</h2>
+                <div class="card" style="margin-bottom: 12px">
+                    <h3>映像の色が薄い（眠たい）のはなぜですか？</h3>
+                    <p>
+                        明るい部分と暗い部分の情報を残すため、Log で記録しています。ファインダーの「LUT表示」をオンにするか、カラー編集でルックを選ぶと仕上がりの色で確認できます。書き出した動画には必ずルックが適用されます。
+                    </p>
+                </div>
+
+                <div class="card" style="margin-bottom: 12px">
+                    <h3>Apple Log で撮影できる機種は？</h3>
+                    <p>
+                        iPhone 15 Pro 以降です。それ以外の iPhone では、同じルックがそのまま使えるフラットな Log プロファイルで記録します。カメラ設定の「カラープロファイル」で確認できます。
+                    </p>
+                </div>
+
+                <div class="card" style="margin-bottom: 12px">
+                    <h3>撮ったクリップはどうやってつながりますか？</h3>
+                    <p>
+                        2秒・3秒・長押しで撮ったクリップは、撮影した日ごとに自動で1本のフィルムにまとまります。通常の録画はクリップとして保存され、「フィルムに追加」から好きなフィルムに入れられます。メディアの「＋」から自分でフィルムを作ることもできます。
+                    </p>
+                </div>
+
+                <div class="card" style="margin-bottom: 12px">
+                    <h3>ルックをフィルム全体と1カットごとで変えたい</h3>
+                    <p>
+                        フィルムの「カラー」を開き、「フィルム全体」と「このクリップ」を切り替えてください。「このクリップ」で「このクリップにフィルムのグレードを使う」をオフにすると、そのクリップだけ別の色にできます。
+                    </p>
+                </div>
+
+                <div class="card" style="margin-bottom: 12px">
+                    <h3>クリップはどこに保存されますか？</h3>
+                    <p>
+                        iPhone 内（アプリ内）に保存されます。アプリを削除すると消えてしまうため、再インストールや機種変更の前に「設定 → iCloud バックアップ」でバックアップしてください。
+                    </p>
+                </div>
+
+                <div class="card" style="margin-bottom: 12px">
+                    <h3>購入を別の端末に引き継ぐには？</h3>
+                    <p>
+                        同じ Apple ID でサインインした端末で「設定 → プレミアム → 購入を復元」を押してください。
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>サブスクリプションを解約するには？</h3>
+                    <p>
+                        iPhone の「設定」→ 自分の名前 →「サブスクリプション」から解約できます。アプリを削除しても解約にはなりません。
+                    </p>
+                </div>
+            </section>
+
+            <div class="divider"></div>
+
+            <header>
+                <h1>Support</h1>
+            </header>
+
+            <section>
+                <h2>Getting help</h2>
+                <div class="card">
+                    <p>
+                        If something is not working, or you have a request, email
+                        <a href="mailto:nao22c@icloud.com">nao22c@icloud.com</a>.
+                        We aim to reply within a few business days.
+                    </p>
+                    <p style="margin-top: 12px">
+                        Including the following makes it much faster to help you:
+                    </p>
+                    <ul style="margin-top: 8px">
+                        <li>Your device model and OS version (e.g. iPhone 15 Pro, iOS 18.2)</li>
+                        <li>The app version, shown under <em>Settings → About</em></li>
+                        <li>What you did, what you expected, and what happened instead</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2>Frequently asked questions</h2>
+                <div class="card" style="margin-bottom: 12px">
+                    <h3>Why does my footage look flat?</h3>
+                    <p>
+                        Clips are recorded in Log to keep detail in highlights and shadows. Turn on “Display LUT” in the viewfinder, or pick a look in the color editor, to see the finished color. Exported videos always include the look.
+                    </p>
+                </div>
+
+                <div class="card" style="margin-bottom: 12px">
+                    <h3>Which iPhones record Apple Log?</h3>
+                    <p>
+                        iPhone 15 Pro and later. Other iPhones record a flat Log profile that works with the same looks. The active profile is shown in Camera Settings under “Color Profile”.
+                    </p>
+                </div>
+
+                <div class="card" style="margin-bottom: 12px">
+                    <h3>How are clips joined into films?</h3>
+                    <p>
+                        Clips recorded in 2 SEC, 3 SEC and HOLD modes are joined into one film per day automatically. Regular videos are kept as clips; add them to any film with “Add to Film”, or create your own film with “+” in Media.
+                    </p>
+                </div>
+
+                <div class="card" style="margin-bottom: 12px">
+                    <h3>Can I grade the whole film and single clips differently?</h3>
+                    <p>
+                        Open “Color” on a film and switch between “Whole Film” and “This Clip”. Turn off “Use the film's grade for this clip” to give one clip its own color.
+                    </p>
+                </div>
+
+                <div class="card" style="margin-bottom: 12px">
+                    <h3>Where are my clips stored?</h3>
+                    <p>
+                        On your iPhone, inside the app. Deleting the app deletes them, so back up with Settings → iCloud Backup before reinstalling or changing iPhones.
+                    </p>
+                </div>
+
+                <div class="card" style="margin-bottom: 12px">
+                    <h3>How do I restore my purchase on another device?</h3>
+                    <p>
+                        Sign in with the same Apple ID and tap Settings → Premium → Restore Purchases.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>How do I cancel my subscription?</h3>
+                    <p>
+                        Open the iPhone Settings app → your name → Subscriptions. Deleting the app does not cancel a subscription.
+                    </p>
+                </div>
+            </section>
+
+            <footer>© 2026 nao22c. All rights reserved.</footer>
+        </div>
+    </body>
+</html>
