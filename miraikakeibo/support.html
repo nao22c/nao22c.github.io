@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>未来家計簿 サポート / Support</title>
+        <style>
+            :root {
+                --accent: #e88e7a;
+                --bg: #f5f5f7;
+                --card: #ffffff;
+                --text: #1d1d1f;
+                --sub: #6e6e73;
+                --border: rgba(0, 0, 0, 0.08);
+            }
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                font-family:
+                    -apple-system, BlinkMacSystemFont, "Hiragino Sans",
+                    "Hiragino Kaku Gothic ProN", sans-serif;
+                background: var(--bg);
+                color: var(--text);
+                line-height: 1.8;
+                padding: 0 16px 60px;
+            }
+            .container {
+                max-width: 680px;
+                margin: 0 auto;
+            }
+            .nav {
+                padding: 20px 0;
+            }
+            .nav a {
+                color: #007aff;
+                text-decoration: none;
+                font-size: 0.95rem;
+            }
+            header {
+                text-align: center;
+                padding: 40px 0 24px;
+            }
+            h1 {
+                font-size: 1.8rem;
+                font-weight: 800;
+                margin-bottom: 8px;
+            }
+            .updated {
+                color: var(--sub);
+                font-size: 0.85rem;
+                margin-top: 6px;
+            }
+            section {
+                margin-bottom: 28px;
+            }
+            h2 {
+                font-size: 1.1rem;
+                font-weight: 700;
+                margin-bottom: 12px;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+            h2::before {
+                content: "";
+                width: 4px;
+                height: 18px;
+                background: var(--accent);
+                border-radius: 4px;
+            }
+            .card {
+                background: var(--card);
+                border: 1px solid var(--border);
+                border-radius: 14px;
+                padding: 18px 20px;
+            }
+            ul {
+                padding-left: 1.2em;
+            }
+            li {
+                margin-bottom: 8px;
+            }
+            a {
+                color: #007aff;
+            }
+            .divider {
+                margin: 48px 0 32px;
+                border-top: 1px solid var(--border);
+            }
+            footer {
+                text-align: center;
+                color: var(--sub);
+                font-size: 0.85rem;
+                padding-top: 32px;
+                border-top: 1px solid var(--border);
+                margin-top: 40px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="nav"><a href="index.html">← 未来家計簿</a></div>
+
+            <header>
+                <h1>サポート</h1>
+                <p class="updated">Support</p>
+            </header>
+
+            <section>
+                <h2>お問い合わせ</h2>
+                <div class="card">
+                    <p>
+                        うまく動かないときや、ご要望があるときは
+                        <a href="mailto:nao22c@icloud.com">nao22c@icloud.com</a>
+                        までメールをお送りください。数日以内に返信いたします。
+                    </p>
+                    <p style="margin-top: 12px">
+                        以下を書き添えていただけると、原因の特定がとても早くなります。
+                    </p>
+                    <ul style="margin-top: 8px">
+                        <li>端末の機種と OS のバージョン（例: iPhone 15 / iOS 18.2）</li>
+                        <li>アプリのバージョンと制度パラメータ（<em>設定 → このアプリについて</em> に表示されます）</li>
+                        <li>行った操作、期待した結果、実際に起きたこと</li>
+                    </ul>
+                    <p style="margin-top: 12px; color: var(--sub); font-size: 0.9rem">
+                        お給料などの具体的な金額をメールに書いていただく必要はありません。
+                    </p>
+                </div>
+            </section>
+
+            <section>
+                <h2>よくある質問</h2>
+                <div class="card" style="margin-bottom: 12px">
+                    <h3>計算結果は正確ですか？</h3>
+                    <p>
+                        日本の税制・社会保険制度をもとにした目安です。実際の金額は、勤務先・自治体・加入している健康保険などによって異なります。給付金や還付の入金日も、申請から支給までの一般的な期間をもとにしています。正確な金額は、勤務先・自治体・税務署などにご確認ください。
+                    </p>
+                </div>
+
+                <div class="card" style="margin-bottom: 12px">
+                    <h3>お給料は手取りと額面のどちらを入れますか？</h3>
+                    <p>
+                        額面（通勤手当などを含めた総支給額）を入れてください。税金と社会保険料はアプリが計算して差し引きます。
+                    </p>
+                </div>
+
+                <div class="card" style="margin-bottom: 12px">
+                    <h3>入力した内容を直したい・最初からやり直したい</h3>
+                    <p>
+                        各タブ右上の設定ボタンから「設定」を開き、「入力内容の確認・修正」で直せます。すべて消してやり直す場合は「最初から入力しなおす」を押してください。家計・税金タブからも直接修正できます。
+                    </p>
+                </div>
+
+                <div class="card" style="margin-bottom: 12px">
+                    <h3>給付金が表示されません</h3>
+                    <p>
+                        産休・育休中の給付金や手当は、出産予定日を登録すると表示されます。「家計」タブから出産の予定を入力してください。
+                    </p>
+                </div>
+
+                <div class="card" style="margin-bottom: 12px">
+                    <h3>税制が変わったらどうなりますか？</h3>
+                    <p>
+                        税率や給付金の制度パラメータは、インターネットに接続したときに自動で最新のものに切り替わります。使っているパラメータは「設定 → このアプリについて」で確認できます。
+                    </p>
+                </div>
+
+                <div class="card" style="margin-bottom: 12px">
+                    <h3>入力したデータはどこに保存されますか？</h3>
+                    <p>
+                        iPhone 内（アプリ内）にのみ保存され、外部に送信されることはありません。アプリを削除するとデータも消えてしまいますのでご注意ください。
+                    </p>
+                </div>
+
+                <div class="card" style="margin-bottom: 12px">
+                    <h3>広告を消すには？</h3>
+                    <p>
+                        「設定 → プレミアム」から月額・年額・買い切りのいずれかを購入すると、広告が表示されなくなります。機能はすべて無料版と同じです。
+                    </p>
+                </div>
+
+                <div class="card" style="margin-bottom: 12px">
+                    <h3>購入を別の端末に引き継ぐには？</h3>
+                    <p>
+                        同じ Apple ID でサインインした端末で「設定 → プレミアム → 購入を復元」を押してください。
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>サブスクリプションを解約するには？</h3>
+                    <p>
+                        iPhone の「設定」→ 自分の名前 →「サブスクリプション」から解約できます。期間終了の24時間前までに解約しない限り自動で更新されます。アプリを削除しても解約にはなりません。
+                    </p>
+                </div>
+            </section>
+
+            <div class="divider"></div>
+
+            <header>
+                <h1>Support</h1>
+            </header>
+
+            <section>
+                <h2>Getting help</h2>
+                <div class="card">
+                    <p>
+                        If something is not working, or you have a request, email
+                        <a href="mailto:nao22c@icloud.com">nao22c@icloud.com</a>.
+                        We aim to reply within a few business days.
+                    </p>
+                    <p style="margin-top: 12px">
+                        Including the following makes it much faster to help you:
+                    </p>
+                    <ul style="margin-top: 8px">
+                        <li>Your device model and OS version (e.g. iPhone 15, iOS 18.2)</li>
+                        <li>The app version and parameter version, shown under <em>Settings → About</em></li>
+                        <li>What you did, what you expected, and what happened instead</li>
+                    </ul>
+                    <p style="margin-top: 12px; color: var(--sub); font-size: 0.9rem">
+                        There is no need to include your actual salary or other amounts.
+                    </p>
+                </div>
+            </section>
+
+            <section>
+                <h2>Frequently asked questions</h2>
+                <div class="card" style="margin-bottom: 12px">
+                    <h3>How accurate are the results?</h3>
+                    <p>
+                        They are estimates based on Japan's tax and social insurance rules. Actual amounts depend on your employer, municipality and health insurance, and payment dates are based on typical processing times. Please confirm exact figures with your employer, municipality or tax office.
+                    </p>
+                </div>
+
+                <div class="card" style="margin-bottom: 12px">
+                    <h3>Should I enter my gross or take-home pay?</h3>
+                    <p>
+                        Enter your gross pay, including commuting allowances. The app calculates and subtracts taxes and social insurance.
+                    </p>
+                </div>
+
+                <div class="card" style="margin-bottom: 12px">
+                    <h3>How do I edit or start over?</h3>
+                    <p>
+                        Open Settings from the button at the top right of any tab. Use “Review and edit” to change your entries, or “Start over” to erase everything. You can also edit directly in the Household and Taxes tabs.
+                    </p>
+                </div>
+
+                <div class="card" style="margin-bottom: 12px">
+                    <h3>Why are no benefits shown?</h3>
+                    <p>
+                        Maternity and childcare leave benefits appear once you enter a due date. Add it in the Household tab.
+                    </p>
+                </div>
+
+                <div class="card" style="margin-bottom: 12px">
+                    <h3>What happens when tax rules change?</h3>
+                    <p>
+                        The app downloads the latest tax and benefit parameters automatically when you are online. The version in use is shown under Settings → About.
+                    </p>
+                </div>
+
+                <div class="card" style="margin-bottom: 12px">
+                    <h3>Where is my data stored?</h3>
+                    <p>
+                        Only on your iPhone, inside the app. It is never sent anywhere. Deleting the app also deletes your data.
+                    </p>
+                </div>
+
+                <div class="card" style="margin-bottom: 12px">
+                    <h3>How do I remove ads?</h3>
+                    <p>
+                        Buy a monthly, yearly or one-time plan under Settings → Premium. All features are the same as in the free version.
+                    </p>
+                </div>
+
+                <div class="card" style="margin-bottom: 12px">
+                    <h3>How do I restore my purchase on another device?</h3>
+                    <p>
+                        Sign in with the same Apple ID and tap Settings → Premium → Restore Purchases.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>How do I cancel my subscription?</h3>
+                    <p>
+                        Open the iPhone Settings app → your name → Subscriptions. Subscriptions renew automatically unless cancelled at least 24 hours before the end of the period. Deleting the app does not cancel a subscription.
+                    </p>
+                </div>
+            </section>
+
+            <footer>© 2026 nao22c. All rights reserved.</footer>
+        </div>
+    </body>
+</html>

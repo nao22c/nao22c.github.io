@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>未来家計簿 — 1年後までのお金の流れを、先回りで</title>
+        <style>
+            :root {
+                --accent: #e88e7a;
+                --bg: #f5f5f7;
+                --card: #ffffff;
+                --text: #1d1d1f;
+                --sub: #6e6e73;
+                --border: rgba(0, 0, 0, 0.08);
+            }
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                font-family:
+                    -apple-system, BlinkMacSystemFont, "Hiragino Sans",
+                    "Hiragino Kaku Gothic ProN", sans-serif;
+                background: var(--bg);
+                color: var(--text);
+                line-height: 1.7;
+                padding: 0 16px 60px;
+            }
+            .container {
+                max-width: 680px;
+                margin: 0 auto;
+            }
+            header {
+                text-align: center;
+                padding: 60px 0 40px;
+            }
+            .icon {
+                width: 110px;
+                height: 110px;
+                border-radius: 24px;
+                object-fit: cover;
+                margin-bottom: 24px;
+                box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+                
+            }
+            h1 {
+                font-size: 2rem;
+                font-weight: 800;
+                margin-bottom: 8px;
+            }
+            .tagline {
+                color: var(--sub);
+                font-size: 1rem;
+                max-width: 520px;
+                margin: 0 auto;
+            }
+            section {
+                margin-bottom: 32px;
+            }
+            h2 {
+                font-size: 1.15rem;
+                font-weight: 700;
+                margin-bottom: 14px;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+            h2::before {
+                content: "";
+                width: 4px;
+                height: 18px;
+                background: var(--accent);
+                border-radius: 4px;
+            }
+            .card {
+                background: var(--card);
+                border: 1px solid var(--border);
+                border-radius: 14px;
+                padding: 20px 22px;
+            }
+            .features {
+                display: grid;
+                gap: 12px;
+            }
+            .feature {
+                background: var(--card);
+                border: 1px solid var(--border);
+                border-radius: 14px;
+                padding: 16px 18px;
+            }
+            .feature h3 {
+                font-size: 1rem;
+                font-weight: 700;
+                margin-bottom: 4px;
+            }
+            .feature p {
+                color: var(--sub);
+                font-size: 0.92rem;
+            }
+            table.pricing {
+                width: 100%;
+                border-collapse: collapse;
+                font-size: 0.95rem;
+            }
+            table.pricing th,
+            table.pricing td {
+                text-align: left;
+                padding: 10px 4px;
+                border-bottom: 1px solid var(--border);
+            }
+            table.pricing th {
+                white-space: nowrap;
+                padding-right: 16px;
+                color: var(--sub);
+                font-weight: 600;
+            }
+            table.pricing tr:last-child td {
+                border-bottom: none;
+            }
+            a {
+                color: #007aff;
+            }
+            ul {
+                padding-left: 1.2em;
+            }
+            li {
+                margin-bottom: 6px;
+            }
+            .links {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 16px;
+                justify-content: center;
+                padding-top: 8px;
+            }
+            footer {
+                text-align: center;
+                color: var(--sub);
+                font-size: 0.85rem;
+                padding-top: 32px;
+                border-top: 1px solid var(--border);
+                margin-top: 40px;
+            }
+            .lang {
+                color: var(--sub);
+                font-size: 0.85rem;
+                text-align: center;
+                padding: 24px 0 0;
+            }
+            .coming-soon {
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+                background: #fdf1de;
+                color: #b3690a;
+                font-size: 0.85rem;
+                font-weight: 700;
+                padding: 8px 16px;
+                border-radius: 100px;
+                margin-top: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <img src="icon_miraikakeibo.svg" alt="未来家計簿" class="icon" />
+                <h1>未来家計簿</h1>
+                <p class="tagline">
+                    お給料・税金・給付金から、1年後までのお金の流れを。<br />
+                    出産や育休を控えた夫婦のための、先回り家計シミュレーター。
+                </p>
+                <div class="coming-soon">
+                    リリース準備中 — 近日公開予定
+                </div>
+            </header>
+
+            <section>
+                <h2>できること</h2>
+                <div class="features">
+                    <div class="feature">
+                        <h3>1年後までの残高を、月ごとに</h3>
+                        <p>
+                            夫婦のお給料・ボーナス・毎月の支出と今の預金を入れるだけで、毎月の収支と月末の世帯残高を1年先まで計算します。貯蓄が一番減る月や、次の大きな支出もひと目でわかります。
+                        </p>
+                    </div>
+                    <div class="feature">
+                        <h3>額面から手取りを自動で計算</h3>
+                        <p>
+                            所得税・住民税・社会保険料を差し引いた手取りを、夫婦それぞれ計算します。住民税の払い方（天引き・普通徴収）や、年末調整・還付の見込みにも対応しています。
+                        </p>
+                    </div>
+                    <div class="feature">
+                        <h3>産休・育休中のお金を先取り</h3>
+                        <p>
+                            出産予定日を登録すると、出産手当金・育児休業給付金・出生後休業支援給付金・出産育児一時金などの金額と入金予定、社会保険料の免除額を計算します。入金がない期間も事前にわかります。
+                        </p>
+                    </div>
+                    <div class="feature">
+                        <h3>控除・車・固定資産税まで</h3>
+                        <p>
+                            生命保険料・iDeCo・住宅ローン控除・ふるさと納税などの控除、自動車税と車検の費用、固定資産税、出産時の医療費控除も計算に入れられます。
+                        </p>
+                    </div>
+                    <div class="feature">
+                        <h3>給付金カレンダー</h3>
+                        <p>
+                            受け取れる給付金・手当がいつ・いくら入るかをカレンダーで確認できます。ホーム画面に表示する項目も自由に選べます。
+                        </p>
+                    </div>
+                    <div class="feature">
+                        <h3>制度の改正に自動で対応</h3>
+                        <p>
+                            税率や給付金の制度パラメータは、アプリを更新しなくても最新の内容に自動で切り替わります。入力した家計のデータは端末の中だけに保存されます。
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>価格</h2>
+                <div class="card">
+                    <p style="margin-bottom: 12px">
+                        <strong>すべての機能を無料で使えます。</strong>
+                        無料版では画面下部などに広告が表示されます。プレミアムにすると広告が表示されなくなります。
+                    </p>
+                    <table class="pricing">
+                        <tr>
+                            <th>月額プラン</th>
+                            <td>広告の非表示</td>
+                        </tr>
+                        <tr>
+                            <th>年額プラン</th>
+                            <td>月額プランと同じ内容を 1 年単位で</td>
+                        </tr>
+                        <tr>
+                            <th>買い切り</th>
+                            <td>同じ内容をずっと。更新はありません</td>
+                        </tr>
+                    </table>
+                    <p
+                        style="
+                            color: var(--sub);
+                            font-size: 0.85rem;
+                            margin-top: 12px;
+                        "
+                    >
+                        価格はお住まいの国・地域によって異なります。最新の価格はアプリ内、または App Store でご確認ください。
+                    </p>
+                </div>
+            </section>
+
+            <section>
+                <h2>ご注意</h2>
+                <div class="card">
+                    <p>
+                        計算結果は、日本の税制・社会保険制度をもとにした目安です。実際の金額は、勤務先・自治体・加入している健康保険などによって異なります。給付金や還付の入金日は、申請から支給までの一般的な期間をもとにしています。正確な金額や手続きは、勤務先・自治体・税務署などにご確認ください。
+                    </p>
+                </div>
+            </section>
+
+            <section>
+                <h2>動作環境</h2>
+                <div class="card">
+                    <ul>
+                        <li>iOS 17.0 以降の iPhone</li>
+                        <li>日本の税制・社会保険制度に対応しています</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2>お問い合わせ</h2>
+                <div class="card">
+                    <p>
+                        ご質問・不具合のご報告は
+                        <a href="mailto:nao22c@icloud.com">nao22c@icloud.com</a>
+                        までお送りください。数日以内に返信いたします。
+                    </p>
+                </div>
+            </section>
+
+            <div class="links">
+                <a href="support.html">サポート</a>
+                <a href="privacy-policy.html">プライバシーポリシー</a>
+                <a href="../">他のアプリ</a>
+            </div>
+
+            <p class="lang">
+                English documents are available on the
+                <a href="privacy-policy.html">Privacy Policy</a> and
+                <a href="support.html">Support</a> pages.
+            </p>
+
+            <footer>© 2026 nao22c. All rights reserved.</footer>
+        </div>
+    </body>
+</html>
