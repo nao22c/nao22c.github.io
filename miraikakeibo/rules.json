@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "version": "2026.10",
-  "effectiveFrom": "2026-10-01",
+  "version": "2026.11",
+  "effectiveFrom": "2026-11-01",
   "maternity": {
     "prenatalDays": 42,
     "prenatalDaysMultiple": 98,
@@ -268,6 +268,19 @@
       "weightTaxPerHalfTon": { "base": 8200, "over13": 11400, "over18": 12600 },
       "keiWeightTax": { "base": 6600, "over13": 8200, "over18": 8800 }
     }
+  },
+  "nursery": {
+    "tiers": [
+      { "levyBelow": 48600, "monthlyFee": 19500 },
+      { "levyBelow": 97000, "monthlyFee": 30000 },
+      { "levyBelow": 169000, "monthlyFee": 44500 },
+      { "levyBelow": 301000, "monthlyFee": 61000 },
+      { "levyBelow": 397000, "monthlyFee": 80000 },
+      { "monthlyFee": 104000 }
+    ],
+    "municipalShare": 0.6,
+    "siblingRates": [1.0, 0.5, 0.0],
+    "freeFromClassAge": 3
   },
   "nisa": {
     "annualLimit": 3600000,
