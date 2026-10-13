@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "version": "2026.08",
-  "effectiveFrom": "2026-08-01",
+  "version": "2026.10",
+  "effectiveFrom": "2026-10-01",
   "maternity": {
     "prenatalDays": 42,
     "prenatalDaysMultiple": 98,
@@ -49,7 +49,9 @@
       { "untilMonthsSinceBirth": 216, "monthlyAmount": 10000 }
     ],
     "paymentMonths": [2, 4, 6, 8, 10, 12],
-    "paymentDay": 10
+    "paymentDay": 10,
+    "thirdChildMonthlyAmount": 30000,
+    "countUntilAge": 22
   },
   "socialInsurance": {
     "healthRate": 0.0495,
@@ -228,7 +230,14 @@
     "housingLoanResidentRate": 0.05,
     "furusato": { "selfBurden": 2000, "specialCapRate": 0.2 },
     "residentOrdinaryPaymentMonths": [6, 8, 10, 1],
-    "yearEndAdjustmentMonth": 12
+    "yearEndAdjustmentMonth": 12,
+    "dependents": {
+      "general": { "incomeTax": 380000, "residentTax": 330000 },
+      "specific": { "incomeTax": 630000, "residentTax": 450000 },
+      "generalMinAge": 16,
+      "specificMinAge": 19,
+      "specificMaxAge": 22
+    }
   },
   "vehicle": {
     "taxPaymentMonth": 5,
@@ -259,6 +268,10 @@
       "weightTaxPerHalfTon": { "base": 8200, "over13": 11400, "over18": 12600 },
       "keiWeightTax": { "base": 6600, "over13": 8200, "over18": 8800 }
     }
+  },
+  "nisa": {
+    "annualLimit": 3600000,
+    "lifetimeLimit": 18000000
   },
   "publicHolidays": [
     "2026-01-01", "2026-01-12", "2026-02-11", "2026-02-23", "2026-03-20", "2026-04-29",
