@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>timemachine — See relativity for yourself</title>
+        <meta name="description" content="timemachine is an iPhone and iPad app that lets you explore Einstein's relativity through real calculations and simple explanations." />
+        <style>
+            :root {
+                --accent: #6e56cf;
+                --bg: #f5f5f7;
+                --card: #ffffff;
+                --text: #1d1d1f;
+                --sub: #6e6e73;
+                --border: rgba(0, 0, 0, 0.08);
+            }
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                font-family:
+                    -apple-system, BlinkMacSystemFont, "Hiragino Sans",
+                    "Hiragino Kaku Gothic ProN", sans-serif;
+                background: var(--bg);
+                color: var(--text);
+                line-height: 1.7;
+                padding: 0 16px 60px;
+            }
+            .container {
+                max-width: 680px;
+                margin: 0 auto;
+            }
+            header {
+                text-align: center;
+                padding: 60px 0 40px;
+            }
+            .icon {
+                width: 110px;
+                height: 110px;
+                border-radius: 24px;
+                object-fit: cover;
+                margin-bottom: 24px;
+                box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+                background: #0d1030;
+            }
+            h1 {
+                font-size: 2rem;
+                font-weight: 800;
+                margin-bottom: 8px;
+            }
+            .tagline {
+                color: var(--sub);
+                font-size: 1rem;
+                max-width: 520px;
+                margin: 0 auto;
+            }
+            section {
+                margin-bottom: 32px;
+            }
+            h2 {
+                font-size: 1.15rem;
+                font-weight: 700;
+                margin-bottom: 14px;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+            h2::before {
+                content: "";
+                width: 4px;
+                height: 18px;
+                background: var(--accent);
+                border-radius: 4px;
+            }
+            .card {
+                background: var(--card);
+                border: 1px solid var(--border);
+                border-radius: 14px;
+                padding: 20px 22px;
+            }
+            .features {
+                display: grid;
+                gap: 12px;
+            }
+            .feature {
+                background: var(--card);
+                border: 1px solid var(--border);
+                border-radius: 14px;
+                padding: 16px 18px;
+            }
+            .feature h3 {
+                font-size: 1rem;
+                font-weight: 700;
+                margin-bottom: 4px;
+            }
+            .feature p {
+                color: var(--sub);
+                font-size: 0.92rem;
+            }
+            table.pricing {
+                width: 100%;
+                border-collapse: collapse;
+                font-size: 0.95rem;
+            }
+            table.pricing th,
+            table.pricing td {
+                text-align: left;
+                padding: 10px 4px;
+                border-bottom: 1px solid var(--border);
+            }
+            table.pricing th {
+                white-space: nowrap;
+                padding-right: 16px;
+                color: var(--sub);
+                font-weight: 600;
+            }
+            table.pricing tr:last-child td {
+                border-bottom: none;
+            }
+            .note {
+                color: var(--sub);
+                font-size: 0.85rem;
+                margin-top: 12px;
+            }
+            a {
+                color: #007aff;
+            }
+            ul {
+                padding-left: 1.2em;
+            }
+            li {
+                margin-bottom: 6px;
+            }
+            .links {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 16px;
+                justify-content: center;
+                padding-top: 8px;
+            }
+            .divider {
+                margin: 48px 0 0;
+                border-top: 1px solid var(--border);
+            }
+            footer {
+                text-align: center;
+                color: var(--sub);
+                font-size: 0.85rem;
+                padding-top: 32px;
+                border-top: 1px solid var(--border);
+                margin-top: 40px;
+            }
+            .coming-soon {
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+                background: #ece8ff;
+                color: #4b3aa8;
+                font-size: 0.85rem;
+                font-weight: 700;
+                padding: 8px 16px;
+                border-radius: 100px;
+                margin-top: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <img src="icon_timemachine.svg" alt="timemachine" class="icon" />
+                <h1>timemachine</h1>
+                <p class="tagline">
+                    Fly to Hawaii and your clock drifts. GPS would be off by kilometers without relativity.<br />
+                    See Einstein's relativity for yourself, with real calculations and simple explanations.
+                </p>
+                <div class="coming-soon">Coming soon to the App Store</div>
+            </header>
+
+            <section>
+                <h2>What you can do</h2>
+                <div class="features">
+                    <div class="feature">
+                        <h3>Start with a real question</h3>
+                        <p>
+                            “How far does my clock drift on a flight to Hawaii?” “How old would I be after a trip at 99% of light speed?” Pick a familiar example with one tap and the answer appears as one big number.
+                        </p>
+                    </div>
+                    <div class="feature">
+                        <h3>Real physics, not shortcuts</h3>
+                        <p>
+                            More than 30 simulations of time dilation, E = mc², gravity, GPS, black holes and gravitational waves. The calculations are checked against real measurements, such as GPS satellite clocks gaining 38 microseconds a day.
+                        </p>
+                    </div>
+                    <div class="feature">
+                        <h3>See it with your own eyes</h3>
+                        <p>
+                            A black hole drawn by tracing light rays one by one, the sky at near light speed, a trip through a wormhole, and a journey across the solar system using the real orbits of the planets.
+                        </p>
+                    </div>
+                    <div class="feature">
+                        <h3>Learn step by step</h3>
+                        <p>
+                            A 12-lesson intro course, a glossary, a timeline from 1676 to today, equations explained in words, and a quiz. Formulas are tucked away so you can understand everything without them.
+                        </p>
+                    </div>
+                    <div class="feature">
+                        <h3>Energy you can picture</h3>
+                        <p>
+                            Energy is always shown with everyday comparisons: your electricity bill, years of household power, or liters of gasoline.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Pricing</h2>
+                <div class="card">
+                    <p style="margin-bottom: 12px">
+                        <strong>Free to use.</strong>
+                        All simulations, the intro course, the glossary, the timeline and the quiz are free. The free version shows ads.
+                    </p>
+                    <table class="pricing">
+                        <tr>
+                            <th>Premium</th>
+                            <td>One-time purchase. Removes ads and unlocks “Learn more”, a guide to books for going further. No subscription.</td>
+                        </tr>
+                    </table>
+                    <p class="note">
+                        Prices vary by country and region. See the app or the App Store for the current price.
+                    </p>
+                </div>
+            </section>
+
+            <section>
+                <h2>Requirements</h2>
+                <div class="card">
+                    <ul>
+                        <li>iPhone or iPad with iOS 17.0 or later</li>
+                        <li>Available in English and Japanese</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2>Contact</h2>
+                <div class="card">
+                    <p>
+                        For questions or bug reports, email
+                        <a href="mailto:nao22c@icloud.com">nao22c@icloud.com</a>.
+                        We aim to reply within a few days.
+                    </p>
+                </div>
+            </section>
+
+            <div class="links">
+                <a href="support.html">Support</a>
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Use</a>
+                <a href="../">Other apps</a>
+            </div>
+
+            <div class="divider"></div>
+
+            <header>
+                <h1 lang="ja">timemachine</h1>
+                <p class="tagline" lang="ja">
+                    ハワイまで飛ぶと時計がずれる。相対論がなければ GPS は何 km もずれる。<br />
+                    アインシュタインの相対性理論を、本物の計算とやさしい説明で体験できるアプリです。
+                </p>
+            </header>
+
+            <div lang="ja">
+                <section>
+                    <h2>できること</h2>
+                    <div class="features">
+                        <div class="feature">
+                            <h3>身近な「問い」から始まる</h3>
+                            <p>
+                                「ハワイまで飛ぶと何秒ずれる？」「光速の 99% で旅したら何歳になる？」。身近な例を 1 タップで選ぶと、答えが大きな数字で表示されます。
+                            </p>
+                        </div>
+                        <div class="feature">
+                            <h3>計算は本物</h3>
+                            <p>
+                                時間の遅れ、E = mc²、重力、GPS、ブラックホール、重力波など 30 以上のシミュレーション。計算は「GPS 衛星の時計は 1 日に約 38 マイクロ秒進む」といった実測値で確かめています。
+                            </p>
+                        </div>
+                        <div class="feature">
+                            <h3>目で見て体験する</h3>
+                            <p>
+                                光の通り道を 1 本ずつ計算して描くブラックホール、光速に近づいたときの星空、ワームホールの通り抜け、本物の惑星の軌道を使った太陽系の旅。
+                            </p>
+                        </div>
+                        <div class="feature">
+                            <h3>順番に学べる</h3>
+                            <p>
+                                全 12 回の入門コース、用語集、1676 年から現在までの年表、言葉で読む式のまとめ、クイズ。数式は折りたたんであるので、読まなくても理解できます。
+                            </p>
+                        </div>
+                        <div class="feature">
+                            <h3>エネルギーを実感できる</h3>
+                            <p>
+                                エネルギーには必ず、電気代、一般家庭の電気の何年分、ガソリン何リットルといった日常の例えを添えています。
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <h2>価格</h2>
+                    <div class="card">
+                        <p style="margin-bottom: 12px">
+                            <strong>無料で使えます。</strong>
+                            シミュレーション、入門コース、用語集、年表、クイズはすべて無料です。無料版では広告が表示されます。
+                        </p>
+                        <table class="pricing">
+                            <tr>
+                                <th>プレミアム</th>
+                                <td>買い切り。広告が表示されなくなり、さらに学ぶための本の案内「もっと学ぶ」が使えるようになります。サブスクリプションではありません。</td>
+                            </tr>
+                        </table>
+                        <p class="note">
+                            価格はお住まいの国・地域によって異なります。最新の価格はアプリ内、または App Store でご確認ください。
+                        </p>
+                    </div>
+                </section>
+
+                <section>
+                    <h2>動作環境</h2>
+                    <div class="card">
+                        <ul>
+                            <li>iOS 17.0 以降の iPhone・iPad</li>
+                            <li>英語・日本語に対応</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section>
+                    <h2>お問い合わせ</h2>
+                    <div class="card">
+                        <p>
+                            ご質問・不具合のご報告は
+                            <a href="mailto:nao22c@icloud.com">nao22c@icloud.com</a>
+                            までお送りください。数日以内に返信いたします。
+                        </p>
+                    </div>
+                </section>
+
+                <div class="links">
+                    <a href="support.html#ja">サポート</a>
+                    <a href="privacy-policy.html#ja">プライバシーポリシー</a>
+                    <a href="terms.html#ja">利用規約</a>
+                    <a href="../">他のアプリ</a>
+                </div>
+            </div>
+
+            <footer>© 2026 nao22c. All rights reserved.</footer>
+        </div>
+    </body>
+</html>
