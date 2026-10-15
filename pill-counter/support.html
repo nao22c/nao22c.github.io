@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>錠剤カウンター — サポート / Support</title>
+        <style>
+            :root {
+                --accent: #34a36b;
+                --bg: #f5f5f7;
+                --card: #ffffff;
+                --text: #1d1d1f;
+                --sub: #6e6e73;
+                --border: rgba(0, 0, 0, 0.08);
+            }
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                font-family:
+                    -apple-system, BlinkMacSystemFont, "Hiragino Sans",
+                    "Hiragino Kaku Gothic ProN", sans-serif;
+                background: var(--bg);
+                color: var(--text);
+                line-height: 1.8;
+                padding: 0 16px 60px;
+            }
+            .container {
+                max-width: 680px;
+                margin: 0 auto;
+            }
+            .nav {
+                padding: 20px 0;
+            }
+            .nav a {
+                color: #007aff;
+                text-decoration: none;
+                font-size: 0.95rem;
+            }
+            header {
+                text-align: center;
+                padding: 40px 0 24px;
+            }
+            h1 {
+                font-size: 1.8rem;
+                font-weight: 800;
+                margin-bottom: 8px;
+            }
+            .updated {
+                color: var(--sub);
+                font-size: 0.85rem;
+                margin-top: 6px;
+            }
+            section {
+                margin-bottom: 28px;
+            }
+            h2 {
+                font-size: 1.1rem;
+                font-weight: 700;
+                margin-bottom: 12px;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+            h2::before {
+                content: "";
+                width: 4px;
+                height: 18px;
+                background: var(--accent);
+                border-radius: 4px;
+            }
+            .card {
+                background: var(--card);
+                border: 1px solid var(--border);
+                border-radius: 14px;
+                padding: 18px 20px;
+            }
+            ul {
+                padding-left: 1.2em;
+            }
+            li {
+                margin-bottom: 8px;
+            }
+            a {
+                color: #007aff;
+            }
+            .divider {
+                margin: 48px 0 32px;
+                border-top: 1px solid var(--border);
+            }
+            footer {
+                text-align: center;
+                color: var(--sub);
+                font-size: 0.85rem;
+                padding-top: 32px;
+                border-top: 1px solid var(--border);
+                margin-top: 40px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="nav"><a href="index.html">← 錠剤カウンター</a></div>
+
+            <header>
+                <h1>サポート</h1>
+                <p class="updated">Support</p>
+            </header>
+
+            <section>
+                <h2>お問い合わせ</h2>
+                <div class="card">
+                    <p>
+                        うまく動かないときや、ご要望があるときは
+                        <a href="mailto:nao22c@icloud.com">nao22c@icloud.com</a>
+                        までメールをお送りください。数日以内に返信いたします。
+                    </p>
+                    <p style="margin-top: 12px">
+                        以下を書き添えていただけると、原因の特定がとても早くなります。
+                    </p>
+                    <ul style="margin-top: 8px">
+                        <li>端末の機種と OS のバージョン（例: iPhone 15 / iOS 18.2）</li>
+                        <li>アプリのバージョン（<em>設定 → アプリ情報</em> に表示されます）</li>
+                        <li>行った操作、期待した結果、実際に起きたこと</li>
+                    </ul>
+                    <p style="margin-top: 12px; color: var(--sub); font-size: 0.9rem">
+                        患者さんのお名前など、個人を特定できる情報が写った写真は送らないでください。
+                    </p>
+                </div>
+            </section>
+
+            <section>
+                <h2>よくある質問</h2>
+                <div class="card" style="margin-bottom: 12px">
+                    <h3>うまく数えられません</h3>
+                    <p>
+                        錠剤どうしが重ならないように広げ、錠剤と色の違うトレー（白い錠剤なら色の付いたトレー）の上で、明るい場所で真上から撮影してください。影や反射が強いと数え間違いが起こりやすくなります。
+                    </p>
+                </div>
+
+                <div class="card" style="margin-bottom: 12px">
+                    <h3>数え間違いを直したい</h3>
+                    <p>
+                        結果画面の「マークを編集」をオンにして、数え漏れの錠剤をタップすると追加、余分な点をタップすると削除できます。直し終わったら「完了」を押してください。右上の ↶ で直前の修正を取り消せます。
+                    </p>
+                </div>
+
+                <div class="card" style="margin-bottom: 12px">
+                    <h3>点がずれていないか確認したい</h3>
+                    <p>
+                        結果画面の写真は 2 本指で広げると拡大できます。ダブルタップでもその場所を拡大できます。拡大しても点の大きさは変わらないので、錠剤からずれた点や点の付いていない錠剤を見つけやすくなります。
+                    </p>
+                </div>
+
+                <div class="card" style="margin-bottom: 12px">
+                    <h3>「異なる錠剤が混ざっている可能性があります」と出ました</h3>
+                    <p>
+                        錠剤の色と大きさを比べて、違う種類が混ざっているように見えるときに表示します。実物をご確認ください。色と大きさが同じ錠剤の混入や、1〜2 錠だけの混入は見分けられないことがあります。
+                    </p>
+                </div>
+
+                <div class="card" style="margin-bottom: 12px">
+                    <h3>刻印検索の使い方</h3>
+                    <p>
+                        錠剤に刻まれた英字・数字・日本語を入力してください。複数の刻印はスペースで区切ると絞り込めます。全角・半角、大文字・小文字の違いは区別しません。表示されるのは候補ですので、必ず実物と添付文書でご確認ください。
+                    </p>
+                </div>
+
+                <div class="card" style="margin-bottom: 12px">
+                    <h3>写真はどこに保存されますか？</h3>
+                    <p>
+                        数えた結果と点を付けた写真は、iPhone 内（アプリ内）の履歴にのみ保存され、外部に送信されることはありません。アプリを削除すると履歴も消えますのでご注意ください。
+                    </p>
+                </div>
+
+                <div class="card" style="margin-bottom: 12px">
+                    <h3>広告を消すには？</h3>
+                    <p>
+                        「設定 → プレミアム」から月額・年額・買い切りのいずれかを購入すると、広告が表示されなくなります。機能はすべて無料版と同じです。
+                    </p>
+                </div>
+
+                <div class="card" style="margin-bottom: 12px">
+                    <h3>購入を別の端末に引き継ぐには？</h3>
+                    <p>
+                        同じ Apple ID でサインインした端末で「設定 → プレミアム → 購入を復元」を押してください。
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>サブスクリプションを解約するには？</h3>
+                    <p>
+                        iPhone の「設定」→ 自分の名前 →「サブスクリプション」から解約できます。期間終了の24時間前までに解約しない限り自動で更新されます。アプリを削除しても解約にはなりません。
+                    </p>
+                </div>
+            </section>
+
+            <div class="divider"></div>
+
+            <header>
+                <h1>Support</h1>
+            </header>
+
+            <section>
+                <h2>Getting help</h2>
+                <div class="card">
+                    <p>
+                        If something is not working, or you have a request, email
+                        <a href="mailto:nao22c@icloud.com">nao22c@icloud.com</a>.
+                        We aim to reply within a few business days.
+                    </p>
+                    <p style="margin-top: 12px">
+                        Including the following makes it much faster to help you:
+                    </p>
+                    <ul style="margin-top: 8px">
+                        <li>Your device model and OS version (e.g. iPhone 15, iOS 18.2)</li>
+                        <li>The app version, shown under <em>Settings → App info</em></li>
+                        <li>What you did, what you expected, and what happened instead</li>
+                    </ul>
+                    <p style="margin-top: 12px; color: var(--sub); font-size: 0.9rem">
+                        Please do not send photos that show patient names or other personal information.
+                    </p>
+                </div>
+            </section>
+
+            <section>
+                <h2>Frequently asked questions</h2>
+                <div class="card" style="margin-bottom: 12px">
+                    <h3>The count is off</h3>
+                    <p>
+                        Spread the pills so they do not overlap, place them on a tray that contrasts with them (a coloured tray for white pills), and shoot from directly above in good light. Strong shadows or reflections make miscounts more likely.
+                    </p>
+                </div>
+
+                <div class="card" style="margin-bottom: 12px">
+                    <h3>How do I fix a count?</h3>
+                    <p>
+                        On the result screen, turn on Edit marks. Tap a missed pill to add it, or tap an extra mark to remove it, then tap Done. The ↶ button at the top right undoes the last change.
+                    </p>
+                </div>
+
+                <div class="card" style="margin-bottom: 12px">
+                    <h3>How do I check the marks?</h3>
+                    <p>
+                        Pinch the photo on the result screen to zoom in, or double-tap a spot. The marks keep their size as you zoom, so a mark that misses its pill, or a pill without a mark, is easy to spot.
+                    </p>
+                </div>
+
+                <div class="card" style="margin-bottom: 12px">
+                    <h3>It says different pills may be mixed in</h3>
+                    <p>
+                        The app compares the colour and size of the pills and shows this when they look like more than one kind. Please check the pills themselves. Pills of the same colour and size, or a mix of only one or two pills, may not be detected.
+                    </p>
+                </div>
+
+                <div class="card" style="margin-bottom: 12px">
+                    <h3>How do I use imprint search?</h3>
+                    <p>
+                        Type the letters, numbers or Japanese printed on the pill. Separate several marks with spaces to narrow down. Width and case are ignored. Results are candidates, so always check against the actual pill and the package insert.
+                    </p>
+                </div>
+
+                <div class="card" style="margin-bottom: 12px">
+                    <h3>Where are my photos stored?</h3>
+                    <p>
+                        Your counts and their marked photos are kept only in the app's history on your iPhone and are never sent anywhere. Deleting the app also deletes the history.
+                    </p>
+                </div>
+
+                <div class="card" style="margin-bottom: 12px">
+                    <h3>How do I remove ads?</h3>
+                    <p>
+                        Buy a monthly, yearly or one-time plan under Settings → Premium. All features are the same as in the free version.
+                    </p>
+                </div>
+
+                <div class="card" style="margin-bottom: 12px">
+                    <h3>How do I restore my purchase on another device?</h3>
+                    <p>
+                        Sign in with the same Apple ID and tap Settings → Premium → Restore Purchases.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>How do I cancel my subscription?</h3>
+                    <p>
+                        Open the iPhone Settings app → your name → Subscriptions. Subscriptions renew automatically unless cancelled at least 24 hours before the end of the period. Deleting the app does not cancel a subscription.
+                    </p>
+                </div>
+            </section>
+
+            <footer>© 2026 nao22c. All rights reserved.</footer>
+        </div>
+    </body>
+</html>

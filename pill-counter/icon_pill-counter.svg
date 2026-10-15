@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 220">
+  <!-- Placeholder until the real app icon is uploaded. -->
+  <defs><linearGradient id="g" x1="0" y1="1" x2="1" y2="0">
+    <stop offset="0" stop-color="#2f9e63"/><stop offset="1" stop-color="#6fcf97"/></linearGradient></defs>
+  <rect width="220" height="220" fill="url(#g)"/>
+  <g transform="rotate(-35 110 110)">
+    <rect x="45" y="85" width="130" height="50" rx="25" fill="#ffffff"/>
+    <rect x="110" y="85" width="65" height="50" rx="25" fill="#e8f7ee"/>
+    <rect x="110" y="85" width="25" height="50" fill="#e8f7ee"/>
+  </g>
+  <circle cx="160" cy="160" r="22" fill="#ffffff"/>
+  <text x="160" y="168" font-family="-apple-system, Helvetica, Arial, sans-serif" font-size="22" font-weight="700" fill="#2f9e63" text-anchor="middle">1 2</text>
+</svg>
