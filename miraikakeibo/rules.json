@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "version": "2026.11",
+  "version": "2026.12",
   "effectiveFrom": "2026-11-01",
   "maternity": {
     "prenatalDays": 42,
@@ -285,6 +285,29 @@
   "nisa": {
     "annualLimit": 3600000,
     "lifetimeLimit": 18000000
+  },
+  "education": {
+    "elementary": {
+      "startClassAge": 6, "years": 6,
+      "publicSchool": { "annual": 110110, "entrance": 0 },
+      "privateSchool": { "annual": 1031849, "entrance": 0 }
+    },
+    "juniorHigh": {
+      "startClassAge": 12, "years": 3,
+      "publicSchool": { "annual": 186432, "entrance": 0 },
+      "privateSchool": { "annual": 1137378, "entrance": 0 }
+    },
+    "highSchool": {
+      "startClassAge": 15, "years": 3,
+      "publicSchool": { "annual": 351523, "entrance": 0 },
+      "privateSchool": { "annual": 832650, "entrance": 0 }
+    },
+    "university": {
+      "startClassAge": 18, "years": 4,
+      "national": { "annual": 535800, "entrance": 282000 },
+      "privateArts": { "annual": 970973, "entrance": 223867 },
+      "privateScience": { "annual": 1295694, "entrance": 234756 }
+    }
   },
   "publicHolidays": [
     "2026-01-01", "2026-01-12", "2026-02-11", "2026-02-23", "2026-03-20", "2026-04-29",
