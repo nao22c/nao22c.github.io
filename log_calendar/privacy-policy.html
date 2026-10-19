@@ -12,6 +12,7 @@
       --text: #1d1d1f;
       --sub: #6e6e73;
       --border: #e0e0e5;
+      --body: #3a3a3c;
     }
     @media (prefers-color-scheme: dark) {
       :root {
@@ -20,6 +21,7 @@
         --text: #f5f5f7;
         --sub: #98989d;
         --border: #333;
+        --body: #c7c7cc;
       }
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -37,64 +39,185 @@
     header h1 { font-size: 1.25rem; font-weight: 700; }
     header p { color: var(--sub); font-size: 0.88rem; margin-top: 4px; }
     .container { max-width: 680px; margin: 36px auto; padding: 0 24px 80px; }
-    .back { display: inline-block; color: var(--accent); text-decoration: none; font-size: 0.9rem; margin-bottom: 20px; }
-    .updated { font-size: 0.85rem; color: var(--sub); margin-bottom: 28px; }
-    p { font-size: 0.95rem; color: #3a3a3c; margin-bottom: 12px; }
-    h2 { font-size: 1rem; font-weight: 700; margin: 32px 0 10px; }
-    ul { padding-left: 20px; margin-bottom: 12px; }
-    li { font-size: 0.95rem; color: #3a3a3c; margin-bottom: 6px; line-height: 1.7; }
-    a { color: var(--accent); }
-    @media (prefers-color-scheme: dark) {
-      p, li { color: #c7c7cc; }
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
     }
+    .nav a { color: var(--accent); text-decoration: none; font-size: 0.9rem; }
+    .lang-toggle {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      padding: 6px 14px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text);
+      cursor: pointer;
+    }
+    .lang-toggle:hover { opacity: 0.75; }
+    .updated { font-size: 0.85rem; color: var(--sub); margin-bottom: 28px; }
+    p { font-size: 0.95rem; color: var(--body); margin-bottom: 12px; }
+    h2 { font-size: 1rem; font-weight: 700; color: var(--text); margin: 32px 0 10px; }
+    ul { padding-left: 20px; margin-bottom: 12px; }
+    li { font-size: 0.95rem; color: var(--body); margin-bottom: 6px; line-height: 1.7; }
+    a { color: var(--accent); }
+    html:not([lang="ja"]) [data-lang="ja"] { display: none; }
+    html[lang="ja"] [data-lang="en"] { display: none; }
   </style>
 </head>
 <body>
   <header>
-    <h1>Privacy Policy</h1>
+    <h1 data-lang="en">Privacy Policy</h1>
+    <h1 data-lang="ja">プライバシーポリシー</h1>
     <p>Log Calendar</p>
   </header>
   <div class="container">
-    <a href="index.html" class="back">← Back to Support</a>
-    <p class="updated">Last updated: June 15, 2026</p>
+    <div class="nav">
+      <a href="index.html" data-lang="en">← Back to Support</a>
+      <a href="index.html" data-lang="ja">← サポートへ戻る</a>
+      <button
+        type="button"
+        class="lang-toggle"
+        id="lang-toggle"
+        onclick="setLang(document.documentElement.lang === 'en' ? 'ja' : 'en')"
+      >
+        日本語
+      </button>
+    </div>
 
-    <p>Thank you for using Log Calendar (the "App"). This Privacy Policy explains how your information is handled within the App.</p>
+    <p class="updated" data-lang="en">Last updated: October 20, 2026</p>
+    <p class="updated" data-lang="ja">最終更新日: 2026年10月20日</p>
 
-    <h2>1. Information We Collect</h2>
-    <p>The App stores the following information entered by the user, locally on your device only:</p>
-    <ul>
-      <li>Calendar events (title, date/time, notes, notification settings)</li>
-      <li>Tasks and goals (content, completion status)</li>
-      <li>Log entries (journals, weight, health records, and other user-entered data)</li>
-      <li>App settings</li>
-    </ul>
-    <p>This data is stored only in your iPhone's local storage and is never sent to our servers.</p>
+    <div data-lang="en">
+      <p>Thank you for using Log Calendar (the "App"). This policy explains what the App keeps, where it is kept, and what choices you have. The App runs on iPhone, iPad and Mac.</p>
+      <p>We do not run servers of our own. What you write stays on your device and in your own iCloud account, except for the items you deliberately choose to share with other people, which are described in section 3.</p>
 
-    <h2>2. Third-Party Services</h2>
-    <p>The App communicates with the following third-party services:</p>
-    <ul>
-      <li><strong>Google AdMob</strong>: Used to serve ads. AdMob may use your device's advertising identifier (IDFA). Personalized ads require App Tracking Transparency (ATT) permission at app launch. Non-personalized ads are shown if ATT is not granted.</li>
-      <li><strong>RevenueCat</strong>: Used to manage in-app purchases. Only purchase verification is performed; no personally identifiable information is collected.</li>
-    </ul>
+      <h2>1. What you write, and where it is kept</h2>
+      <p>The App stores what you enter on your device, and — when iCloud sync is on in the App's settings — in the private area of your own iCloud account, so that your devices stay in step:</p>
+      <ul>
+        <li>Events, tasks, exams and timetables</li>
+        <li>Notes, day pages and handwriting, with any photos or files you attach</li>
+        <li>Logs: journals, weight, blood pressure, workouts, anniversaries and the like</li>
+        <li>App settings, including the colours and widget designs you choose</li>
+      </ul>
+      <p>Apple holds the iCloud copy on your behalf. We cannot read it, and it is covered by Apple's privacy policy. Turning iCloud sync off in the App's settings leaves the data on the device only.</p>
 
-    <h2>3. Advertising</h2>
-    <p>The App displays ads to free-plan users via Google AdMob. Your device's advertising ID may be used. You can upgrade to the Premium plan to remove ads.</p>
+      <h2>2. Permissions the App asks for</h2>
+      <ul>
+        <li><strong>Calendars and Reminders</strong>: so the App can show and edit the events and reminders already on your device. They are read and written on the device; we never receive them.</li>
+        <li><strong>Photos</strong>: to attach pictures to your entries, and to save a wallpaper the App makes to your photo library. The App reads only the pictures you pick.</li>
+        <li><strong>Camera</strong>: to take a picture for an entry.</li>
+        <li><strong>Notifications</strong>: to remind you of your events and tasks. These are scheduled on your device; nothing is sent through a server.</li>
+      </ul>
+      <p>You may refuse or withdraw any of these in the Settings app; the rest of the App keeps working.</p>
 
-    <h2>4. Notifications</h2>
-    <p>The App may request permission to send notifications for event reminders. You can change notification settings at any time in the iOS Settings app.</p>
+      <h2>3. Sharing with other people (optional)</h2>
+      <p>The App can share an event or a timetable with people you choose. This part, and only this part, leaves your devices. It is off until you sign in.</p>
+      <ul>
+        <li><strong>Signing in</strong>: sharing uses Sign in with Apple, through Google Firebase Authentication. We store an account record holding your user ID, and the display name and email address Apple gives us — which is the relay address <em>(…@privaterelay.appleid.com)</em> if you chose to hide your email.</li>
+        <li><strong>What is shared</strong>: for a shared event, its title, date and time, location, notes, colour and time zone; for a shared timetable, its subjects, times, rooms and teachers. Also the user IDs of the owner and of the people it is shared with, a display name, and the short code used to connect with someone.</li>
+        <li><strong>Who can see it</strong>: only the people you share it with. They can see the display name you set.</li>
+        <li><strong>Where it is kept</strong>: Google Cloud Firestore (Firebase), as our processor.</li>
+        <li><strong>What is never shared</strong>: your notes, day pages, handwriting, logs and journals. The App has no way to share them.</li>
+      </ul>
+      <p>Stop sharing an item and its copy is deleted. Leaving a shared item removes you from it.</p>
 
-    <h2>5. Data Deletion</h2>
-    <p>All data is stored only on your device. Uninstalling the App will permanently delete all stored data.</p>
+      <h2>4. Advertising</h2>
+      <p>The free plan shows banner ads through Google AdMob. The App does not ask for tracking permission and does not use your device's advertising identifier to track you across other companies' apps and websites, so these ads are not personalised in that way. Google may process your IP address and general ad interaction to deliver and measure ads, under <a href="https://policies.google.com/technologies/partner-sites">Google's policy</a>. Nothing you write in the App is used for advertising. Premium removes the ads.</p>
 
-    <h2>6. Children's Privacy</h2>
-    <p>This App is not directed at children under 13, and we do not knowingly collect personal information from children under 13.</p>
+      <h2>5. Purchases</h2>
+      <p>Premium is sold through the App Store and managed with RevenueCat, which receives an anonymous user ID and your purchase status so that your purchase can be restored on your other devices. Payment is handled by Apple; we never see your card details.</p>
 
-    <h2>7. Changes to This Policy</h2>
-    <p>This policy may be updated without prior notice. Any changes will be posted on this page.</p>
+      <h2>6. Keeping and deleting your data</h2>
+      <ul>
+        <li>Deleting an entry in the App deletes it from the device and from iCloud.</li>
+        <li>Deleting the App removes everything on that device. The iCloud copy is removed by turning off iCloud for the App, or by deleting its data in the Settings app under your Apple Account.</li>
+        <li>For shared items, stop sharing (or leave the item) to delete the shared copy.</li>
+        <li>To close your sharing account, open Settings → Sharing → Delete account in the App. Everything you shared is deleted, you are taken off what others shared with you, and the account itself is closed. Your calendar, notes and logs are not touched.</li>
+      </ul>
 
-    <h2>8. Contact</h2>
-    <p>For privacy-related questions, please contact us at:</p>
-    <p><a href="mailto:nao22c@icloud.com">nao22c@icloud.com</a></p>
+      <h2>7. Children</h2>
+      <p>The App is not directed at children under 13, and we do not knowingly collect personal information from them.</p>
+
+      <h2>8. Changes</h2>
+      <p>If this policy changes, the new version is posted on this page with a new date above.</p>
+
+      <h2>9. Contact</h2>
+      <p>For anything about privacy, please write to <a href="mailto:nao22c@icloud.com">nao22c@icloud.com</a>.</p>
+    </div>
+
+    <div data-lang="ja">
+      <p>Log Calendar（以下「本アプリ」）をご利用いただきありがとうございます。本ポリシーでは、本アプリが何を保存し、どこに置き、利用者にどのような選択肢があるかを説明します。本アプリは iPhone・iPad・Mac で動作します。</p>
+      <p>当方は自前のサーバーを持っていません。書いた内容は端末と、ご自身の iCloud アカウントの中に保存されます。例外は、ご自身で選んで他の人と共有した項目だけで、それは第3項で説明します。</p>
+
+      <h2>1. 書いた内容と、その保存先</h2>
+      <p>本アプリは、入力された内容を端末に保存します。アプリの設定で iCloud 同期を有効にしている場合は、ご自身の iCloud アカウントの非公開領域にも保存され、お持ちの端末どうしで同じ状態になります。</p>
+      <ul>
+        <li>予定、タスク、試験、時間割</li>
+        <li>ノート、1日のページ、手書き、および添付した写真やファイル</li>
+        <li>ログ（日記、体重、血圧、筋トレ、記念日など）</li>
+        <li>アプリの設定（配色やウィジェットのデザインを含む）</li>
+      </ul>
+      <p>iCloud 上の控えは Apple が利用者のために保持するもので、当方が読むことはできません。取り扱いは Apple のプライバシーポリシーに従います。アプリの設定で iCloud 同期を切ると、データは端末内だけになります。</p>
+
+      <h2>2. 本アプリが求める許可</h2>
+      <ul>
+        <li><strong>カレンダー・リマインダー</strong>：端末にある予定とリマインダーを表示・編集するため。読み書きは端末内で行い、当方が受け取ることはありません。</li>
+        <li><strong>写真</strong>：記録に写真を添えるため、また本アプリで作った壁紙を写真に保存するため。選ばれた写真だけを読み込みます。</li>
+        <li><strong>カメラ</strong>：記録用の写真を撮るため。</li>
+        <li><strong>通知</strong>：予定やタスクをお知らせするため。通知は端末内で予約され、サーバーを経由しません。</li>
+      </ul>
+      <p>いずれも「設定」アプリでいつでも拒否・取り消しができ、その場合も他の機能は使えます。</p>
+
+      <h2>3. 他の人との共有（任意）</h2>
+      <p>本アプリでは、予定や時間割を選んだ相手と共有できます。端末の外に出るのはこの部分だけで、サインインするまでは使われません。</p>
+      <ul>
+        <li><strong>サインイン</strong>：共有は「Sign in with Apple」を使い、Google Firebase Authentication 経由で行います。アカウントの記録として、ユーザー ID と、Apple から渡される表示名・メールアドレスを保存します。メールを非公開にした場合は中継アドレス <em>(…@privaterelay.appleid.com)</em> になります。</li>
+        <li><strong>共有される内容</strong>：予定ならタイトル・日時・場所・メモ・色・タイムゾーン、時間割なら科目・時間・教室・担当。あわせて、所有者と共有相手のユーザー ID、表示名、相手とつながるための短いコード。</li>
+        <li><strong>見られる範囲</strong>：共有した相手だけです。相手には設定した表示名が見えます。</li>
+        <li><strong>保存先</strong>：当方の委託先である Google Cloud Firestore（Firebase）。</li>
+        <li><strong>共有されないもの</strong>：ノート、1日のページ、手書き、ログ、日記。これらを共有する機能はありません。</li>
+      </ul>
+      <p>共有をやめると、その控えは削除されます。共有から抜けると、その項目から自分が外れます。</p>
+
+      <h2>4. 広告について</h2>
+      <p>無料プランでは Google AdMob のバナー広告を表示します。本アプリはトラッキングの許可を求めず、端末の広告識別子を使って他社のアプリやサイトをまたいで利用者を追跡することはありません。そのため、この種のパーソナライズは行われません。広告の配信と効果測定のため、Google が IP アドレスや広告への反応を処理することがあります（<a href="https://policies.google.com/technologies/partner-sites">Google のポリシー</a>）。本アプリに書いた内容が広告に使われることはありません。プレミアムでは広告は表示されません。</p>
+
+      <h2>5. 購入について</h2>
+      <p>プレミアムは App Store で販売し、RevenueCat で管理します。RevenueCat は匿名のユーザー ID と購入状況を受け取り、他の端末で購入を復元できるようにします。決済は Apple が扱い、当方がカード情報を受け取ることはありません。</p>
+
+      <h2>6. データの保持と削除</h2>
+      <ul>
+        <li>アプリ内で記録を削除すると、端末と iCloud の両方から消えます。</li>
+        <li>アプリを削除すると、その端末の中身はすべて消えます。iCloud 上の控えは、本アプリの iCloud をオフにするか、「設定」アプリの Apple アカウントから本アプリのデータを削除してください。</li>
+        <li>共有した項目は、共有をやめる（または共有から抜ける）と控えが削除されます。</li>
+        <li>共有アカウントを閉じるには、アプリの「設定 → 共有設定 → アカウントを削除」をお使いください。共有した内容は削除され、相手から共有されたものからは外れ、アカウント自体を閉じます。カレンダー・ノート・ログには触れません。</li>
+      </ul>
+
+      <h2>7. お子様の利用について</h2>
+      <p>本アプリは13歳未満のお子様に向けたものではなく、お子様の個人情報を意図的に取得することはありません。</p>
+
+      <h2>8. 本ポリシーの変更</h2>
+      <p>変更した場合は、上部の日付を改めたうえで、新しい内容をこのページに掲載します。</p>
+
+      <h2>9. お問い合わせ</h2>
+      <p>プライバシーに関するご質問は <a href="mailto:nao22c@icloud.com">nao22c@icloud.com</a> までご連絡ください。</p>
+    </div>
   </div>
+
+  <script>
+    function setLang(lang) {
+      document.documentElement.lang = lang;
+      document.getElementById('lang-toggle').textContent = lang === 'en' ? '日本語' : 'English';
+      try { localStorage.setItem('log-calendar-lang', lang); } catch (e) {}
+    }
+    (function () {
+      var saved = null;
+      try { saved = localStorage.getItem('log-calendar-lang'); } catch (e) {}
+      if (saved === 'ja') setLang('ja');
+    })();
+  </script>
 </body>
 </html>
