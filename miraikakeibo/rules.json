@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "version": "2026.12",
+  "version": "2026.13",
   "effectiveFrom": "2026-11-01",
   "maternity": {
     "prenatalDays": 42,
@@ -308,6 +308,66 @@
       "privateArts": { "annual": 970973, "entrance": 223867 },
       "privateScience": { "annual": 1295694, "entrance": 234756 }
     }
+  },
+  "lifeEvents": {
+    "severance": {
+      "perYearUpTo20": 400000, "perYearOver20": 700000, "minimum": 800000, "longServiceYears": 20,
+      "shortServiceYears": 5, "shortServiceHalfLimit": 3000000, "residentTaxRate": 0.10
+    },
+    "unemployment": {
+      "wageDailyMin": 3014,
+      "highRateUpTo": 5340,
+      "highRate": 0.8,
+      "bands": [
+        { "upToAge": 29, "wageDailyMax": 14510, "lowRateFrom": 13140, "lowRate": 0.5 },
+        { "upToAge": 44, "wageDailyMax": 16110, "lowRateFrom": 13140, "lowRate": 0.5 },
+        { "upToAge": 59, "wageDailyMax": 17740, "lowRateFrom": 13140, "lowRate": 0.5 },
+        { "upToAge": null, "wageDailyMax": 16940, "lowRateFrom": 11800, "lowRate": 0.45 }
+      ],
+      "waitingDays": 7,
+      "voluntaryRestrictionMonths": 1,
+      "receivablePeriodDays": 365,
+      "certificationDays": 28,
+      "paymentLagDays": 7,
+      "generalDays": [
+        { "underYears": 1, "days": 0 },
+        { "underYears": 10, "days": 90 },
+        { "underYears": 20, "days": 120 },
+        { "underYears": null, "days": 150 }
+      ],
+      "companyDays": [
+        { "upToAge": 29, "table": [
+          { "underYears": 1, "days": 90 }, { "underYears": 5, "days": 90 }, { "underYears": 10, "days": 120 },
+          { "underYears": 20, "days": 180 }, { "underYears": null, "days": 180 } ] },
+        { "upToAge": 34, "table": [
+          { "underYears": 1, "days": 90 }, { "underYears": 5, "days": 120 }, { "underYears": 10, "days": 180 },
+          { "underYears": 20, "days": 210 }, { "underYears": null, "days": 240 } ] },
+        { "upToAge": 44, "table": [
+          { "underYears": 1, "days": 90 }, { "underYears": 5, "days": 150 }, { "underYears": 10, "days": 180 },
+          { "underYears": 20, "days": 240 }, { "underYears": null, "days": 270 } ] },
+        { "upToAge": 59, "table": [
+          { "underYears": 1, "days": 90 }, { "underYears": 5, "days": 180 }, { "underYears": 10, "days": 240 },
+          { "underYears": 20, "days": 270 }, { "underYears": null, "days": 330 } ] },
+        { "upToAge": 64, "table": [
+          { "underYears": 1, "days": 90 }, { "underYears": 5, "days": 150 }, { "underYears": 10, "days": 180 },
+          { "underYears": 20, "days": 210 }, { "underYears": null, "days": 240 } ] }
+      ],
+      "seniorLumpSumDays": [
+        { "underYears": 1, "days": 30 },
+        { "underYears": null, "days": 50 }
+      ]
+    },
+    "sickPay": { "rateNumerator": 2, "rateDenominator": 3, "waitingDays": 3, "maxDays": 547, "paymentDay": 25 },
+    "careLeave": { "rate": 0.67, "maxDays": 93, "wageDailyMax": 16110, "paymentLagDays": 60 },
+    "pension": {
+      "basicFullAnnual": 831700, "basicFullMonths": 480, "earningsRatePerMille": 5.481,
+      "standardMonthlyMax": 650000, "bonusMax": 1500000, "normalStartAge": 65,
+      "deferralRatePerMonth": 0.007, "earlyRatePerMonth": 0.004, "earliestStartAge": 60, "latestStartAge": 75
+    },
+    "nationalInsurance": {
+      "pensionMonthly": 17510, "healthIncomeRate": 0.10, "healthPerCapitaAnnual": 50000, "healthBasicDeduction": 430000
+    },
+    "smallBusinessMutualAidReturnRate": 0.01
   },
   "publicHolidays": [
     "2026-01-01", "2026-01-12", "2026-02-11", "2026-02-23", "2026-03-20", "2026-04-29",
