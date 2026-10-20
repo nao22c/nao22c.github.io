@@ -1,0 +1,26 @@
+{
+  "schema": 1,
+  "version": "2026-10-15",
+  "files": [
+    {
+      "name": "medicines.csv",
+      "sha256": "1c5593a2209ae20d70b416abe9ff7577b269b553d73d734db4d5eddf386f87a3",
+      "size": 1444977
+    },
+    {
+      "name": "drug_reference_index.bin",
+      "sha256": "cb902de6f8f4542686942beca06cfd9bb4e079db1b3e0d3311d20150dbc5f11c",
+      "size": 128188
+    },
+    {
+      "name": "drug_reference_records.bin",
+      "sha256": "0b4f7544c9a5254573a41934587b46ab9c3efe261a49af24497b7cf917c1d74f",
+      "size": 2874390
+    },
+    {
+      "name": "interactions.bin",
+      "sha256": "690bfb611e1e829cd2d08994f736d07bf909f6a3d72a8276b7d935cb3ae0fb7f",
+      "size": 226215
+    }
+  ]
+}
