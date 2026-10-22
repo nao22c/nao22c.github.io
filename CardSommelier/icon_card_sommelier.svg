@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8c2342"/>
+      <stop offset="1" stop-color="#4a0f22"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2b2b2e"/>
+      <stop offset="1" stop-color="#111113"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f3dfa2"/>
+      <stop offset="1" stop-color="#c9a453"/>
+    </linearGradient>
+  </defs>
+  <rect width="1024" height="1024" fill="url(#bg)"/>
+  <g transform="rotate(-12 512 540)">
+    <rect x="212" y="350" width="600" height="378" rx="40" fill="url(#card)" stroke="#c9a453" stroke-opacity="0.6" stroke-width="6"/>
+    <rect x="270" y="440" width="112" height="82" rx="14" fill="url(#gold)"/>
+    <rect x="270" y="620" width="280" height="22" rx="11" fill="#c9a453" fill-opacity="0.55"/>
+  </g>
+  <circle cx="742" cy="282" r="96" fill="url(#gold)"/>
+  <text x="742" y="316" text-anchor="middle" font-family="-apple-system, Helvetica, Arial, sans-serif" font-size="100" font-weight="800" fill="#4a0f22">%</text>
+</svg>
