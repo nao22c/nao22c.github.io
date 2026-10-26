@@ -25,7 +25,7 @@ app-ads.txtがgoogleに認識されるようにリポジトリの直下におき
 
 | フォルダ | アプリ | 日本語 | 英語 |
 |---|---|---|---|
-| miraikakeibo | 未来家計簿 | https://apps.apple.com/jp/app/%E6%9C%AA%E6%9D%A5%E5%AE%B6%E8%A8%88%E7%B0%BF-%E5%B0%86%E6%9D%A5%E3%81%AE%E3%81%8A%E9%87%91%E3%81%8C%E8%A6%8B%E3%81%88%E3%82%8B/id6822124688 | （日本のみ配信） |
+| miraikakeibo | 未来家計簿 | https://apps.apple.com/jp/app/%E6%9C%AA%E6%9D%A5%E5%AE%B6%E8%A8%88%E7%B0%BF-%E5%B0%86%E6%9D%A5%E3%81%AE%E3%81%8A%E9%87%91%E3%81%8C%E8%A6%8B%E3%81%88%E3%82%8B/id6822124688 | （日本語のみ） |
 | TaxNavi | 税金ナビ | https://apps.apple.com/jp/app/%E7%A8%8E%E9%87%91%E3%83%8A%E3%83%93/id6793511199 | － |
 | kabu-log | 株主優待ログ | https://apps.apple.com/jp/app/%E6%A0%AA%E4%B8%BB%E5%84%AA%E5%BE%85%E3%83%AD%E3%82%B0/id6774957806 | － |
 | okusuri | おくすりカレンダー | https://apps.apple.com/jp/app/%E3%81%8A%E3%81%8F%E3%81%99%E3%82%8A%E3%82%AB%E3%83%AC%E3%83%B3%E3%83%80%E3%83%BC/id6773173424 | － |
