@@ -106,7 +106,7 @@
 
             <header>
                 <h1>プライバシーポリシー</h1>
-                <p class="updated">最終更新日: 2026年10月26日</p>
+                <p class="updated">最終更新日: 2026年10月27日</p>
             </header>
 
             <section>
@@ -128,8 +128,9 @@
                         <li><strong>登録したカードの種類</strong>（カード名・国際ブランドなど）— お得なカードを提案するため。端末内に保存し、当方が受け取ることはありません。iCloud にサインインしている場合は、利用者自身の iCloud にも保存され、同じ Apple アカウントの端末と同期されます。</li>
                         <li><strong>ポイントの残高と履歴</strong>（プレミアムで利用者が記録した場合のみ）— ポイントの管理のため。登録したカードと同じく端末内に保存し、iCloud にサインインしている場合は利用者自身の iCloud にも保存されます。当方が受け取ることはありません。</li>
                         <li><strong>位置情報</strong>（アプリまたはウィジェットを表示している間のみ）— 近くの対象店舗を探すため。位置情報は端末内で使い、当方のサーバーに送信することはありません。店舗の検索には Apple のマップ（MapKit）を使います。直近の検索結果（近くのお店と距離）は、ウィジェットで表示するために端末内に保存します。</li>
+                        <li><strong>位置情報（常に許可した場合のみ）</strong>— 「よく行くお店」に登録した店舗（最大20か所）に着いたことを iPhone の機能で判定し、お得なカードを通知するため（プレミアムの機能）。判定は端末内で行い、現在地を当方に送信することはありません。登録した店舗は、利用者自身の iCloud に保存されます。</li>
                         <li><strong>カードのリクエスト</strong>（利用者が送信した場合のみ）— 一覧に無いカードを追加するため。送信されるのは、入力したカード名・カード会社・メモと、匿名のユーザー ID、アプリのバージョンです。メモにカード番号などの個人情報は入力しないでください。</li>
-                        <li><strong>匿名のユーザー ID</strong> — カード情報（還元率などのデータ）の取得とカードのリクエストの送信のため、Firebase の匿名認証で発行されます。氏名やメールアドレスとは結びつきません。</li>
+                        <li><strong>匿名のユーザー ID</strong> — カードのリクエストを送信するときだけ、Firebase の匿名認証で発行されます。氏名やメールアドレスとは結びつきません。</li>
                         <li><strong>広告識別子・利用状況</strong> — 無料版での広告の表示と効果測定のため（第 4 項）。</li>
                         <li><strong>購入状況</strong> — プレミアムの利用と、他の端末での購入の復元のため。</li>
                     </ul>
@@ -144,7 +145,7 @@
                     </p>
                     <ul style="margin-top: 8px">
                         <li><a href="https://firebase.google.com/support/privacy">Google Firebase</a>
-                            （Authentication・Cloud Firestore）— 匿名認証、カード情報の配信、カードのリクエストの受付</li>
+                            （Authentication・Cloud Firestore・Hosting）— カード情報（還元率などのデータ）の配信、匿名認証、カードのリクエストの受付。カード情報の取得では、アプリはファイルを読み込むだけで、利用者の情報は送信しません</li>
                         <li><a href="https://policies.google.com/technologies/partner-sites">Google AdMob</a>
                             — 無料版での広告配信</li>
                         <li><a href="https://www.revenuecat.com/privacy">RevenueCat</a>
