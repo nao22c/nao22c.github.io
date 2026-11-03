@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>あしあと — 妊娠中から使える育児記録・母子手帳アプリ</title>
+        <style>
+            :root {
+                --accent: #e8907a;
+                --bg: #fbf7f2;
+                --card: #ffffff;
+                --text: #3d3330;
+                --sub: #7a6e69;
+                --border: rgba(61, 51, 48, 0.08);
+            }
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                font-family:
+                    -apple-system, BlinkMacSystemFont, "Hiragino Sans",
+                    "Hiragino Kaku Gothic ProN", sans-serif;
+                background: var(--bg);
+                color: var(--text);
+                line-height: 1.7;
+                padding: 0 16px 60px;
+            }
+            .container {
+                max-width: 680px;
+                margin: 0 auto;
+            }
+            header {
+                text-align: center;
+                padding: 60px 0 40px;
+            }
+            .icon {
+                width: 110px;
+                height: 110px;
+                border-radius: 24px;
+                object-fit: cover;
+                margin-bottom: 24px;
+                box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+            }
+            h1 {
+                font-size: 2rem;
+                font-weight: 800;
+                margin-bottom: 8px;
+            }
+            .tagline {
+                color: var(--sub);
+                font-size: 1rem;
+                max-width: 520px;
+                margin: 0 auto;
+            }
+            section {
+                margin-bottom: 32px;
+            }
+            h2 {
+                font-size: 1.15rem;
+                font-weight: 700;
+                margin-bottom: 14px;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+            h2::before {
+                content: "";
+                width: 4px;
+                height: 18px;
+                background: var(--accent);
+                border-radius: 4px;
+            }
+            .card {
+                background: var(--card);
+                border: 1px solid var(--border);
+                border-radius: 14px;
+                padding: 20px 22px;
+            }
+            .features {
+                display: grid;
+                gap: 12px;
+            }
+            .feature {
+                background: var(--card);
+                border: 1px solid var(--border);
+                border-radius: 14px;
+                padding: 16px 18px;
+            }
+            .feature h3 {
+                font-size: 1rem;
+                font-weight: 700;
+                margin-bottom: 4px;
+            }
+            .feature p {
+                color: var(--sub);
+                font-size: 0.92rem;
+            }
+            table.pricing {
+                width: 100%;
+                border-collapse: collapse;
+                font-size: 0.95rem;
+            }
+            table.pricing th,
+            table.pricing td {
+                text-align: left;
+                padding: 10px 4px;
+                border-bottom: 1px solid var(--border);
+            }
+            table.pricing th {
+                white-space: nowrap;
+                padding-right: 16px;
+                color: var(--sub);
+                font-weight: 600;
+            }
+            table.pricing tr:last-child td {
+                border-bottom: none;
+            }
+            a {
+                color: #c0614a;
+            }
+            ul {
+                padding-left: 1.2em;
+            }
+            li {
+                margin-bottom: 6px;
+            }
+            .links {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 16px;
+                justify-content: center;
+                padding-top: 8px;
+            }
+            footer {
+                text-align: center;
+                color: var(--sub);
+                font-size: 0.85rem;
+                padding-top: 32px;
+                border-top: 1px solid var(--border);
+                margin-top: 40px;
+            }
+            .coming-soon {
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+                background: #fde9e2;
+                color: #b4533c;
+                font-size: 0.85rem;
+                font-weight: 700;
+                padding: 8px 16px;
+                border-radius: 100px;
+                margin-top: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <img class="icon" src="icon_ashiato.png" alt="あしあと" />
+                <h1>あしあと</h1>
+                <p class="tagline">
+                    妊娠中から、生まれてからも。<br />
+                    毎日の育児記録と母子手帳を、ひとつのアプリに。
+                </p>
+                <div class="coming-soon">
+                    リリース準備中 — 近日公開予定
+                </div>
+            </header>
+
+            <section>
+                <h2>できること</h2>
+                <div class="features">
+                    <div class="feature">
+                        <h3>ワンタップの育児記録</h3>
+                        <p>授乳・ミルク・おむつ・体温・お風呂・お昼寝・身長体重を、ホームのボタンからすぐに記録できます。ボタンの種類と並び順は自由に変えられます。</p>
+                    </div>
+                    <div class="feature">
+                        <h3>履歴とグラフ</h3>
+                        <p>記録をタップすると、過去の履歴と、7日・14日・30日ごとのグラフを見られます。身長・体重は成長曲線に、お子さまの記録を重ねて表示します。</p>
+                    </div>
+                    <div class="feature">
+                        <h3>母子手帳</h3>
+                        <p>妊娠中の健診、出生時の記録、乳幼児健診、予防接種、発達の記録をまとめて残せます。健診の欄には、月齢ごとの身長・体重の平均の目安も表示します。</p>
+                    </div>
+                    <div class="feature">
+                        <h3>育児日記と思い出</h3>
+                        <p>写真つきの日記で、成長の瞬間を残せます。カレンダーで振り返ることもできます。</p>
+                    </div>
+                    <div class="feature">
+                        <h3>妊娠中も使える</h3>
+                        <p>妊娠週数ごとの赤ちゃんの様子とママへのアドバイス、出産準備品のチェックリスト、給付金の計算など、妊娠中に役立つツールもそろっています。</p>
+                    </div>
+                    <div class="feature">
+                        <h3>家族と共有・バックアップ</h3>
+                        <p>Apple でサインインすると、記録が iCloud に自動で保存されます。パートナーを招待すれば、同じ記録を一緒に見たり書いたりできます（iPhone 同士）。Google でサインインした場合は、Google ドライブに好きなときにバックアップできます。</p>
+                    </div>
+                    <div class="feature">
+                        <h3>ウィジェット</h3>
+                        <p>ホーム画面のウィジェットから、すぐに記録を始められます。</p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>価格</h2>
+                <div class="card">
+                    <p style="margin-bottom: 12px">
+                        <strong>記録・母子手帳・日記・グラフ・共有など、すべての機能を無料で使えます。</strong>
+                        無料版では、画面下部などに広告が表示されます。
+                    </p>
+                    <table class="pricing">
+                        <tr>
+                            <th>プレミアム</th>
+                            <td>広告の非表示、標準以外の5種類のデザインスタイル</td>
+                        </tr>
+                        <tr>
+                            <th>月額プラン</th>
+                            <td>プレミアムを1か月単位で（自動更新）</td>
+                        </tr>
+                        <tr>
+                            <th>年額プラン</th>
+                            <td>プレミアムを1年単位で（自動更新）</td>
+                        </tr>
+                        <tr>
+                            <th>買い切り</th>
+                            <td>プレミアムをずっと。更新はありません</td>
+                        </tr>
+                    </table>
+                    <p style="color: var(--sub); font-size: 0.85rem; margin-top: 12px">
+                        最新の価格はアプリ内、または App Store でご確認ください。
+                    </p>
+                </div>
+            </section>
+
+            <section>
+                <h2>ご注意</h2>
+                <div class="card">
+                    <p>
+                        本アプリは育児の記録を目的としたもので、医療上の判断を行うものではありません。成長曲線や平均の目安は、厚生労働省「平成22年 乳幼児身体発育調査」の値をもとにしています。お子さまの健康について気になることがあるときは、医師や保健師にご相談ください。
+                    </p>
+                </div>
+            </section>
+
+            <section>
+                <h2>動作環境</h2>
+                <div class="card">
+                    <ul>
+                        <li>iOS 17.0 以降の iPhone</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2>お問い合わせ</h2>
+                <div class="card">
+                    <p>
+                        ご質問・不具合のご報告は
+                        <a href="mailto:nao22c@icloud.com">nao22c@icloud.com</a>
+                        までお送りください。数日以内に返信いたします。
+                    </p>
+                </div>
+            </section>
+
+            <div class="links">
+                <a href="support.html">サポート</a>
+                <a href="privacy-policy.html">プライバシーポリシー</a>
+                <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">利用規約（EULA）</a>
+                <a href="../">他のアプリ</a>
+            </div>
+
+            <footer>© 2026 nao22c. All rights reserved.</footer>
+        </div>
+    </body>
+</html>

@@ -34,4 +34,4 @@ app-ads.txtがgoogleに認識されるようにリポジトリの直下におき
 | finance-tracker | 世界の株価~Tracker~ | https://apps.apple.com/jp/app/%E4%B8%96%E7%95%8C%E3%81%AE%E6%A0%AA%E4%BE%A1-tracker/id6780177684 | https://apps.apple.com/us/app/finance-tracker-world/id6780177684 |
 | Stack | StackHub（Mac） | https://apps.apple.com/jp/app/stackhub-%E3%82%AF%E3%83%AA%E3%83%83%E3%83%97%E3%83%9C%E3%83%BC%E3%83%89%E6%95%B4%E7%90%86/id6801430349 | https://apps.apple.com/us/app/stackhub-organize-clipboard/id6801430349 |
 
-未リリース（リンクなし）：pill-counter, CardSommelier, timemachine, Log_Film, tonebase, TripCanvas, memocal
+未リリース（リンクなし）：pill-counter, CardSommelier, timemachine, Log_Film, tonebase, TripCanvas, memocal, Ashiato
