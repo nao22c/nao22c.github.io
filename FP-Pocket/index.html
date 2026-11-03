@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>FPポケット — FP技能士2級・3級の過去問アプリ</title>
+        <style>
+            :root {
+                --accent: #ff6b4a;
+                --bg: #f5f5f7;
+                --card: #ffffff;
+                --text: #1d1d1f;
+                --sub: #6e6e73;
+                --border: rgba(0, 0, 0, 0.08);
+            }
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                font-family:
+                    -apple-system, BlinkMacSystemFont, "Hiragino Sans",
+                    "Hiragino Kaku Gothic ProN", sans-serif;
+                background: var(--bg);
+                color: var(--text);
+                line-height: 1.7;
+                padding: 0 16px 60px;
+            }
+            .container {
+                max-width: 680px;
+                margin: 0 auto;
+            }
+            header {
+                text-align: center;
+                padding: 60px 0 40px;
+            }
+            .icon {
+                width: 110px;
+                height: 110px;
+                border-radius: 24px;
+                object-fit: cover;
+                margin-bottom: 24px;
+                box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+            }
+            h1 {
+                font-size: 2rem;
+                font-weight: 800;
+                margin-bottom: 8px;
+            }
+            .tagline {
+                color: var(--sub);
+                font-size: 1rem;
+                max-width: 520px;
+                margin: 0 auto;
+            }
+            section {
+                margin-bottom: 32px;
+            }
+            h2 {
+                font-size: 1.15rem;
+                font-weight: 700;
+                margin-bottom: 14px;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+            h2::before {
+                content: "";
+                width: 4px;
+                height: 18px;
+                background: var(--accent);
+                border-radius: 4px;
+            }
+            .card {
+                background: var(--card);
+                border: 1px solid var(--border);
+                border-radius: 14px;
+                padding: 20px 22px;
+            }
+            .features {
+                display: grid;
+                gap: 12px;
+            }
+            .feature {
+                background: var(--card);
+                border: 1px solid var(--border);
+                border-radius: 14px;
+                padding: 16px 18px;
+            }
+            .feature h3 {
+                font-size: 1rem;
+                font-weight: 700;
+                margin-bottom: 4px;
+            }
+            .feature p {
+                color: var(--sub);
+                font-size: 0.92rem;
+            }
+            table.pricing {
+                width: 100%;
+                border-collapse: collapse;
+                font-size: 0.95rem;
+            }
+            table.pricing th,
+            table.pricing td {
+                text-align: left;
+                padding: 10px 4px;
+                border-bottom: 1px solid var(--border);
+            }
+            table.pricing th {
+                white-space: nowrap;
+                padding-right: 16px;
+                color: var(--sub);
+                font-weight: 600;
+            }
+            table.pricing tr:last-child td {
+                border-bottom: none;
+            }
+            a {
+                color: #007aff;
+            }
+            ul {
+                padding-left: 1.2em;
+            }
+            li {
+                margin-bottom: 6px;
+            }
+            .links {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 16px;
+                justify-content: center;
+                padding-top: 8px;
+            }
+            footer {
+                text-align: center;
+                color: var(--sub);
+                font-size: 0.85rem;
+                padding-top: 32px;
+                border-top: 1px solid var(--border);
+                margin-top: 40px;
+            }
+            .coming-soon {
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+                background: #fdf1de;
+                color: #b3690a;
+                font-size: 0.85rem;
+                font-weight: 700;
+                padding: 8px 16px;
+                border-radius: 100px;
+                margin-top: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <h1>FPポケット</h1>
+                <p class="tagline">
+                    FP技能士（2級・3級）の過去問を、ポケットに。<br />
+                    一問一答から本番形式まで、全選択肢の解説つきで合格をめざせます。
+                </p>
+                <div class="coming-soon">
+                    リリース準備中 — 近日公開予定
+                </div>
+            </header>
+
+            <section>
+                <h2>できること</h2>
+                <div class="features">
+                    <div class="feature">
+                        <h3>過去問をまるごと本番形式で</h3>
+                        <p>試験の回を選んで、本番と同じ問題数・制限時間で解けます。タイマー、問題一覧、見直しの印つき。途中でやめても、続きから再開できます。</p>
+                    </div>
+                    <div class="feature">
+                        <h3>すきま時間に一問一答</h3>
+                        <p>分野や試験の回を選んで1問ずつ。答えるとすぐに正解と解説が出ます。毎日の「今日の10問」は、苦手な問題とまだ解いていない問題から選びます。</p>
+                    </div>
+                    <div class="feature">
+                        <h3>全選択肢の解説つき</h3>
+                        <p>正解の理由だけでなく、ほかの選択肢がなぜ違うのかも1つずつ解説します。解説は本アプリが独自に作成したものです。</p>
+                    </div>
+                    <div class="feature">
+                        <h3>模擬試験</h3>
+                        <p>本番と同じ出題形式・問題数で、ランダムに出題します（無料版は最新回の問題から、プレミアムはすべての回から）。合格ラインに届いたかと、分野ごとの正答率がわかります。</p>
+                    </div>
+                    <div class="feature">
+                        <h3>苦手を見える化</h3>
+                        <p>学習カレンダー、正答率の推移、6分野ごとの習熟度を表示します。間違えた問題だけを解き直す「苦手を復習」も（プレミアム）。</p>
+                    </div>
+                    <div class="feature">
+                        <h3>実技の図や表もそのまま</h3>
+                        <p>実技試験の設例・表・親族関係図・土地の図も表示します。折りたたみの iPhone を開いたときは、左に問題文、右に選択肢の2画面で解けます。</p>
+                    </div>
+                    <div class="feature">
+                        <h3>iCloud で同期</h3>
+                        <p>iCloud にサインインしていれば、学習記録を同じ Apple アカウントの端末と同期します。</p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>収録内容</h2>
+                <div class="card">
+                    <ul>
+                        <li>2級・3級の学科試験</li>
+                        <li>2級・3級の実技試験（資産設計提案業務）</li>
+                        <li>2024年以降に実施された試験の過去問。新しい回はアプリのアップデートで追加します</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2>価格</h2>
+                <div class="card">
+                    <p style="margin-bottom: 12px">
+                        <strong>基本の機能は無料で使えます。</strong>
+                        無料版では、各級の最新回の過去問をまるごと解けるほか、一問一答を1日10問まで解けます。画面下部などに広告が表示されます。
+                    </p>
+                    <table class="pricing">
+                        <tr>
+                            <th>プレミアム</th>
+                            <td>すべての回の過去問、一問一答の回数無制限、苦手を復習、分野ごとの詳しい分析、広告の非表示</td>
+                        </tr>
+                        <tr>
+                            <th>月額プラン</th>
+                            <td>プレミアムを1か月単位で</td>
+                        </tr>
+                        <tr>
+                            <th>買い切り</th>
+                            <td>プレミアムをずっと。更新はありません</td>
+                        </tr>
+                    </table>
+                    <p style="color: var(--sub); font-size: 0.85rem; margin-top: 12px">
+                        最新の価格はアプリ内、または App Store でご確認ください。
+                    </p>
+                </div>
+            </section>
+
+            <section>
+                <h2>ご注意</h2>
+                <div class="card">
+                    <p>
+                        問題は、日本FP協会および金融財政事情研究会が実施したファイナンシャル・プランニング技能検定の試験問題を、アプリ向けに一部改変して掲載しています。各問題には出典を表示しています。解説は本アプリが独自に作成したもので、試験実施時点の法令に基づいています。法改正により、現在の制度と異なる場合があります。本アプリは、各試験実施団体とは関係のない個人が開発しています。
+                    </p>
+                </div>
+            </section>
+
+            <section>
+                <h2>動作環境</h2>
+                <div class="card">
+                    <ul>
+                        <li>iOS 17.0 以降の iPhone</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2>お問い合わせ</h2>
+                <div class="card">
+                    <p>
+                        ご質問・不具合のご報告は
+                        <a href="mailto:nao22c@icloud.com">nao22c@icloud.com</a>
+                        までお送りください。数日以内に返信いたします。
+                    </p>
+                </div>
+            </section>
+
+            <div class="links">
+                <a href="support.html">サポート</a>
+                <a href="privacy-policy.html">プライバシーポリシー</a>
+                <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">利用規約（EULA）</a>
+                <a href="../">他のアプリ</a>
+            </div>
+
+            <footer>© 2026 nao22c. All rights reserved.</footer>
+        </div>
+    </body>
+</html>
